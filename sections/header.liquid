@@ -81,6 +81,32 @@
     padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
   }
 
+  /* Mobile header - ZERO padding for ultra-compact size */
+  @media screen and (max-width: 749px) {
+    .header {
+      padding: 0 1.5rem 0 1.5rem;
+      min-height: auto;
+    }
+    
+    /* Make header elements more compact on mobile */
+    .header__heading-logo-wrapper {
+      max-height: 30px;
+    }
+    
+    .header__heading-logo {
+      max-height: 30px;
+      width: auto;
+    }
+    
+    .header__icons {
+      gap: 0.5rem;
+    }
+    
+    .header__icon {
+      padding: 0.25rem;
+    }
+  }
+
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
@@ -96,6 +122,204 @@
     .header {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* Floating Glass Header Styles */
+  .header-wrapper {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Dark glass variant for dark backgrounds */
+  .header-wrapper.header-glass-dark {
+    background: rgba(0, 0, 0, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Inverse text colors for white backgrounds */
+  .header-wrapper.header-glass-inverse .header__heading-link .h2,
+  .header-wrapper.header-glass-inverse .header__menu-item,
+  .header-wrapper.header-glass-inverse .header__icon,
+  .header-wrapper.header-glass-inverse .header__search .field__input,
+  .header-wrapper.header-glass-inverse .header__search .field__label,
+  .header-wrapper.header-glass-inverse .header__icon--account,
+  .header-wrapper.header-glass-inverse .header__icon--cart,
+  .header-wrapper.header-glass-inverse .cart-count-bubble,
+  .header-wrapper.header-glass-inverse .localization-form__select,
+  .header-wrapper.header-glass-inverse .localization-form__label,
+  .header-wrapper.header-glass-inverse svg,
+  .header-wrapper.header-glass-inverse .svg-wrapper {
+    color: rgba(0, 0, 0, 0.8) !important;
+    fill: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .header-wrapper.header-glass-inverse .header__menu-item:hover,
+  .header-wrapper.header-glass-inverse .header__heading-link:hover .h2,
+  .header-wrapper.header-glass-inverse .header__icon:hover,
+  .header-wrapper.header-glass-inverse .header__icon--account:hover,
+  .header-wrapper.header-glass-inverse .header__icon--cart:hover {
+    color: rgb(0, 0, 0) !important;
+    fill: rgb(0, 0, 0) !important;
+  }
+
+  /* Cart count bubble styling for inverse mode */
+  .header-wrapper.header-glass-inverse .cart-count-bubble {
+    background: rgba(0, 0, 0, 0.9) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  /* Add top padding to body to account for fixed header */
+  body {
+    padding-top: var(--header-height, 80px);
+  }
+
+  /* Ultra-reduced body padding on mobile for zero-padding header */
+  @media screen and (max-width: 749px) {
+    body {
+      padding-top: var(--header-height, 30px);
+    }
+  }
+
+  /* Ensure main content doesn't overlap with fixed header */
+  .content-for-layout {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Fallback for browsers that don't support backdrop-filter */
+  @supports not (backdrop-filter: blur(20px)) {
+    .header-wrapper {
+      background: rgba(255, 255, 255, 0.95) !important;
+    }
+    
+    .header-wrapper.header-glass-dark {
+      background: rgba(0, 0, 0, 0.95) !important;
+    }
+  }
+
+  /* Smooth transitions for color changes */
+  .header__heading-link .h2,
+  .header__menu-item,
+  .header__icon,
+  .header__search .field__input,
+  .header__search .field__label,
+  .header__icon--account,
+  .header__icon--cart,
+  .cart-count-bubble,
+  .localization-form__select,
+  .localization-form__label,
+  .header-wrapper svg,
+  .header-wrapper .svg-wrapper {
+    transition: color 0.3s ease, fill 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* Smooth transitions for glass effect changes */
+  .header-wrapper {
+    transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Enhanced glass effect on scroll */
+  .header-wrapper.header-glass-scrolled {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .header-wrapper.header-glass-dark.header-glass-scrolled {
+    background: rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Additional glass effect enhancements */
+  .header-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .header-wrapper.header-glass-dark::before {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  }
+
+  /* Improve contrast for search and form elements */
+  .header-wrapper.header-glass-inverse .header__search .field__input {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .header-wrapper.header-glass-inverse .header__search .field__input:focus {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9) !important;
+  }
+
+  .header-wrapper.header-glass-inverse .header__search .field__input::placeholder {
+    color: rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* Localization form styling for inverse mode */
+  .header-wrapper.header-glass-inverse .localization-form__select {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .header-wrapper.header-glass-inverse .localization-form__select:focus {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  /* Menu dropdown styling for inverse mode */
+  .header-wrapper.header-glass-inverse .list-menu__item--link {
+    color: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .header-wrapper.header-glass-inverse .list-menu__item--link:hover {
+    color: rgba(0, 0, 0, 1) !important;
+  }
+
+  /* Mobile responsiveness */
+  @media screen and (max-width: 749px) {
+    .header-wrapper {
+      backdrop-filter: blur(10px) saturate(120%);
+      -webkit-backdrop-filter: blur(10px) saturate(120%);
+      background: rgba(255, 255, 255, 0.08) !important;
+    }
+    
+    .header-wrapper.header-glass-dark {
+      background: rgba(0, 0, 0, 0.08) !important;
+    }
+    
+    .header-wrapper.header-glass-scrolled {
+      background: rgba(255, 255, 255, 0.12) !important;
+      backdrop-filter: blur(12px) saturate(130%);
+      -webkit-backdrop-filter: blur(12px) saturate(130%);
+    }
+    
+    .header-wrapper.header-glass-dark.header-glass-scrolled {
+      background: rgba(0, 0, 0, 0.12) !important;
     }
   }
 {%- endstyle -%}
@@ -320,6 +544,7 @@
 
     connectedCallback() {
       this.header = document.querySelector('.section-header');
+      this.headerWrapper = document.querySelector('.header-wrapper');
       this.headerIsAlwaysSticky =
         this.getAttribute('data-sticky-type') === 'always' ||
         this.getAttribute('data-sticky-type') === 'reduce-logo-size';
@@ -344,15 +569,119 @@
       window.addEventListener('scroll', this.onScrollHandler, false);
 
       this.createObserver();
+      this.initGlassEffect();
     }
 
     setHeaderHeight() {
-      document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
+      const headerHeight = this.header.offsetHeight;
+      document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+      
+      // Additional mobile optimization - ultra-compact header with zero padding
+      if (window.innerWidth <= 749) {
+        const minMobileHeight = Math.max(headerHeight, 25);
+        document.documentElement.style.setProperty('--header-height', `${minMobileHeight}px`);
+      }
+    }
+
+    initGlassEffect() {
+      this.updateGlassEffect();
+      window.addEventListener('scroll', this.updateGlassEffect.bind(this));
+      window.addEventListener('resize', this.updateGlassEffect.bind(this));
+    }
+
+    updateGlassEffect() {
+      if (!this.headerWrapper) return;
+
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const headerHeight = this.header.offsetHeight;
+      
+      // Add scrolled class for enhanced effect
+      if (scrollTop > 50) {
+        this.headerWrapper.classList.add('header-glass-scrolled');
+      } else {
+        this.headerWrapper.classList.remove('header-glass-scrolled');
+      }
+
+      // Detect background color behind header
+      this.detectBackgroundColor();
+    }
+
+    detectBackgroundColor() {
+      if (!this.headerWrapper) return;
+
+      // Sample multiple points below the header for better detection
+      const headerRect = this.header.getBoundingClientRect();
+      const samplePoints = [
+        { x: window.innerWidth / 2, y: headerRect.bottom + 10 },
+        { x: window.innerWidth / 4, y: headerRect.bottom + 15 },
+        { x: (window.innerWidth * 3) / 4, y: headerRect.bottom + 15 }
+      ];
+
+      let backgroundColor = null;
+      let elementBelow = null;
+
+      // Try to find a non-transparent background by sampling multiple points
+      for (const point of samplePoints) {
+        elementBelow = document.elementFromPoint(point.x, point.y);
+        if (!elementBelow) continue;
+
+        const computedStyle = window.getComputedStyle(elementBelow);
+        backgroundColor = computedStyle.backgroundColor;
+        
+        // Handle transparent backgrounds by checking parent elements
+        if (backgroundColor === 'rgba(0, 0, 0, 0)' || backgroundColor === 'transparent') {
+          let parent = elementBelow.parentElement;
+          let depth = 0;
+          while (parent && depth < 5 && (backgroundColor === 'rgba(0, 0, 0, 0)' || backgroundColor === 'transparent')) {
+            const parentStyle = window.getComputedStyle(parent);
+            backgroundColor = parentStyle.backgroundColor;
+            parent = parent.parentElement;
+            depth++;
+          }
+        }
+
+        // If we found a non-transparent background, use it
+        if (backgroundColor && backgroundColor !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'transparent') {
+          break;
+        }
+      }
+
+      if (!backgroundColor || backgroundColor === 'rgba(0, 0, 0, 0)' || backgroundColor === 'transparent') {
+        // Fallback: check body background
+        const bodyStyle = window.getComputedStyle(document.body);
+        backgroundColor = bodyStyle.backgroundColor;
+      }
+      
+      // Parse RGB values (handle both rgb() and rgba() formats)
+      const rgbMatch = backgroundColor.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*[\d.]+)?\)/);
+      if (!rgbMatch) {
+        // Fallback: assume light background for better UX
+        this.headerWrapper.classList.remove('header-glass-dark');
+        this.headerWrapper.classList.add('header-glass-inverse');
+        return;
+      }
+
+      const [, r, g, b] = rgbMatch.map(Number);
+      
+      // Calculate brightness using improved formula
+      const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+      
+      // More sensitive thresholds for better detection
+      const isLightBackground = brightness > 160;
+      const isWhiteBackground = brightness > 220 && r > 200 && g > 200 && b > 200;
+      const isVeryLightBackground = brightness > 180;
+      const isOffWhiteBackground = brightness > 200 && Math.abs(r - g) < 30 && Math.abs(g - b) < 30 && Math.abs(r - b) < 30;
+
+      // Update header classes with more comprehensive detection
+      this.headerWrapper.classList.toggle('header-glass-dark', !isLightBackground);
+      this.headerWrapper.classList.toggle('header-glass-inverse', isWhiteBackground || isVeryLightBackground || isOffWhiteBackground);
     }
 
     disconnectedCallback() {
       this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
       window.removeEventListener('scroll', this.onScrollHandler);
+      window.removeEventListener('scroll', this.updateGlassEffect.bind(this));
+      window.removeEventListener('resize', this.updateGlassEffect.bind(this));
     }
 
     createObserver() {
