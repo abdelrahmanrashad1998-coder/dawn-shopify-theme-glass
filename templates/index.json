@@ -86,9 +86,15 @@
             "heading_size": "h0"
           }
         },
+        "text_yWJMMy": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Every piece tells a story of artistry, elegance, and timeless beauty. Designed with precision and passion, our collections embody the perfect balance between modern style and everlasting charm.</h4>",
+            "text_style": "body"
+          }
+        },
         "button_tyHE3R": {
           "type": "button",
-          "disabled": true,
           "settings": {
             "button_label": "Explore",
             "button_link": "shopify://collections/necklaces",
@@ -98,6 +104,7 @@
       },
       "block_order": [
         "heading_mcrtND",
+        "text_yWJMMy",
         "button_tyHE3R"
       ],
       "name": "t:sections.image-with-text.presets.name",
@@ -111,7 +118,7 @@
         "text_banner_size": "medium",
         "text_banner_padding_top": 20,
         "text_banner_padding_horizontal": 0,
-        "text_banner_padding_bottom": 8,
+        "text_banner_padding_bottom": 16,
         "desktop_content_position": "middle",
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "center",
