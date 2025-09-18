@@ -12,6 +12,12 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .image-with-text__content--{{ section.id }} {
+    --text-banner-padding-top: {{ section.settings.text_banner_padding_top }}px;
+    --text-banner-padding-horizontal: {{ section.settings.text_banner_padding_horizontal }}px;
+    --text-banner-padding-bottom: {{ section.settings.text_banner_padding_bottom }}px;
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -62,7 +68,7 @@
         <div class="image-with-text__text-item grid__item">
           <div
             id="ImageWithText--{{ section.id }}"
-            class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}"
+            class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} image-with-text__content--banner-{{ section.settings.text_banner_size }} image-with-text__content--{{ section.id }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}"
           >
             {%- for block in section.blocks -%}
               {% case block.type %}
@@ -219,6 +225,60 @@
       ],
       "default": "no-overlap",
       "label": "t:sections.image-with-text.settings.content_layout.label"
+    },
+    {
+      "type": "select",
+      "id": "text_banner_size",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        },
+        {
+          "value": "extra-large",
+          "label": "Extra Large"
+        }
+      ],
+      "default": "medium",
+      "label": "Text banner size"
+    },
+    {
+      "type": "range",
+      "id": "text_banner_padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Text banner padding top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "text_banner_padding_horizontal",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Text banner padding horizontal",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "text_banner_padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Text banner padding bottom",
+      "default": 80
     },       
     {
       "type": "select",
