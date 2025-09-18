@@ -25,6 +25,167 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  /* Glass Footer Styles */
+  .footer {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+
+
+  /* Dark glass variant for dark backgrounds */
+  .footer.footer-glass-dark {
+    background: rgba(0, 0, 0, 0.1) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Inverse text colors for white backgrounds */
+  .footer.footer-glass-inverse .footer-block__heading,
+  .footer.footer-glass-inverse .footer-block__details-content,
+  .footer.footer-glass-inverse .footer__copyright,
+  .footer.footer-glass-inverse .copyright__content,
+  .footer.footer-glass-inverse .newsletter-form__button,
+  .footer.footer-glass-inverse .field__input,
+  .footer.footer-glass-inverse .field__label,
+  .footer.footer-glass-inverse .localization-form__select,
+  .footer.footer-glass-inverse .localization-form__label,
+  .footer.footer-glass-inverse .list-menu__item--link,
+  .footer.footer-glass-inverse svg,
+  .footer.footer-glass-inverse .svg-wrapper {
+    color: rgba(0, 0, 0, 0.8) !important;
+    fill: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .footer.footer-glass-inverse .list-menu__item--link:hover,
+  .footer.footer-glass-inverse .newsletter-form__button:hover,
+  .footer.footer-glass-inverse .field__input:focus {
+    color: rgb(0, 0, 0) !important;
+    fill: rgb(0, 0, 0) !important;
+  }
+
+
+  /* Fallback for browsers that don't support backdrop-filter */
+  @supports not (backdrop-filter: blur(20px)) {
+    .footer {
+      background: rgba(255, 255, 255, 0.95) !important;
+    }
+    
+    .footer.footer-glass-dark {
+      background: rgba(0, 0, 0, 0.95) !important;
+    }
+  }
+
+  /* Smooth transitions for color changes */
+  .footer-block__heading,
+  .footer-block__details-content,
+  .footer__copyright,
+  .copyright__content,
+  .newsletter-form__button,
+  .field__input,
+  .field__label,
+  .localization-form__select,
+  .localization-form__label,
+  .list-menu__item--link,
+  .footer svg,
+  .footer .svg-wrapper {
+    transition: color 0.3s ease, fill 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* Smooth transitions for glass effect changes */
+  .footer {
+    transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Enhanced glass effect on scroll */
+  .footer.footer-glass-scrolled {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .footer.footer-glass-dark.footer-glass-scrolled {
+    background: rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Additional glass effect enhancements */
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .footer.footer-glass-dark::before {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  }
+
+  /* Improve contrast for form elements */
+  .footer.footer-glass-inverse .field__input {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .footer.footer-glass-inverse .field__input:focus {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9) !important;
+  }
+
+  .footer.footer-glass-inverse .field__input::placeholder {
+    color: rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* Localization form styling for inverse mode */
+  .footer.footer-glass-inverse .localization-form__select {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .footer.footer-glass-inverse .localization-form__select:focus {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  /* Mobile responsiveness */
+  @media screen and (max-width: 749px) {
+    .footer {
+      backdrop-filter: blur(10px) saturate(120%);
+      -webkit-backdrop-filter: blur(10px) saturate(120%);
+      background: rgba(255, 255, 255, 0.08) !important;
+    }
+    
+    .footer.footer-glass-dark {
+      background: rgba(0, 0, 0, 0.08) !important;
+    }
+    
+    .footer.footer-glass-scrolled {
+      background: rgba(255, 255, 255, 0.12) !important;
+      backdrop-filter: blur(12px) saturate(130%);
+      -webkit-backdrop-filter: blur(12px) saturate(130%);
+    }
+    
+    .footer.footer-glass-dark.footer-glass-scrolled {
+      background: rgba(0, 0, 0, 0.12) !important;
+    }
+  }
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
@@ -320,6 +481,131 @@
     </div>
   </div>
 </footer>
+
+{% javascript %}
+  class GlassFooter {
+    constructor() {
+      this.footer = document.querySelector('.footer');
+      this.init();
+    }
+
+    init() {
+      if (!this.footer) return;
+      
+      this.initGlassEffect();
+    }
+
+
+    initGlassEffect() {
+      this.updateGlassEffect();
+      window.addEventListener('scroll', this.updateGlassEffect.bind(this));
+      window.addEventListener('resize', this.updateGlassEffect.bind(this));
+    }
+
+    updateGlassEffect() {
+      if (!this.footer) return;
+
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      
+      // Add scrolled class for enhanced effect when near bottom
+      if (scrollTop + windowHeight > documentHeight - 100) {
+        this.footer.classList.add('footer-glass-scrolled');
+      } else {
+        this.footer.classList.remove('footer-glass-scrolled');
+      }
+
+      // Detect background color behind footer
+      this.detectBackgroundColor();
+    }
+
+    detectBackgroundColor() {
+      if (!this.footer) return;
+
+      // Sample multiple points above the footer for better detection
+      const footerRect = this.footer.getBoundingClientRect();
+      const samplePoints = [
+        { x: window.innerWidth / 2, y: footerRect.top - 10 },
+        { x: window.innerWidth / 4, y: footerRect.top - 15 },
+        { x: (window.innerWidth * 3) / 4, y: footerRect.top - 15 }
+      ];
+
+      let backgroundColor = null;
+      let elementAbove = null;
+
+      // Try to find a non-transparent background by sampling multiple points
+      for (const point of samplePoints) {
+        elementAbove = document.elementFromPoint(point.x, point.y);
+        if (!elementAbove) continue;
+
+        const computedStyle = window.getComputedStyle(elementAbove);
+        backgroundColor = computedStyle.backgroundColor;
+        
+        // Handle transparent backgrounds by checking parent elements
+        if (backgroundColor === 'rgba(0, 0, 0, 0)' || backgroundColor === 'transparent') {
+          let parent = elementAbove.parentElement;
+          let depth = 0;
+          while (parent && depth < 5 && (backgroundColor === 'rgba(0, 0, 0, 0)' || backgroundColor === 'transparent')) {
+            const parentStyle = window.getComputedStyle(parent);
+            backgroundColor = parentStyle.backgroundColor;
+            parent = parent.parentElement;
+            depth++;
+          }
+        }
+
+        // If we found a non-transparent background, use it
+        if (backgroundColor && backgroundColor !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'transparent') {
+          break;
+        }
+      }
+
+      if (!backgroundColor || backgroundColor === 'rgba(0, 0, 0, 0)' || backgroundColor === 'transparent') {
+        // Fallback: check body background
+        const bodyStyle = window.getComputedStyle(document.body);
+        backgroundColor = bodyStyle.backgroundColor;
+      }
+      
+      // Parse RGB values (handle both rgb() and rgba() formats)
+      const rgbMatch = backgroundColor.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*[\d.]+)?\)/);
+      if (!rgbMatch) {
+        // Fallback: assume light background for better UX
+        this.footer.classList.remove('footer-glass-dark');
+        this.footer.classList.add('footer-glass-inverse');
+        return;
+      }
+
+      const [, r, g, b] = rgbMatch.map(Number);
+      
+      // Calculate brightness using improved formula
+      const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+      
+      // More sensitive thresholds for better detection
+      const isLightBackground = brightness > 160;
+      const isWhiteBackground = brightness > 220 && r > 200 && g > 200 && b > 200;
+      const isVeryLightBackground = brightness > 180;
+      const isOffWhiteBackground = brightness > 200 && Math.abs(r - g) < 30 && Math.abs(g - b) < 30 && Math.abs(r - b) < 30;
+
+      // Update footer classes with more comprehensive detection
+      this.footer.classList.toggle('footer-glass-dark', !isLightBackground);
+      this.footer.classList.toggle('footer-glass-inverse', isWhiteBackground || isVeryLightBackground || isOffWhiteBackground);
+    }
+  }
+
+  // Initialize glass footer when DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    new GlassFooter();
+  });
+
+  // Also initialize if DOM is already loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      new GlassFooter();
+    });
+  } else {
+    new GlassFooter();
+  }
+{% endjavascript %}
 
 {% schema %}
 {
