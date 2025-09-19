@@ -12,7 +12,9 @@ class PictureCardSlideshowComponent {
     this.animationId = null;
     this.isPaused = false;
     this.startTime = null;
-    this.animationDuration = 3000; // 3 seconds per slide
+    this.animationDuration = 4000; // 4 seconds per slide for luxury feel
+    this.currentPosition = 0;
+    this.originalSlidesCount = 0;
     
     this.init();
   }
@@ -20,52 +22,52 @@ class PictureCardSlideshowComponent {
   init() {
     if (this.slides.length === 0) return;
     
-    this.setupContinuousFlow();
-    this.startContinuousFlow();
+    this.setupSeamlessFlow();
+    this.startSeamlessFlow();
     
     // Handle window resize
     window.addEventListener('resize', this.debounce(() => {
-      this.setupContinuousFlow();
+      this.setupSeamlessFlow();
     }, 250));
   }
 
-  setupContinuousFlow() {
+  setupSeamlessFlow() {
     if (this.slides.length <= this.getCurrentSlidesToShow()) return;
     
     const slidesToShow = this.getCurrentSlidesToShow();
+    this.originalSlidesCount = this.slides.length;
     
     // Clear container
     this.slidesContainer.innerHTML = '';
     
-    // Add original slides
-    this.slides.forEach(slide => {
-      this.slidesContainer.appendChild(slide.cloneNode(true));
-    });
+    // Create enough clones for seamless infinite scroll
+    // We need at least 3 sets to ensure smooth looping
+    const totalClones = this.originalSlidesCount * 3;
     
-    // Add clones for seamless loop
-    for (let i = 0; i < slidesToShow * 2; i++) {
-      const originalIndex = i % this.slides.length;
+    for (let i = 0; i < totalClones; i++) {
+      const originalIndex = i % this.originalSlidesCount;
       this.slidesContainer.appendChild(this.slides[originalIndex].cloneNode(true));
     }
     
     // Update slides reference
     this.slides = this.slidesContainer.querySelectorAll('.picture-card-slideshow__slide');
     
-    // Set initial position
-    this.slidesContainer.style.transform = 'translateX(0%)';
+    // Set initial position to start from the middle set
+    this.currentPosition = -this.originalSlidesCount * (100 / slidesToShow);
+    this.slidesContainer.style.transform = `translateX(${this.currentPosition}%)`;
     this.slidesContainer.style.transition = 'none';
   }
 
-  startContinuousFlow() {
+  startSeamlessFlow() {
     if (!this.isAutoPlaying || this.slides.length <= this.getCurrentSlidesToShow()) return;
     
-    this.pauseContinuousFlow();
+    this.pauseSeamlessFlow();
     this.isPaused = false;
     this.startTime = performance.now();
-    this.animateContinuousFlow();
+    this.animateSeamlessFlow();
   }
 
-  pauseContinuousFlow() {
+  pauseSeamlessFlow() {
     this.isPaused = true;
     if (this.animationId) {
       cancelAnimationFrame(this.animationId);
@@ -73,31 +75,39 @@ class PictureCardSlideshowComponent {
     }
   }
 
-  animateContinuousFlow() {
+  animateSeamlessFlow() {
     if (this.isPaused) return;
     
     const currentTime = performance.now();
     const elapsed = currentTime - this.startTime;
-    const progress = (elapsed % this.animationDuration) / this.animationDuration;
     
     const slidesToShow = this.getCurrentSlidesToShow();
     const slideWidth = 100 / slidesToShow;
+    const totalSlides = this.slides.length;
     
-    // Calculate position for smooth continuous movement
-    const translateX = -(progress * slideWidth);
+    // Calculate continuous position
+    const progress = (elapsed % this.animationDuration) / this.animationDuration;
+    const newPosition = this.currentPosition - (progress * slideWidth);
     
-    this.slidesContainer.style.transform = `translateX(${translateX}%)`;
+    this.slidesContainer.style.transform = `translateX(${newPosition}%)`;
     
-    // Reset position when we've moved past one slide
+    // Seamlessly reset position when we've moved past one complete set
     if (progress >= 1) {
-      this.slidesContainer.style.transition = 'none';
-      this.slidesContainer.style.transform = 'translateX(0%)';
-      setTimeout(() => {
-        this.slidesContainer.style.transition = '';
-      }, 50);
+      this.currentPosition = newPosition;
+      this.startTime = currentTime;
+      
+      // Reset to beginning of middle set when we reach the end
+      if (this.currentPosition <= -this.originalSlidesCount * 2 * (100 / slidesToShow)) {
+        this.currentPosition = -this.originalSlidesCount * (100 / slidesToShow);
+        this.slidesContainer.style.transition = 'none';
+        this.slidesContainer.style.transform = `translateX(${this.currentPosition}%)`;
+        setTimeout(() => {
+          this.slidesContainer.style.transition = '';
+        }, 50);
+      }
     }
     
-    this.animationId = requestAnimationFrame(() => this.animateContinuousFlow());
+    this.animationId = requestAnimationFrame(() => this.animateSeamlessFlow());
   }
 
   getCurrentSlidesToShow() {
@@ -119,7 +129,7 @@ class PictureCardSlideshowComponent {
 
   // Cleanup when component is removed
   destroy() {
-    this.pauseContinuousFlow();
+    this.pauseSeamlessFlow();
     window.removeEventListener('resize', this.debounce);
   }
 }
