@@ -24,7 +24,7 @@ picture-card-slideshow-component {
 }
 
 .picture-card-slideshow__slides.infinite-scroll {
-  animation: infiniteScroll var(--animation-duration, 8000ms) linear infinite;
+  animation: infiniteScroll var(--animation-duration, 4000ms) var(--animation-easing, linear) infinite;
 }
 
 @keyframes infiniteScroll {

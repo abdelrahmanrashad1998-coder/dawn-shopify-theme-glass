@@ -22,6 +22,7 @@
       data-speed="{{ section.settings.change_slides_speed }}"
       data-slides-to-show="{{ section.settings.slides_to_show }}"
       data-slides-to-show-mobile="{{ section.settings.slides_to_show_mobile }}"
+      data-animation-easing="{{ section.settings.animation_easing }}"
     >
       <div
         class="picture-card-slideshow__track"
@@ -120,12 +121,73 @@
     {
       "type": "range",
       "id": "change_slides_speed",
-      "min": 3,
-      "max": 9,
-      "step": 2,
+      "min": 1,
+      "max": 20,
+      "step": 1,
       "unit": "s",
-      "label": "Change slides every",
-      "default": 5
+      "label": "Animation speed (seconds per slide)",
+      "default": 4,
+      "info": "1-2s = Fast, 3-5s = Medium, 6-10s = Slow, 10s+ = Very Slow"
+    },
+    {
+      "type": "select",
+      "id": "speed_preset",
+      "options": [
+        {
+          "value": "custom",
+          "label": "Custom (use slider above)"
+        },
+        {
+          "value": "1",
+          "label": "Very Fast (1s)"
+        },
+        {
+          "value": "2",
+          "label": "Fast (2s)"
+        },
+        {
+          "value": "3",
+          "label": "Medium-Fast (3s)"
+        },
+        {
+          "value": "4",
+          "label": "Medium (4s)"
+        },
+        {
+          "value": "6",
+          "label": "Slow (6s)"
+        },
+        {
+          "value": "8",
+          "label": "Very Slow (8s)"
+        },
+        {
+          "value": "12",
+          "label": "Ultra Slow (12s)"
+        }
+      ],
+      "default": "custom",
+      "label": "Speed presets"
+    },
+    {
+      "type": "select",
+      "id": "animation_easing",
+      "options": [
+        {
+          "value": "linear",
+          "label": "Linear (constant speed)"
+        },
+        {
+          "value": "ease-in-out",
+          "label": "Smooth (ease in/out)"
+        },
+        {
+          "value": "ease-out",
+          "label": "Gentle (ease out)"
+        }
+      ],
+      "default": "linear",
+      "label": "Animation style"
     },
     {
       "type": "color_scheme",

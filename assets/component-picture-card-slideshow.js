@@ -8,6 +8,7 @@ class PictureCardSlideshowComponent {
     this.slideSpeed = parseInt(this.element.dataset.speed) * 1000;
     this.slidesToShow = parseInt(this.element.dataset.slidesToShow);
     this.slidesToShowMobile = parseInt(this.element.dataset.slidesToShowMobile);
+    this.animationEasing = this.element.dataset.animationEasing || 'linear';
     
     this.init();
   }
@@ -51,6 +52,7 @@ class PictureCardSlideshowComponent {
     this.slidesContainer.style.setProperty('--slide-width', `${slideWidth}%`);
     this.slidesContainer.style.setProperty('--move-distance', `${moveDistance}%`);
     this.slidesContainer.style.setProperty('--animation-duration', `${this.slideSpeed}ms`);
+    this.slidesContainer.style.setProperty('--animation-easing', this.animationEasing);
     
     // Add the infinite scroll class
     this.slidesContainer.classList.add('infinite-scroll');
