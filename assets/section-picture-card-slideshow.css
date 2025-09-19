@@ -19,9 +19,21 @@ picture-card-slideshow-component {
 
 .picture-card-slideshow__slides {
   display: flex;
-  transition: none; /* Remove transition for continuous flow */
   will-change: transform;
   transform-style: preserve-3d;
+}
+
+.picture-card-slideshow__slides.infinite-scroll {
+  animation: infiniteScroll var(--animation-duration, 8000ms) linear infinite;
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--slide-width, 33.333%)));
+  }
 }
 
 .picture-card-slideshow__slide {
@@ -127,8 +139,8 @@ picture-card-slideshow-component {
 
 /* Animation for smooth transitions */
 @media (prefers-reduced-motion: no-preference) {
-  .picture-card-slideshow__slides {
-    transition: none; /* Continuous flow uses requestAnimationFrame */
+  .picture-card-slideshow__slides.infinite-scroll {
+    animation-play-state: running;
   }
   
   .picture-card {
@@ -144,8 +156,8 @@ picture-card-slideshow-component {
 
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
-  .picture-card-slideshow__slides {
-    transition: none;
+  .picture-card-slideshow__slides.infinite-scroll {
+    animation-play-state: paused;
   }
   
   .picture-card {

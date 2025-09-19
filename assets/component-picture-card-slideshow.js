@@ -9,105 +9,51 @@ class PictureCardSlideshowComponent {
     this.slidesToShow = parseInt(this.element.dataset.slidesToShow);
     this.slidesToShowMobile = parseInt(this.element.dataset.slidesToShowMobile);
     
-    this.animationId = null;
-    this.isPaused = false;
-    this.startTime = null;
-    this.animationDuration = 4000; // 4 seconds per slide for luxury feel
-    this.currentPosition = 0;
-    this.originalSlidesCount = 0;
-    
     this.init();
   }
 
   init() {
     if (this.slides.length === 0) return;
     
-    this.setupSeamlessFlow();
-    this.startSeamlessFlow();
+    this.setupInfiniteScroll();
     
     // Handle window resize
     window.addEventListener('resize', this.debounce(() => {
-      this.setupSeamlessFlow();
+      this.setupInfiniteScroll();
     }, 250));
   }
 
-  setupSeamlessFlow() {
+  setupInfiniteScroll() {
     if (this.slides.length <= this.getCurrentSlidesToShow()) return;
     
     const slidesToShow = this.getCurrentSlidesToShow();
-    this.originalSlidesCount = this.slides.length;
     
     // Clear container
     this.slidesContainer.innerHTML = '';
     
     // Create enough clones for seamless infinite scroll
-    // We need at least 3 sets to ensure smooth looping
-    const totalClones = this.originalSlidesCount * 3;
+    // We need 2 complete sets for smooth looping
+    const totalSlides = this.slides.length * 2;
     
-    for (let i = 0; i < totalClones; i++) {
-      const originalIndex = i % this.originalSlidesCount;
-      this.slidesContainer.appendChild(this.slides[originalIndex].cloneNode(true));
+    for (let i = 0; i < totalSlides; i++) {
+      const originalIndex = i % this.slides.length;
+      const slide = this.slides[originalIndex].cloneNode(true);
+      this.slidesContainer.appendChild(slide);
     }
     
     // Update slides reference
     this.slides = this.slidesContainer.querySelectorAll('.picture-card-slideshow__slide');
     
-    // Set initial position to start from the middle set
-    this.currentPosition = -this.originalSlidesCount * (100 / slidesToShow);
-    this.slidesContainer.style.transform = `translateX(${this.currentPosition}%)`;
-    this.slidesContainer.style.transition = 'none';
-  }
-
-  startSeamlessFlow() {
-    if (!this.isAutoPlaying || this.slides.length <= this.getCurrentSlidesToShow()) return;
-    
-    this.pauseSeamlessFlow();
-    this.isPaused = false;
-    this.startTime = performance.now();
-    this.animateSeamlessFlow();
-  }
-
-  pauseSeamlessFlow() {
-    this.isPaused = true;
-    if (this.animationId) {
-      cancelAnimationFrame(this.animationId);
-      this.animationId = null;
-    }
-  }
-
-  animateSeamlessFlow() {
-    if (this.isPaused) return;
-    
-    const currentTime = performance.now();
-    const elapsed = currentTime - this.startTime;
-    
-    const slidesToShow = this.getCurrentSlidesToShow();
+    // Set CSS custom properties for animation
     const slideWidth = 100 / slidesToShow;
-    const totalSlides = this.slides.length;
+    const totalWidth = slideWidth * this.slides.length;
     
-    // Calculate continuous position
-    const progress = (elapsed % this.animationDuration) / this.animationDuration;
-    const newPosition = this.currentPosition - (progress * slideWidth);
+    this.slidesContainer.style.setProperty('--slide-width', `${slideWidth}%`);
+    this.slidesContainer.style.setProperty('--total-width', `${totalWidth}%`);
+    this.slidesContainer.style.setProperty('--animation-duration', `${this.slideSpeed}ms`);
     
-    this.slidesContainer.style.transform = `translateX(${newPosition}%)`;
-    
-    // Seamlessly reset position when we've moved past one complete set
-    if (progress >= 1) {
-      this.currentPosition = newPosition;
-      this.startTime = currentTime;
-      
-      // Reset to beginning of middle set when we reach the end
-      if (this.currentPosition <= -this.originalSlidesCount * 2 * (100 / slidesToShow)) {
-        this.currentPosition = -this.originalSlidesCount * (100 / slidesToShow);
-        this.slidesContainer.style.transition = 'none';
-        this.slidesContainer.style.transform = `translateX(${this.currentPosition}%)`;
-        setTimeout(() => {
-          this.slidesContainer.style.transition = '';
-        }, 50);
-      }
-    }
-    
-    this.animationId = requestAnimationFrame(() => this.animateSeamlessFlow());
+    // Add the infinite scroll class
+    this.slidesContainer.classList.add('infinite-scroll');
   }
 
   getCurrentSlidesToShow() {
@@ -125,12 +71,6 @@ class PictureCardSlideshowComponent {
       clearTimeout(timeout);
       timeout = setTimeout(later, wait);
     };
-  }
-
-  // Cleanup when component is removed
-  destroy() {
-    this.pauseSeamlessFlow();
-    window.removeEventListener('resize', this.debounce);
   }
 }
 
