@@ -32,7 +32,7 @@ picture-card-slideshow-component {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(calc(-1 * var(--slide-width, 33.333%)));
+    transform: translateX(calc(-1 * var(--move-distance, 100%)));
   }
 }
 

@@ -46,10 +46,10 @@ class PictureCardSlideshowComponent {
     
     // Set CSS custom properties for animation
     const slideWidth = 100 / slidesToShow;
-    const totalWidth = slideWidth * this.slides.length;
+    const moveDistance = slideWidth * this.slides.length / 2; // Move exactly one set
     
     this.slidesContainer.style.setProperty('--slide-width', `${slideWidth}%`);
-    this.slidesContainer.style.setProperty('--total-width', `${totalWidth}%`);
+    this.slidesContainer.style.setProperty('--move-distance', `${moveDistance}%`);
     this.slidesContainer.style.setProperty('--animation-duration', `${this.slideSpeed}ms`);
     
     // Add the infinite scroll class
