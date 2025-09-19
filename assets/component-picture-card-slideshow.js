@@ -62,33 +62,52 @@ class PictureCardSlideshowComponent {
   setupHoverControls() {
     if (!this.isAutoPlaying) return;
     
-    // Desktop hover events
-    this.element.addEventListener('mouseenter', () => {
-      this.pauseAnimation();
-    });
-    
-    this.element.addEventListener('mouseleave', () => {
-      this.resumeAnimation();
-    });
-    
-    // Mobile touch events
-    this.element.addEventListener('touchstart', (e) => {
-      this.pauseAnimation();
-      // Prevent default to avoid scrolling issues
-      e.preventDefault();
-    }, { passive: false });
-    
-    this.element.addEventListener('touchend', () => {
-      // Small delay to prevent accidental resume
-      setTimeout(() => {
+    // Desktop hover events (only on devices that support hover)
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      this.element.addEventListener('mouseenter', () => {
+        this.pauseAnimation();
+      });
+      
+      this.element.addEventListener('mouseleave', () => {
         this.resumeAnimation();
-      }, 100);
-    });
+      });
+    }
     
-    // Handle touch cancel (when touch is interrupted)
-    this.element.addEventListener('touchcancel', () => {
-      this.resumeAnimation();
-    });
+    // Mobile touch events (only on touch devices)
+    if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
+      let touchStartTime = 0;
+      let isTouching = false;
+      
+      this.element.addEventListener('touchstart', (e) => {
+        touchStartTime = Date.now();
+        isTouching = true;
+        this.pauseAnimation();
+        // Don't prevent default to allow normal touch behavior
+      }, { passive: true });
+      
+      this.element.addEventListener('touchend', () => {
+        if (isTouching) {
+          const touchDuration = Date.now() - touchStartTime;
+          isTouching = false;
+          
+          // Only resume if it was a quick tap (not a long press)
+          if (touchDuration < 500) {
+            setTimeout(() => {
+              this.resumeAnimation();
+            }, 200);
+          } else {
+            // For long press, resume immediately
+            this.resumeAnimation();
+          }
+        }
+      }, { passive: true });
+      
+      // Handle touch cancel (when touch is interrupted)
+      this.element.addEventListener('touchcancel', () => {
+        isTouching = false;
+        this.resumeAnimation();
+      }, { passive: true });
+    }
   }
 
   pauseAnimation() {
