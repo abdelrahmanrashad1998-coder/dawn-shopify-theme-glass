@@ -25,57 +25,6 @@
         "padding_bottom": 0
       }
     },
-    "slideshow_LeJEXR": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_3Qw3QK": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/By_Dana_El_Gendy_1.png",
-            "image_overlay_opacity": 30,
-            "heading": "UNVEIL ELEGANCE",
-            "heading_size": "h0",
-            "subheading": "Explore our luxury jewelry where every piece tells the story you wear. Handcrafted Statements of Power & Elegance each piece from Danutti is a bold expression of identity - sculpted by hand, infused with soul, and designed to turn heads.",
-            "button_label": "Shop now",
-            "link": "shopify://collections/all",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "bottom-left",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": "background-1"
-          }
-        }
-      },
-      "block_order": [
-        "slide_3Qw3QK"
-      ],
-      "disabled": true,
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "large",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
-    "slideshow_fHzDYf": {
-      "type": "slideshow",
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
     "image_with_text_UWLAfV": {
       "type": "image-with-text",
       "blocks": {
@@ -317,8 +266,6 @@
   },
   "order": [
     "video_48Hm4j",
-    "slideshow_LeJEXR",
-    "slideshow_fHzDYf",
     "image_with_text_UWLAfV",
     "featured_collection_MDAxGp",
     "featured_collection",
