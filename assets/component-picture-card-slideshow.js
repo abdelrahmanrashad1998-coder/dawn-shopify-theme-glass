@@ -16,6 +16,10 @@ class PictureCardSlideshowComponent {
     
     this.autoPlayInterval = null;
     this.isTransitioning = false;
+    this.isPaused = false;
+    this.animationId = null;
+    this.startTime = null;
+    this.animationDuration = 3000; // 3 seconds per slide for smooth flow
     
     this.init();
   }
@@ -25,12 +29,14 @@ class PictureCardSlideshowComponent {
     
     this.setupEventListeners();
     this.updateSlidesToShow();
-    this.startAutoplay();
+    this.setupContinuousFlow();
+    this.startContinuousFlow();
     this.updateCounter();
     
     // Handle window resize
     window.addEventListener('resize', this.debounce(() => {
       this.updateSlidesToShow();
+      this.setupContinuousFlow();
     }, 250));
   }
 
@@ -47,24 +53,18 @@ class PictureCardSlideshowComponent {
       this.autoplayButton.addEventListener('click', () => this.toggleAutoplay());
     }
     
-    // Pause autoplay on hover
+    // Pause continuous flow on hover
     this.element.addEventListener('mouseenter', () => {
-      if (this.isAutoPlaying) {
-        this.pauseAutoplay();
-      }
+      this.pauseContinuousFlow();
     });
     
     this.element.addEventListener('mouseleave', () => {
-      if (this.isAutoPlaying) {
-        this.startAutoplay();
-      }
+      this.resumeContinuousFlow();
     });
     
-    // Pause autoplay when user interacts with slides
+    // Pause continuous flow when user interacts with slides
     this.slidesContainer.addEventListener('click', () => {
-      if (this.isAutoPlaying) {
-        this.pauseAutoplay();
-      }
+      this.pauseContinuousFlow();
     });
     
     // Keyboard navigation
@@ -156,24 +156,53 @@ class PictureCardSlideshowComponent {
     }
   }
 
-  startAutoplay() {
+  setupContinuousFlow() {
+    if (this.slides.length <= this.getCurrentSlidesToShow()) return;
+    
+    // Duplicate slides for seamless loop
+    const slidesToShow = this.getCurrentSlidesToShow();
+    const totalSlides = this.slides.length;
+    
+    // Create clones for infinite loop
+    this.slidesContainer.innerHTML = '';
+    
+    // Add original slides
+    this.slides.forEach(slide => {
+      this.slidesContainer.appendChild(slide.cloneNode(true));
+    });
+    
+    // Add clones at the end for seamless transition
+    for (let i = 0; i < slidesToShow; i++) {
+      this.slidesContainer.appendChild(this.slides[i].cloneNode(true));
+    }
+    
+    // Update slides reference
+    this.slides = this.slidesContainer.querySelectorAll('.picture-card-slideshow__slide');
+    
+    // Set initial position
+    this.slidesContainer.style.transform = 'translateX(0%)';
+    this.slidesContainer.style.transition = 'none';
+  }
+
+  startContinuousFlow() {
     if (!this.isAutoPlaying || this.slides.length <= this.getCurrentSlidesToShow()) return;
     
-    this.pauseAutoplay(); // Clear any existing interval
+    this.pauseContinuousFlow(); // Clear any existing animation
     
-    this.autoPlayInterval = setInterval(() => {
-      this.nextSlide();
-    }, this.slideSpeed);
+    this.isPaused = false;
+    this.startTime = performance.now();
+    this.animateContinuousFlow();
     
     if (this.autoplayButton) {
       this.autoplayButton.classList.remove('paused');
     }
   }
 
-  pauseAutoplay() {
-    if (this.autoPlayInterval) {
-      clearInterval(this.autoPlayInterval);
-      this.autoPlayInterval = null;
+  pauseContinuousFlow() {
+    this.isPaused = true;
+    if (this.animationId) {
+      cancelAnimationFrame(this.animationId);
+      this.animationId = null;
     }
     
     if (this.autoplayButton) {
@@ -181,13 +210,54 @@ class PictureCardSlideshowComponent {
     }
   }
 
+  resumeContinuousFlow() {
+    if (!this.isAutoPlaying) return;
+    
+    this.isPaused = false;
+    this.startTime = performance.now();
+    this.animateContinuousFlow();
+    
+    if (this.autoplayButton) {
+      this.autoplayButton.classList.remove('paused');
+    }
+  }
+
+  animateContinuousFlow() {
+    if (this.isPaused) return;
+    
+    const currentTime = performance.now();
+    const elapsed = currentTime - this.startTime;
+    const progress = (elapsed % this.animationDuration) / this.animationDuration;
+    
+    const slidesToShow = this.getCurrentSlidesToShow();
+    const slideWidth = 100 / slidesToShow;
+    const totalSlides = this.slides.length;
+    const originalSlidesCount = totalSlides - slidesToShow;
+    
+    // Calculate position for smooth continuous movement
+    const translateX = -(progress * slideWidth);
+    
+    this.slidesContainer.style.transform = `translateX(${translateX}%)`;
+    
+    // Reset position when we've moved past the original slides
+    if (progress >= 1) {
+      this.slidesContainer.style.transition = 'none';
+      this.slidesContainer.style.transform = 'translateX(0%)';
+      setTimeout(() => {
+        this.slidesContainer.style.transition = '';
+      }, 50);
+    }
+    
+    this.animationId = requestAnimationFrame(() => this.animateContinuousFlow());
+  }
+
   toggleAutoplay() {
     this.isAutoPlaying = !this.isAutoPlaying;
     
     if (this.isAutoPlaying) {
-      this.startAutoplay();
+      this.startContinuousFlow();
     } else {
-      this.pauseAutoplay();
+      this.pauseContinuousFlow();
     }
   }
 
@@ -206,7 +276,7 @@ class PictureCardSlideshowComponent {
 
   // Cleanup when component is removed
   destroy() {
-    this.pauseAutoplay();
+    this.pauseContinuousFlow();
     window.removeEventListener('resize', this.debounce);
   }
 }

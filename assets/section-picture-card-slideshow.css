@@ -19,7 +19,7 @@ picture-card-slideshow-component {
 
 .picture-card-slideshow__slides {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: none; /* Remove transition for continuous flow */
   will-change: transform;
 }
 
@@ -289,7 +289,7 @@ picture-card-slideshow-component {
 /* Animation for smooth transitions */
 @media (prefers-reduced-motion: no-preference) {
   .picture-card-slideshow__slides {
-    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: none; /* Continuous flow uses requestAnimationFrame */
   }
   
   .picture-card {
