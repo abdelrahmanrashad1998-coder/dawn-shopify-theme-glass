@@ -239,7 +239,7 @@
       "name": "earrings collection",
       "settings": {
         "collection": "earrings",
-        "products_to_show": 10,
+        "products_to_show": 6,
         "title": "",
         "heading_size": "h1",
         "description": "<p>Discover earrings designed to bring elegance, sparkle, and style to every moment.</p>",
