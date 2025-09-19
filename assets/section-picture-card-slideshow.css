@@ -10,6 +10,11 @@ picture-card-slideshow-component {
 .picture-card-slideshow__container {
   position: relative;
   overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.picture-card-slideshow__container:hover {
+  opacity: 0.98;
 }
 
 .picture-card-slideshow__track {
@@ -25,6 +30,18 @@ picture-card-slideshow-component {
 
 .picture-card-slideshow__slides.infinite-scroll {
   animation: infiniteScroll var(--animation-duration, 4000ms) var(--animation-easing, linear) infinite;
+  cursor: pointer;
+}
+
+.picture-card-slideshow__slides.infinite-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Touch feedback for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .picture-card-slideshow__slides.infinite-scroll:active {
+    animation-play-state: paused;
+  }
 }
 
 @keyframes infiniteScroll {

@@ -17,6 +17,7 @@ class PictureCardSlideshowComponent {
     if (this.slides.length === 0) return;
     
     this.setupInfiniteScroll();
+    this.setupHoverControls();
     
     // Handle window resize
     window.addEventListener('resize', this.debounce(() => {
@@ -56,6 +57,50 @@ class PictureCardSlideshowComponent {
     
     // Add the infinite scroll class
     this.slidesContainer.classList.add('infinite-scroll');
+  }
+
+  setupHoverControls() {
+    if (!this.isAutoPlaying) return;
+    
+    // Desktop hover events
+    this.element.addEventListener('mouseenter', () => {
+      this.pauseAnimation();
+    });
+    
+    this.element.addEventListener('mouseleave', () => {
+      this.resumeAnimation();
+    });
+    
+    // Mobile touch events
+    this.element.addEventListener('touchstart', (e) => {
+      this.pauseAnimation();
+      // Prevent default to avoid scrolling issues
+      e.preventDefault();
+    }, { passive: false });
+    
+    this.element.addEventListener('touchend', () => {
+      // Small delay to prevent accidental resume
+      setTimeout(() => {
+        this.resumeAnimation();
+      }, 100);
+    });
+    
+    // Handle touch cancel (when touch is interrupted)
+    this.element.addEventListener('touchcancel', () => {
+      this.resumeAnimation();
+    });
+  }
+
+  pauseAnimation() {
+    if (this.slidesContainer) {
+      this.slidesContainer.style.animationPlayState = 'paused';
+    }
+  }
+
+  resumeAnimation() {
+    if (this.slidesContainer) {
+      this.slidesContainer.style.animationPlayState = 'running';
+    }
   }
 
   getCurrentSlidesToShow() {
