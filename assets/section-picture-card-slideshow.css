@@ -26,6 +26,7 @@ picture-card-slideshow-component {
 .picture-card-slideshow__track {
   overflow: hidden;
   width: 100%;
+  padding: 0.5rem 0;
 }
 
 .picture-card-slideshow__slides {
@@ -112,11 +113,11 @@ picture-card-slideshow-component {
 }
 
 .picture-card:hover {
-  transform: translateY(-0.8rem) scale(1.02);
+  transform: translateY(-0.5rem);
   box-shadow: 
     var(--product-card-shadow-horizontal-offset) 
-    calc(var(--product-card-shadow-vertical-offset) + 1rem) 
-    calc(var(--product-card-shadow-blur-radius) + 1rem) 
+    calc(var(--product-card-shadow-vertical-offset) + 0.8rem) 
+    calc(var(--product-card-shadow-blur-radius) + 0.8rem) 
     rgba(var(--color-shadow), calc(var(--product-card-shadow-opacity) + 0.1)),
     0 0 0 1px rgba(var(--color-foreground), 0.1);
 }
@@ -139,7 +140,7 @@ picture-card-slideshow-component {
 }
 
 .picture-card:hover .picture-card__image {
-  transform: scale(1.08);
+  transform: scale(1.05);
   filter: brightness(1.05) contrast(1.1) saturate(1.15);
 }
 
