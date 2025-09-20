@@ -35,8 +35,8 @@ menu-drawer > details[open] > summary::before {
   width: 100%;
   padding: 0;
   background: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -72,6 +72,8 @@ menu-drawer > details[open] > summary::before {
 .menu-drawer * {
   background: rgba(255, 255, 255, 0.1) !important;
   background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
 }
 
 /* Override CSS variables that might be affecting background */
@@ -99,6 +101,17 @@ menu-drawer > details[open] > summary::before {
   --color-background: 255, 255, 255 !important;
   background: rgba(255, 255, 255, 0.1) !important;
   background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+}
+
+/* Ensure glass effect is always applied - highest priority */
+.menu-drawer,
+.menu-drawer *,
+.js .menu-drawer__submenu,
+.js .menu-drawer__submenu * {
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
 }
 
 /* Dark glass variant for dark backgrounds - matches header */
@@ -106,6 +119,8 @@ menu-drawer > details[open] > summary::before {
   background: rgba(0, 0, 0, 0.1) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
 }
 
 /* Enhanced glass effect on scroll - matches header */
@@ -219,8 +234,8 @@ details[open].menu-opening > .menu-drawer__submenu {
   bottom: 0;
   left: 0;
   background: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -254,6 +269,8 @@ details[open].menu-opening > .menu-drawer__submenu {
 .js .menu-drawer__submenu * {
   background: rgba(255, 255, 255, 0.1) !important;
   background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
 }
 
 /* Override CSS variables for submenus */
@@ -281,6 +298,8 @@ details[open].menu-opening > .menu-drawer__submenu {
   --color-background: 255, 255, 255 !important;
   background: rgba(255, 255, 255, 0.1) !important;
   background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
 }
 
 /* Dark glass variant for submenu */
