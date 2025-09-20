@@ -602,6 +602,9 @@
         this.headerWrapper.classList.remove('header-glass-scrolled');
       }
 
+      // Update mobile menu classes to match header state
+      this.updateMobileMenuClasses();
+
       // Detect background color behind header
       this.detectBackgroundColor();
     }
@@ -658,6 +661,7 @@
         // Fallback: assume light background for better UX
         this.headerWrapper.classList.remove('header-glass-dark');
         this.headerWrapper.classList.add('header-glass-inverse');
+        this.updateMobileMenuClasses();
         return;
       }
 
@@ -675,6 +679,28 @@
       // Update header classes with more comprehensive detection
       this.headerWrapper.classList.toggle('header-glass-dark', !isLightBackground);
       this.headerWrapper.classList.toggle('header-glass-inverse', isWhiteBackground || isVeryLightBackground || isOffWhiteBackground);
+      
+      // Update mobile menu classes to match header
+      this.updateMobileMenuClasses();
+    }
+
+    updateMobileMenuClasses() {
+      const menuDrawer = document.querySelector('.menu-drawer');
+      const menuSubmenus = document.querySelectorAll('.js .menu-drawer__submenu');
+      
+      if (menuDrawer) {
+        // Copy header classes to mobile menu
+        menuDrawer.classList.toggle('menu-glass-dark', this.headerWrapper.classList.contains('header-glass-dark'));
+        menuDrawer.classList.toggle('menu-glass-inverse', this.headerWrapper.classList.contains('header-glass-inverse'));
+        menuDrawer.classList.toggle('menu-glass-scrolled', this.headerWrapper.classList.contains('header-glass-scrolled'));
+      }
+      
+      // Apply same classes to submenus
+      menuSubmenus.forEach(submenu => {
+        submenu.classList.toggle('menu-glass-dark', this.headerWrapper.classList.contains('header-glass-dark'));
+        submenu.classList.toggle('menu-glass-inverse', this.headerWrapper.classList.contains('header-glass-inverse'));
+        submenu.classList.toggle('menu-glass-scrolled', this.headerWrapper.classList.contains('header-glass-scrolled'));
+      });
     }
 
     disconnectedCallback() {

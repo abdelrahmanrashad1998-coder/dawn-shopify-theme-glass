@@ -39,11 +39,32 @@ menu-drawer > details[open] > summary::before {
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-x: hidden;
   filter: drop-shadow(
     var(--drawer-shadow-horizontal-offset) var(--drawer-shadow-vertical-offset) var(--drawer-shadow-blur-radius)
       rgba(var(--color-shadow), var(--drawer-shadow-opacity))
   );
+}
+
+/* Dark glass variant for dark backgrounds - matches header */
+.menu-drawer.menu-glass-dark {
+  background: rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced glass effect on scroll - matches header */
+.menu-drawer.menu-glass-scrolled {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.menu-drawer.menu-glass-dark.menu-glass-scrolled {
+  background: rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .js .menu-drawer {
@@ -148,9 +169,30 @@ details[open].menu-opening > .menu-drawer__submenu {
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
   transform: translateX(100%);
   visibility: hidden;
+}
+
+/* Dark glass variant for submenu */
+.js .menu-drawer__submenu.menu-glass-dark {
+  background: rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced glass effect on scroll for submenu */
+.js .menu-drawer__submenu.menu-glass-scrolled {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.js .menu-drawer__submenu.menu-glass-dark.menu-glass-scrolled {
+  background: rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .js .menu-drawer__submenu .menu-drawer__submenu {
@@ -253,7 +295,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   }
 }
 
-/* Glass effect enhancements for mobile menu */
+/* Glass effect enhancements for mobile menu - matches header */
 .menu-drawer::before {
   content: '';
   position: absolute;
@@ -266,48 +308,66 @@ details[open].menu-opening > .menu-drawer__submenu {
   z-index: -1;
 }
 
-/* Ensure menu items are visible on glass background */
-.menu-drawer__menu-item {
-  color: rgba(0, 0, 0, 0.8) !important;
-  font-weight: 500;
+.menu-drawer.menu-glass-dark::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
 }
 
-.menu-drawer__menu-item:hover,
-.menu-drawer__menu-item:focus {
-  color: rgba(0, 0, 0, 1) !important;
+/* Inverse text colors for white backgrounds - matches header system */
+.menu-drawer.menu-glass-inverse .menu-drawer__menu-item,
+.menu-drawer.menu-glass-inverse .menu-drawer__close-button,
+.menu-drawer.menu-glass-inverse .menu-drawer__account,
+.menu-drawer.menu-glass-inverse .list-social__link,
+.menu-drawer.menu-glass-inverse svg,
+.menu-drawer.menu-glass-inverse .svg-wrapper {
+  color: rgba(0, 0, 0, 0.8) !important;
+  fill: rgba(0, 0, 0, 0.8) !important;
+}
+
+.menu-drawer.menu-glass-inverse .menu-drawer__menu-item:hover,
+.menu-drawer.menu-glass-inverse .menu-drawer__close-button:hover,
+.menu-drawer.menu-glass-inverse .menu-drawer__account:hover,
+.menu-drawer.menu-glass-inverse .list-social__link:hover {
+  color: rgb(0, 0, 0) !important;
+  fill: rgb(0, 0, 0) !important;
+}
+
+.menu-drawer.menu-glass-inverse .menu-drawer__menu-item:hover,
+.menu-drawer.menu-glass-inverse .menu-drawer__close-button:hover {
   background-color: rgba(255, 255, 255, 0.2) !important;
 }
 
-.menu-drawer__menu-item--active {
+.menu-drawer.menu-glass-inverse .menu-drawer__menu-item--active {
   color: rgba(0, 0, 0, 1) !important;
   background-color: rgba(255, 255, 255, 0.15) !important;
 }
 
-.menu-drawer__close-button {
-  color: rgba(0, 0, 0, 0.8) !important;
+/* Default styling for dark backgrounds */
+.menu-drawer:not(.menu-glass-inverse) .menu-drawer__menu-item,
+.menu-drawer:not(.menu-glass-inverse) .menu-drawer__close-button,
+.menu-drawer:not(.menu-glass-inverse) .menu-drawer__account,
+.menu-drawer:not(.menu-glass-inverse) .list-social__link,
+.menu-drawer:not(.menu-glass-inverse) svg,
+.menu-drawer:not(.menu-glass-inverse) .svg-wrapper {
+  color: rgba(255, 255, 255, 0.9) !important;
+  fill: rgba(255, 255, 255, 0.9) !important;
 }
 
-.menu-drawer__close-button:hover {
-  color: rgba(0, 0, 0, 1) !important;
+.menu-drawer:not(.menu-glass-inverse) .menu-drawer__menu-item:hover,
+.menu-drawer:not(.menu-glass-inverse) .menu-drawer__close-button:hover,
+.menu-drawer:not(.menu-glass-inverse) .menu-drawer__account:hover,
+.menu-drawer:not(.menu-glass-inverse) .list-social__link:hover {
+  color: rgb(255, 255, 255) !important;
+  fill: rgb(255, 255, 255) !important;
+}
+
+.menu-drawer:not(.menu-glass-inverse) .menu-drawer__menu-item:hover,
+.menu-drawer:not(.menu-glass-inverse) .menu-drawer__close-button:hover {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Social links styling for glass effect */
-.menu-drawer__utility-links .list-social__link {
-  color: rgba(0, 0, 0, 0.8) !important;
-}
-
-.menu-drawer__utility-links .list-social__link:hover {
-  color: rgba(0, 0, 0, 1) !important;
-}
-
-/* Account link styling */
-.menu-drawer__account {
-  color: rgba(0, 0, 0, 0.8) !important;
-}
-
-.menu-drawer__account:hover {
-  color: rgba(0, 0, 0, 1) !important;
+.menu-drawer:not(.menu-glass-inverse) .menu-drawer__menu-item--active {
+  color: rgba(255, 255, 255, 1) !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
 }
 
 /* Fallback for browsers that don't support backdrop-filter */
@@ -315,5 +375,10 @@ details[open].menu-opening > .menu-drawer__submenu {
   .menu-drawer,
   .js .menu-drawer__submenu {
     background: rgba(255, 255, 255, 0.95) !important;
+  }
+  
+  .menu-drawer.menu-glass-dark,
+  .js .menu-drawer__submenu.menu-glass-dark {
+    background: rgba(0, 0, 0, 0.95) !important;
   }
 }
