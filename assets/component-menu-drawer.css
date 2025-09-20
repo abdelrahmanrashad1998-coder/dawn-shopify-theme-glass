@@ -25,8 +25,28 @@ menu-drawer > details[open] > summary::before {
   transition: opacity var(--duration-default) ease, visibility var(--duration-default) ease;
 }
 
-/* Clean Glass Effect Mobile Menu */
-.menu-drawer {
+/* Clean Glass Effect Mobile Menu - Override all color schemes */
+.menu-drawer.menu-glass-override,
+.menu-drawer.menu-glass-override.color-scheme-1,
+.menu-drawer.menu-glass-override.color-scheme-2,
+.menu-drawer.menu-glass-override.color-scheme-3,
+.menu-drawer.menu-glass-override.color-scheme-4,
+.menu-drawer.menu-glass-override.color-scheme-5,
+.menu-drawer.menu-glass-override.color-scheme-6,
+.menu-drawer.menu-glass-override.color-scheme-7,
+.menu-drawer.menu-glass-override.color-scheme-8,
+.menu-drawer.menu-glass-override.color-scheme-9,
+.menu-drawer.menu-glass-override.color-scheme-10,
+.menu-drawer.menu-glass-override.color-scheme-11,
+.menu-drawer.menu-glass-override.color-scheme-12,
+.menu-drawer.menu-glass-override.color-scheme-13,
+.menu-drawer.menu-glass-override.color-scheme-14,
+.menu-drawer.menu-glass-override.color-scheme-15,
+.menu-drawer.menu-glass-override.color-scheme-16,
+.menu-drawer.menu-glass-override.color-scheme-17,
+.menu-drawer.menu-glass-override.color-scheme-18,
+.menu-drawer.menu-glass-override.color-scheme-19,
+.menu-drawer.menu-glass-override.color-scheme-20 {
   position: absolute;
   transform: translateX(-100%);
   visibility: hidden;
@@ -35,13 +55,42 @@ menu-drawer > details[open] > summary::before {
   top: 100%;
   width: 100%;
   padding: 0;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   overflow-x: hidden;
+  /* Override any color scheme variables */
+  --color-background: 255, 255, 255 !important;
+  --color-foreground: 0, 0, 0 !important;
+}
+
+/* Universal override for all child elements */
+.menu-drawer.menu-glass-override *,
+.menu-drawer.menu-glass-override.color-scheme-1 *,
+.menu-drawer.menu-glass-override.color-scheme-2 *,
+.menu-drawer.menu-glass-override.color-scheme-3 *,
+.menu-drawer.menu-glass-override.color-scheme-4 *,
+.menu-drawer.menu-glass-override.color-scheme-5 *,
+.menu-drawer.menu-glass-override.color-scheme-6 *,
+.menu-drawer.menu-glass-override.color-scheme-7 *,
+.menu-drawer.menu-glass-override.color-scheme-8 *,
+.menu-drawer.menu-glass-override.color-scheme-9 *,
+.menu-drawer.menu-glass-override.color-scheme-10 *,
+.menu-drawer.menu-glass-override.color-scheme-11 *,
+.menu-drawer.menu-glass-override.color-scheme-12 *,
+.menu-drawer.menu-glass-override.color-scheme-13 *,
+.menu-drawer.menu-glass-override.color-scheme-14 *,
+.menu-drawer.menu-glass-override.color-scheme-15 *,
+.menu-drawer.menu-glass-override.color-scheme-16 *,
+.menu-drawer.menu-glass-override.color-scheme-17 *,
+.menu-drawer.menu-glass-override.color-scheme-18 *,
+.menu-drawer.menu-glass-override.color-scheme-19 *,
+.menu-drawer.menu-glass-override.color-scheme-20 * {
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 /* Glass effect overlay */
@@ -160,22 +209,45 @@ menu-drawer > details[open] > summary::before {
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* Clean Glass Effect Submenus */
-.js .menu-drawer__submenu {
+/* Clean Glass Effect Submenus - Override all color schemes */
+.js .menu-drawer__submenu,
+.js .menu-drawer__submenu.color-scheme-1,
+.js .menu-drawer__submenu.color-scheme-2,
+.js .menu-drawer__submenu.color-scheme-3,
+.js .menu-drawer__submenu.color-scheme-4,
+.js .menu-drawer__submenu.color-scheme-5,
+.js .menu-drawer__submenu.color-scheme-6,
+.js .menu-drawer__submenu.color-scheme-7,
+.js .menu-drawer__submenu.color-scheme-8,
+.js .menu-drawer__submenu.color-scheme-9,
+.js .menu-drawer__submenu.color-scheme-10,
+.js .menu-drawer__submenu.color-scheme-11,
+.js .menu-drawer__submenu.color-scheme-12,
+.js .menu-drawer__submenu.color-scheme-13,
+.js .menu-drawer__submenu.color-scheme-14,
+.js .menu-drawer__submenu.color-scheme-15,
+.js .menu-drawer__submenu.color-scheme-16,
+.js .menu-drawer__submenu.color-scheme-17,
+.js .menu-drawer__submenu.color-scheme-18,
+.js .menu-drawer__submenu.color-scheme-19,
+.js .menu-drawer__submenu.color-scheme-20 {
   position: absolute;
   top: 0;
   width: 100%;
   bottom: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   z-index: 1;
   transform: translateX(100%);
   visibility: hidden;
+  /* Override any color scheme variables */
+  --color-background: 255, 255, 255 !important;
+  --color-foreground: 0, 0, 0 !important;
 }
 
 .js .menu-drawer__submenu::before {
