@@ -34,10 +34,10 @@ menu-drawer > details[open] > summary::before {
   top: 100%;
   width: 100%;
   padding: 0;
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-x: hidden;
@@ -47,23 +47,48 @@ menu-drawer > details[open] > summary::before {
   );
 }
 
+/* Override any theme color scheme backgrounds */
+.menu-drawer.gradient,
+.menu-drawer.color-scheme-1,
+.menu-drawer.color-scheme-2,
+.menu-drawer.color-scheme-3,
+.menu-drawer.color-scheme-4,
+.menu-drawer.color-scheme-5,
+.menu-drawer.color-scheme-6,
+.menu-drawer.color-scheme-7,
+.menu-drawer.color-scheme-8,
+.menu-drawer.color-scheme-9,
+.menu-drawer.color-scheme-10,
+.menu-drawer.color-scheme-11,
+.menu-drawer.color-scheme-12,
+.menu-drawer.color-scheme-13,
+.menu-drawer.color-scheme-14,
+.menu-drawer.color-scheme-15,
+.menu-drawer.color-scheme-16,
+.menu-drawer.color-scheme-17,
+.menu-drawer.color-scheme-18,
+.menu-drawer.color-scheme-19,
+.menu-drawer.color-scheme-20 {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
 /* Dark glass variant for dark backgrounds - matches header */
 .menu-drawer.menu-glass-dark {
-  background: rgba(0, 0, 0, 0.05) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 /* Enhanced glass effect on scroll - matches header */
 .menu-drawer.menu-glass-scrolled {
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
   backdrop-filter: blur(25px) saturate(200%);
   -webkit-backdrop-filter: blur(25px) saturate(200%);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .menu-drawer.menu-glass-dark.menu-glass-scrolled {
-  background: rgba(0, 0, 0, 0.08) !important;
+  background: rgba(0, 0, 0, 0.15) !important;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
@@ -164,10 +189,10 @@ details[open].menu-opening > .menu-drawer__submenu {
   width: 100%;
   bottom: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
@@ -175,23 +200,48 @@ details[open].menu-opening > .menu-drawer__submenu {
   visibility: hidden;
 }
 
+/* Override any theme color scheme backgrounds for submenus */
+.js .menu-drawer__submenu.gradient,
+.js .menu-drawer__submenu.color-scheme-1,
+.js .menu-drawer__submenu.color-scheme-2,
+.js .menu-drawer__submenu.color-scheme-3,
+.js .menu-drawer__submenu.color-scheme-4,
+.js .menu-drawer__submenu.color-scheme-5,
+.js .menu-drawer__submenu.color-scheme-6,
+.js .menu-drawer__submenu.color-scheme-7,
+.js .menu-drawer__submenu.color-scheme-8,
+.js .menu-drawer__submenu.color-scheme-9,
+.js .menu-drawer__submenu.color-scheme-10,
+.js .menu-drawer__submenu.color-scheme-11,
+.js .menu-drawer__submenu.color-scheme-12,
+.js .menu-drawer__submenu.color-scheme-13,
+.js .menu-drawer__submenu.color-scheme-14,
+.js .menu-drawer__submenu.color-scheme-15,
+.js .menu-drawer__submenu.color-scheme-16,
+.js .menu-drawer__submenu.color-scheme-17,
+.js .menu-drawer__submenu.color-scheme-18,
+.js .menu-drawer__submenu.color-scheme-19,
+.js .menu-drawer__submenu.color-scheme-20 {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
 /* Dark glass variant for submenu */
 .js .menu-drawer__submenu.menu-glass-dark {
-  background: rgba(0, 0, 0, 0.05) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 /* Enhanced glass effect on scroll for submenu */
 .js .menu-drawer__submenu.menu-glass-scrolled {
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
   backdrop-filter: blur(25px) saturate(200%);
   -webkit-backdrop-filter: blur(25px) saturate(200%);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .js .menu-drawer__submenu.menu-glass-dark.menu-glass-scrolled {
-  background: rgba(0, 0, 0, 0.08) !important;
+  background: rgba(0, 0, 0, 0.15) !important;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
@@ -303,13 +353,13 @@ details[open].menu-opening > .menu-drawer__submenu {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
   pointer-events: none;
   z-index: -1;
 }
 
 .menu-drawer.menu-glass-dark::before {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.005) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
 }
 
 /* Inverse text colors for white backgrounds - matches header system */
