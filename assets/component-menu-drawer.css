@@ -34,7 +34,11 @@ menu-drawer > details[open] > summary::before {
   top: 100%;
   width: 100%;
   padding: 0;
-  background-color: rgb(var(--color-background));
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   overflow-x: hidden;
   filter: drop-shadow(
     var(--drawer-shadow-horizontal-offset) var(--drawer-shadow-vertical-offset) var(--drawer-shadow-blur-radius)
@@ -139,7 +143,11 @@ details[open].menu-opening > .menu-drawer__submenu {
   width: 100%;
   bottom: 0;
   left: 0;
-  background-color: rgb(var(--color-background));
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   z-index: 1;
   transform: translateX(100%);
   visibility: hidden;
@@ -171,7 +179,10 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__utility-links {
   padding: 0;
-  background-color: rgba(var(--color-foreground), 0.03);
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
 }
 
@@ -239,5 +250,70 @@ details[open].menu-opening > .menu-drawer__submenu {
     transform: none !important;
     filter: none !important;
     transition: none !important;
+  }
+}
+
+/* Glass effect enhancements for mobile menu */
+.menu-drawer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Ensure menu items are visible on glass background */
+.menu-drawer__menu-item {
+  color: rgba(0, 0, 0, 0.8) !important;
+  font-weight: 500;
+}
+
+.menu-drawer__menu-item:hover,
+.menu-drawer__menu-item:focus {
+  color: rgba(0, 0, 0, 1) !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.menu-drawer__menu-item--active {
+  color: rgba(0, 0, 0, 1) !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.menu-drawer__close-button {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.menu-drawer__close-button:hover {
+  color: rgba(0, 0, 0, 1) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Social links styling for glass effect */
+.menu-drawer__utility-links .list-social__link {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.menu-drawer__utility-links .list-social__link:hover {
+  color: rgba(0, 0, 0, 1) !important;
+}
+
+/* Account link styling */
+.menu-drawer__account {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.menu-drawer__account:hover {
+  color: rgba(0, 0, 0, 1) !important;
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(20px)) {
+  .menu-drawer,
+  .js .menu-drawer__submenu {
+    background: rgba(255, 255, 255, 0.95) !important;
   }
 }
