@@ -102,23 +102,98 @@
           "settings": {
             "text": "<p>Welcome to <strong>Danutti</strong>, </p><p>where timeless elegance meets modern sophistication. At Danutti, we craft more than just accessories; we create pieces that tell<br/>stories, inspire confidence, and celebrate individuality. </p><p>Rooted in a passion for exquisite craftsmanship and innovation, our collections are designed to empower women with a touch of luxury and refinement. </p><p>From our carefully selected materials to the intricate designs, every Danutti piece is a testament to our commitment to quality and elegance. Based in <strong>Egypt, </strong>for queens who seek exclusivity, </p><p><strong>Danutti </strong>is proud to serve.</p>"
           }
-        },
-        "button_CQArPR": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "heading_XMiWrX",
-        "text_RaJGYx",
-        "button_CQArPR"
+        "text_RaJGYx"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "slideshow_tbDQU8": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_QEdXdJ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Artemis_choker_2.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_mkBEJq": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hecate_s_Halo_2_f48b049e-3832-491c-bd76-66055e4733af.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_QEdXdJ",
+        "slide_mkBEJq"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "ambient",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rich_text_WJrpJQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xeRPgd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Mission</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_f7kWJR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Danutti, our mission is to redefine luxury in women’s accessories through exceptional quality, timeless design, and personal expression. </p><p>We strive to enhance the lives of our customers by offering pieces that celebrate their individuality and bring elegance to their everyday lives.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xeRPgd",
+        "text_f7kWJR"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -135,6 +210,8 @@
     "video_9CzytT",
     "image_with_text_gUTep7",
     "main",
-    "rich_text_k4EETc"
+    "rich_text_k4EETc",
+    "slideshow_tbDQU8",
+    "rich_text_WJrpJQ"
   ]
 }
