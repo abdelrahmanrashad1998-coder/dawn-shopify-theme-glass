@@ -25,16 +25,116 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_gUTep7": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_KNBEMw": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Danuttiis a lifestyle, a statement of differentiation, and a celebration of you since2020 .",
+            "heading_size": "h2"
+          }
+        },
+        "text_nq3V8z": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Danutti<br/>is a lifestyle, a statement of differentiation, and a celebration of you since<br/>2020 .</p>",
+            "text_style": "body"
+          }
+        },
+        "button_pbijgG": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_KNBEMw",
+        "text_nq3V8z",
+        "button_pbijgG"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Marbles_of_Magic_2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "overlap",
+        "text_banner_size": "small",
+        "text_banner_padding_top": 64,
+        "text_banner_padding_horizontal": 64,
+        "text_banner_padding_bottom": 80,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "rich_text_k4EETc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_XMiWrX": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Danutti",
+            "heading_size": "h1"
+          }
+        },
+        "text_RaJGYx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to <strong>Danutti</strong>, </p><p>where timeless elegance meets modern sophistication. At Danutti, we craft more than just accessories; we create pieces that tell<br/>stories, inspire confidence, and celebrate individuality. </p><p>Rooted in a passion for exquisite craftsmanship and innovation, our collections are designed to empower women with a touch of luxury and refinement. </p><p>From our carefully selected materials to the intricate designs, every Danutti piece is a testament to our commitment to quality and elegance. Based in <strong>Egypt, </strong>for queens who seek exclusivity, </p><p><strong>Danutti </strong>is proud to serve.</p>"
+          }
+        },
+        "button_CQArPR": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_XMiWrX",
+        "text_RaJGYx",
+        "button_CQArPR"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "video_9CzytT",
-    "main"
+    "image_with_text_gUTep7",
+    "main",
+    "rich_text_k4EETc"
   ]
 }
