@@ -50,6 +50,15 @@
             "content": "",
             "page": "return-and-refund-policy"
           }
+        },
+        "collapsible_tab_8YpiXt": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping Policy",
+            "icon": "return",
+            "content": "",
+            "page": "shipping-policy"
+          }
         }
       },
       "block_order": [
@@ -59,7 +68,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "collapsible_tab_P6mYrV"
+        "collapsible_tab_P6mYrV",
+        "collapsible_tab_8YpiXt"
       ],
       "settings": {
         "enable_sticky_info": true,
