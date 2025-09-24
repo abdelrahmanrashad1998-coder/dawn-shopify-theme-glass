@@ -144,8 +144,8 @@
           "settings": {
             "image": "shopify://shop_images/Hecate_s_Halo_2_f48b049e-3832-491c-bd76-66055e4733af.jpg",
             "image_overlay_opacity": 0,
-            "heading": "",
-            "heading_size": "h2",
+            "heading": "Upholding the highest standards of artistry and quality in every piece.",
+            "heading_size": "h1",
             "subheading": "",
             "button_label": "",
             "link": "",
@@ -154,7 +154,7 @@
             "box_align": "middle-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "color_scheme": ""
+            "color_scheme": "background-2"
           }
         }
       },
