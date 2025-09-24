@@ -41,6 +41,15 @@
         "description": {
           "type": "description",
           "settings": {}
+        },
+        "collapsible_tab_P6mYrV": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Return and Refund Policy",
+            "icon": "return",
+            "content": "<ul><li><strong>Eligibility:</strong> Returns are accepted within 30 days of receipt for unworn, undamaged items in their original packaging.</li><li><strong>Process:</strong> To initiate a return, please contact our customer support team with your order details.</li><li><strong>Refunds:</strong> Once your return is received and inspected, a refund will be issued to your original payment method within 7 business days.</li><li><strong>Exchanges:</strong> We offer exchanges for size or design preferences, subject to availability.</li></ul>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -49,7 +58,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description"
+        "description",
+        "collapsible_tab_P6mYrV"
       ],
       "settings": {
         "enable_sticky_info": true,
