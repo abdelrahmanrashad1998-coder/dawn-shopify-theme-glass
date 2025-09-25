@@ -162,7 +162,7 @@
         "slide_QEdXdJ",
         "slide_mkBEJq"
       ],
-      "name": "t:sections.slideshow.presets.name",
+      "name": "Slideshow 1",
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -195,7 +195,7 @@
         "heading_xeRPgd",
         "text_f7kWJR"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "MIssion",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -249,7 +249,7 @@
         "slide_rHNanG",
         "slide_rExpMQ"
       ],
-      "name": "t:sections.slideshow.presets.name",
+      "name": "Slideshow 2",
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
