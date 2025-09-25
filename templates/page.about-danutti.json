@@ -108,7 +108,7 @@
         "heading_XMiWrX",
         "text_RaJGYx"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "About Danutti text",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -124,9 +124,9 @@
         "slide_QEdXdJ": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Artemis_choker_2.jpg",
+            "image": "shopify://shop_images/Mystic_Key_2_def1070f-861c-4c00-8c82-3a30d850b07b.jpg",
             "image_overlay_opacity": 0,
-            "heading": "",
+            "heading": "Designing products that embody sophistication and class.",
             "heading_size": "h2",
             "subheading": "",
             "button_label": "",
@@ -136,7 +136,7 @@
             "box_align": "middle-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "color_scheme": ""
+            "color_scheme": "background-2"
           }
         },
         "slide_mkBEJq": {
@@ -204,6 +204,62 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "slideshow_hdNpdT": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_rHNanG": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Mystic_Key_2_def1070f-861c-4c00-8c82-3a30d850b07b.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "Designing products that embody sophistication and class.",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "background-2"
+          }
+        },
+        "slide_rExpMQ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hecate_s_Halo_2_f48b049e-3832-491c-bd76-66055e4733af.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "Upholding the highest standards of artistry and quality in every piece.",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "background-2"
+          }
+        }
+      },
+      "block_order": [
+        "slide_rHNanG",
+        "slide_rExpMQ"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "ambient",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
     }
   },
   "order": [
@@ -212,6 +268,7 @@
     "main",
     "rich_text_k4EETc",
     "slideshow_tbDQU8",
-    "rich_text_WJrpJQ"
+    "rich_text_WJrpJQ",
+    "slideshow_hdNpdT"
   ]
 }
