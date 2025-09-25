@@ -25,6 +25,17 @@
         "padding_bottom": 0
       }
     },
+    "page_EgqQtF": {
+      "type": "page",
+      "name": "t:sections.page.presets.name",
+      "settings": {
+        "page": "about-danutti",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_UWLAfV": {
       "type": "image-with-text",
       "blocks": {
@@ -334,6 +345,7 @@
   },
   "order": [
     "video_48Hm4j",
+    "page_EgqQtF",
     "image_with_text_UWLAfV",
     "featured_collection_MDAxGp",
     "featured_collection",
