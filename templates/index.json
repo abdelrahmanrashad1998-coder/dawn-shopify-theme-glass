@@ -25,15 +25,47 @@
         "padding_bottom": 0
       }
     },
-    "page_EgqQtF": {
-      "type": "page",
-      "name": "t:sections.page.presets.name",
+    "rich_text_yTTGad": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fWVRA4": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Danutti",
+            "heading_size": "h1"
+          }
+        },
+        "text_RWjHeH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Danutti is a lifestyle, a statement of differentiation, and a celebration of you since 2020</p>"
+          }
+        },
+        "button_wN79zr": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fWVRA4",
+        "text_RWjHeH",
+        "button_wN79zr"
+      ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "page": "about-danutti",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "image_with_text_UWLAfV": {
@@ -345,7 +377,7 @@
   },
   "order": [
     "video_48Hm4j",
-    "page_EgqQtF",
+    "rich_text_yTTGad",
     "image_with_text_UWLAfV",
     "featured_collection_MDAxGp",
     "featured_collection",
