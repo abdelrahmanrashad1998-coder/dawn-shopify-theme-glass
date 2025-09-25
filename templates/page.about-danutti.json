@@ -79,14 +79,6 @@
         "padding_bottom": 36
       }
     },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "rich_text_k4EETc": {
       "type": "rich-text",
       "blocks": {
@@ -116,6 +108,14 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
     "slideshow_tbDQU8": {
@@ -267,14 +267,14 @@
         "heading_Cyjhwq": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Vision</strong>",
+            "heading": "<strong>Offerings</strong>",
             "heading_size": "h1"
           }
         },
         "text_agz9Hx": {
           "type": "text",
           "settings": {
-            "text": "<p>At Danutti, our mission is to redefine luxury in women’s accessories through exceptional quality, timeless design, and personal expression. </p><p>We strive to enhance the lives of our customers by offering pieces that celebrate their individuality and bring elegance to their everyday lives.</p>"
+            "text": "<p><strong>Danutti offers a curated collection of exquisite accessories, including:</strong></p><ul><li><strong>Bracelets:</strong> Elegant designs that add a<br/>     sophisticated touch to any outfit.</li><li><strong>Necklaces:</strong> Statement pieces and subtle<br/>     adornments that elevate your style.</li><li><strong>Earrings:</strong> From minimalist studs to bold<br/>     designs, perfect for any occasion.</li></ul><p>Each product is a blend of traditional craftsmanship and modern aesthetics, featuring high-quality materials and meticulous attention to detail.</p>"
           }
         }
       },
@@ -291,16 +291,110 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "image_with_text_EMUAbT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_PkXqeU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_qRVnMt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_P3QfJU": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_PkXqeU",
+        "text_qRVnMt",
+        "button_P3QfJU"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "text_banner_size": "medium",
+        "text_banner_padding_top": 64,
+        "text_banner_padding_horizontal": 64,
+        "text_banner_padding_bottom": 80,
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_CWdAxW": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_6N39EP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "necklaces"
+          }
+        },
+        "featured_collection_XnWTzF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "earrings"
+          }
+        },
+        "featured_collection_kRwkd3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_6N39EP",
+        "featured_collection_XnWTzF",
+        "featured_collection_kRwkd3"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "video_9CzytT",
     "image_with_text_gUTep7",
-    "main",
     "rich_text_k4EETc",
+    "main",
     "slideshow_tbDQU8",
     "rich_text_WJrpJQ",
     "slideshow_hdNpdT",
-    "rich_text_M7gNLC"
+    "rich_text_M7gNLC",
+    "image_with_text_EMUAbT",
+    "collection_list_CWdAxW"
   ]
 }
