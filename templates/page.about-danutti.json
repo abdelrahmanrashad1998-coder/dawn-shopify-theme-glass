@@ -223,7 +223,7 @@
             "box_align": "middle-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "color_scheme": "background-2"
+            "color_scheme": "background-1"
           }
         },
         "slide_rExpMQ": {
@@ -241,7 +241,7 @@
             "box_align": "middle-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "color_scheme": "background-2"
+            "color_scheme": "background-1"
           }
         }
       },
