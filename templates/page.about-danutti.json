@@ -1,0 +1,348 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "video_9CzytT": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "enable_video_looping": true,
+        "video": "shopify://files/videos/Generated File September 17, 2025 - 4_38PM.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_gUTep7": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_KNBEMw": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Danuttiis a lifestyle, a statement of differentiation, and a celebration of you since2020 .",
+            "heading_size": "h2"
+          }
+        },
+        "text_nq3V8z": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Danutti<br/>is a lifestyle, a statement of differentiation, and a celebration of you since<br/>2020 .</p>",
+            "text_style": "body"
+          }
+        },
+        "button_pbijgG": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_KNBEMw",
+        "text_nq3V8z",
+        "button_pbijgG"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Marbles_of_Magic_2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "overlap",
+        "text_banner_size": "small",
+        "text_banner_padding_top": 64,
+        "text_banner_padding_horizontal": 64,
+        "text_banner_padding_bottom": 36,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_k4EETc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_XMiWrX": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Danutti",
+            "heading_size": "h1"
+          }
+        },
+        "text_RaJGYx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to <strong>Danutti</strong>, </p><p>where timeless elegance meets modern sophistication. At Danutti, we craft more than just accessories; we create pieces that tell<br/>stories, inspire confidence, and celebrate individuality. </p><p>Rooted in a passion for exquisite craftsmanship and innovation, our collections are designed to empower women with a touch of luxury and refinement. </p><p>From our carefully selected materials to the intricate designs, every Danutti piece is a testament to our commitment to quality and elegance. Based in <strong>Egypt, </strong>for queens who seek exclusivity, </p><p><strong>Danutti </strong>is proud to serve.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XMiWrX",
+        "text_RaJGYx"
+      ],
+      "name": "About Danutti text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "slideshow_tbDQU8": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_QEdXdJ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Mystic_Key_2_def1070f-861c-4c00-8c82-3a30d850b07b.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "Designing products that embody sophistication and class.",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "background-1"
+          }
+        },
+        "slide_mkBEJq": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hecate_s_Halo_2_f48b049e-3832-491c-bd76-66055e4733af.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "Upholding the highest standards of artistry and quality in every piece.",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "slide_QEdXdJ",
+        "slide_mkBEJq"
+      ],
+      "name": "Slideshow 1",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "ambient",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rich_text_WJrpJQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xeRPgd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Mission</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_f7kWJR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Danutti, our mission is to redefine luxury in women’s accessories through exceptional quality, timeless design, and personal expression. </p><p>We strive to enhance the lives of our customers by offering pieces that celebrate their individuality and bring elegance to their everyday lives.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xeRPgd",
+        "text_f7kWJR"
+      ],
+      "name": "MIssion",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "slideshow_hdNpdT": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_rHNanG": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/just-jewellery-no-bags.png",
+            "image_overlay_opacity": 0,
+            "heading": "Staying true to our brand’s identity and commitment to excellence.",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "background-1"
+          }
+        },
+        "slide_rExpMQ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/providing-outstanding-service-and-building-lasting-relationships-with-our-clients.png",
+            "image_overlay_opacity": 0,
+            "heading": "Providing outstanding service and building lasting relationships with our clients.",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "slide_rHNanG",
+        "slide_rExpMQ"
+      ],
+      "name": "Slideshow 2",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "ambient",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rich_text_M7gNLC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Cyjhwq": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Offerings</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_agz9Hx": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Danutti offers a curated collection of exquisite accessories, including:</strong></p><ul><li><strong>Bracelets:</strong> Elegant designs that add a<br/>     sophisticated touch to any outfit.</li><li><strong>Necklaces:</strong> Statement pieces and subtle<br/>     adornments that elevate your style.</li><li><strong>Earrings:</strong> From minimalist studs to bold<br/>     designs, perfect for any occasion.</li></ul><p>Each product is a blend of traditional craftsmanship and modern aesthetics, featuring high-quality materials and meticulous attention to detail.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Cyjhwq",
+        "text_agz9Hx"
+      ],
+      "name": "vision",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collection_list_CWdAxW": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_6N39EP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "necklaces"
+          }
+        },
+        "featured_collection_XnWTzF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "earrings"
+          }
+        },
+        "featured_collection_kRwkd3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bracelets"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_6N39EP",
+        "featured_collection_XnWTzF",
+        "featured_collection_kRwkd3"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "video_9CzytT",
+    "image_with_text_gUTep7",
+    "rich_text_k4EETc",
+    "main",
+    "slideshow_tbDQU8",
+    "rich_text_WJrpJQ",
+    "slideshow_hdNpdT",
+    "rich_text_M7gNLC",
+    "collection_list_CWdAxW"
+  ]
+}
