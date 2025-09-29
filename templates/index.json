@@ -102,21 +102,21 @@
         "heading_BmTJYr": {
           "type": "heading",
           "settings": {
-            "heading": "Glass Section Heading",
+            "heading": "Welcome to Danutti",
             "heading_size": "h1"
           }
         },
         "text_DfXTJh": {
           "type": "text",
           "settings": {
-            "text": "<p>Add some text content to your glass section. This text will appear with a beautiful glass effect overlay.</p>"
+            "text": "<p>Upholding<br/>the highest standards of artistry and quality in every piece.</p>"
           }
         },
         "button_wRyHP7": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "Learn More",
+            "button_link": "shopify://pages/about-danutti"
           }
         }
       },
