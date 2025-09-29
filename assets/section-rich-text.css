@@ -210,8 +210,8 @@
   -webkit-backdrop-filter: blur(15px) saturate(150%) !important;
   /* Ensure it's above other elements */
   z-index: 999 !important;
-  /* Make sure it overlaps with no white space */
-  margin: -120px 20px !important;
+  /* Reduced overlap to show more banner content */
+  margin: -40px 20px !important;
   /* Add a visible border for debugging */
   border: 2px solid rgba(255, 255, 255, 0.3) !important;
   /* Ensure text content is visible */
@@ -223,7 +223,7 @@
 /* Mobile adjustments */
 @media screen and (max-width: 749px) {
   .rich-text.rich-text--glass {
-    margin: -100px 10px !important;
+    margin: -30px 10px !important;
   }
 }
 
