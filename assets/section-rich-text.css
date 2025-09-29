@@ -221,8 +221,6 @@
   /* Ensure text content is visible */
   overflow: visible !important;
   min-height: 200px !important;
-  /* Keep essential padding for glass effect */
-  padding: 40px 20px !important;
   /* Remove margins since we're absolutely positioned */
   margin: 0 !important;
 }
@@ -575,4 +573,44 @@
 
 .rich-text__text + .rich-text__buttons {
   margin-top: 2rem !important;
+}
+
+/* Make color scheme work for text colors in glass effect */
+.rich-text.rich-text--glass .rich-text__heading,
+.rich-text.rich-text--glass .rich-text__text,
+.rich-text.rich-text--glass .rich-text__caption,
+.rich-text.rich-text--glass h1,
+.rich-text.rich-text--glass h2,
+.rich-text.rich-text--glass h3,
+.rich-text.rich-text--glass h4,
+.rich-text.rich-text--glass h5,
+.rich-text.rich-text--glass h6,
+.rich-text.rich-text--glass p,
+.rich-text.rich-text--glass div,
+.rich-text.rich-text--glass span {
+  color: rgb(var(--color-foreground)) !important;
+}
+
+/* Ensure color scheme affects glass section text */
+.rich-text.rich-text--glass {
+  color: rgb(var(--color-foreground)) !important;
+}
+
+/* Make padding slider work for glass sections */
+.rich-text.rich-text--glass {
+  /* Allow theme padding to work */
+  padding-top: var(--section-padding-top, 40px) !important;
+  padding-bottom: var(--section-padding-bottom, 40px) !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+/* Mobile padding adjustments */
+@media screen and (max-width: 749px) {
+  .rich-text.rich-text--glass {
+    padding-top: var(--section-padding-top-mobile, 30px) !important;
+    padding-bottom: var(--section-padding-bottom-mobile, 30px) !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
 }
