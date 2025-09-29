@@ -9,10 +9,19 @@
   background: transparent;
 }
 
-/* Override theme padding limits */
-.glass-section .page-width {
-  padding-top: inherit !important;
-  padding-bottom: inherit !important;
+/* Glass Container Wrapper */
+.glass-container-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+@media screen and (max-width: 749px) {
+  .glass-container-wrapper {
+    padding: 0 1rem;
+  }
 }
 
 .glass-container {

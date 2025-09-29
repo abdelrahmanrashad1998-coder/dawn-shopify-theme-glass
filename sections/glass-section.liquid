@@ -14,8 +14,8 @@
   }
 {%- endstyle -%}
 
-<div class="glass-section">
-  <div class="page-width section-{{ section.id }}-padding">
+<div class="glass-section section-{{ section.id }}-padding">
+  <div class="glass-container-wrapper">
     <div class="glass-container glass-{{ section.settings.glass_style }} width-{{ section.settings.banner_width }}" style="
       --glass-opacity: {{ section.settings.glass_opacity | divided_by: 100.0 }};
       --glass-blur: {{ section.settings.glass_blur }}px;
