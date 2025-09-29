@@ -24,6 +24,11 @@
       --glass-border-opacity: {{ section.settings.glass_border_opacity | divided_by: 100.0 }};
       --glass-padding: {{ section.settings.glass_padding }}px;
       {% if section.settings.banner_width == 'custom' %}--custom-width: {{ section.settings.custom_width }}px;{% endif %}
+      {% if section.settings.banner_width == 'narrow' %}max-width: 600px; width: 600px;{% endif %}
+      {% if section.settings.banner_width == 'medium' %}max-width: 800px; width: 800px;{% endif %}
+      {% if section.settings.banner_width == 'wide' %}max-width: 1000px; width: 1000px;{% endif %}
+      {% if section.settings.banner_width == 'full' %}max-width: 100%; width: 100%;{% endif %}
+      {% if section.settings.banner_width == 'custom' %}max-width: {{ section.settings.custom_width }}px; width: {{ section.settings.custom_width }}px;{% endif %}
     ">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
