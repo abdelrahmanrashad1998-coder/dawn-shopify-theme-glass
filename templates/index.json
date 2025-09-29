@@ -9,6 +9,43 @@
  */
 {
   "sections": {
+    "175916735763a264b1": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_0400a08_zEefQb": {
+          "type": "ai_gen_block_0400a08",
+          "settings": {
+            "min_height": 390,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_right": 0,
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "min_height_mobile": 280,
+            "padding_top_mobile": 0,
+            "padding_bottom_mobile": 0,
+            "padding_left_mobile": 0,
+            "padding_right_mobile": 0,
+            "margin_top_mobile": 0,
+            "margin_bottom_mobile": 0,
+            "background_color": "#ffffff",
+            "background_opacity": 0,
+            "show_border": false,
+            "border_width": 1,
+            "border_style": "solid",
+            "border_color": "#cccccc",
+            "border_radius": 0,
+            "show_placeholder": true
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_0400a08_zEefQb"
+      ],
+      "settings": {}
+    },
     "image_banner_PbUe8K": {
       "type": "image-banner",
       "blocks": {
@@ -269,7 +306,7 @@
         "mobile_content_alignment": "center",
         "section_color_scheme": "background-1",
         "color_scheme": "background-1",
-        "padding_top": 20,
+        "padding_top": 80,
         "padding_bottom": 0
       }
     },
@@ -576,6 +613,7 @@
     }
   },
   "order": [
+    "175916735763a264b1",
     "image_banner_PbUe8K",
     "glass_section_nDDtaK",
     "video_48Hm4j",
