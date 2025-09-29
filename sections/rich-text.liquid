@@ -15,7 +15,7 @@
 {%- endstyle -%}
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
-  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %}{% if section.settings.enable_glass_effect %} rich-text--glass{% if section.settings.glass_effect_dark %} rich-text--glass-dark{% endif %}{% endif %} section-{{ section.id }}-padding">
+  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %}{% if section.settings.enable_glass_effect %} rich-text--glass{% if section.settings.glass_effect_dark %} rich-text--glass-dark{% endif %}{% endif %} section-{{ section.id }}-padding"{% if section.settings.enable_glass_effect %} style="--glass-offset: {{ section.settings.glass_offset }}px;"{% endif %}>
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
@@ -171,6 +171,17 @@
       "default": false,
       "label": "Dark glass variant",
       "info": "Use dark glass effect for light backgrounds"
+    },
+    {
+      "type": "range",
+      "id": "glass_offset",
+      "min": -200,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Glass section offset",
+      "default": 0,
+      "info": "Adjust vertical position of glass section"
     },
     {
       "type": "header",

@@ -210,9 +210,9 @@
   -webkit-backdrop-filter: blur(8px) saturate(120%) !important;
   /* Ensure it's above other elements */
   z-index: 999 !important;
-  /* Position at intersection between banners */
+  /* Position at intersection between banners with offset */
   position: absolute !important;
-  top: 50% !important;
+  top: calc(50% + var(--glass-offset, 0px)) !important;
   left: 20px !important;
   right: 20px !important;
   transform: translateY(-50%) !important;
