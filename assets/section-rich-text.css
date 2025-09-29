@@ -210,9 +210,12 @@
   -webkit-backdrop-filter: blur(8px) saturate(120%) !important;
   /* Ensure it's above other elements */
   z-index: 999 !important;
-  /* Use negative margins to overlap without offsetting */
-  position: relative !important;
-  margin: -80px 20px !important;
+  /* Position at intersection between banners */
+  position: absolute !important;
+  top: 50% !important;
+  left: 20px !important;
+  right: 20px !important;
+  transform: translateY(-50%) !important;
   /* Make border more subtle */
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   /* Ensure text content is visible */
@@ -220,12 +223,15 @@
   min-height: 200px !important;
   /* Keep essential padding for glass effect */
   padding: 40px 20px !important;
+  /* Remove margins since we're absolutely positioned */
+  margin: 0 !important;
 }
 
 /* Mobile adjustments */
 @media screen and (max-width: 749px) {
   .rich-text.rich-text--glass {
-    margin: -60px 10px !important;
+    left: 10px !important;
+    right: 10px !important;
     padding: 30px 15px !important;
   }
 }
