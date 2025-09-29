@@ -150,6 +150,74 @@
     "name": "t:settings_schema.layout.name",
     "settings": [
       {
+        "type": "header",
+        "content": "Background Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background Image",
+        "info": "Upload an image to use as a fixed background for the entire website"
+      },
+      {
+        "type": "range",
+        "id": "background_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "default": 100,
+        "unit": "%",
+        "label": "Background Image Opacity"
+      },
+      {
+        "type": "select",
+        "id": "background_size",
+        "options": [
+          {
+            "value": "cover",
+            "label": "Cover"
+          },
+          {
+            "value": "contain",
+            "label": "Contain"
+          },
+          {
+            "value": "auto",
+            "label": "Auto"
+          }
+        ],
+        "default": "cover",
+        "label": "Background Size"
+      },
+      {
+        "type": "select",
+        "id": "background_position",
+        "options": [
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          },
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center",
+        "label": "Background Position"
+      },
+      {
         "type": "range",
         "id": "page_width",
         "min": 1000,

@@ -220,6 +220,11 @@
         --variant-pills-shadow-horizontal-offset: {{ settings.variant_pills_shadow_horizontal_offset }}px;
         --variant-pills-shadow-vertical-offset: {{ settings.variant_pills_shadow_vertical_offset }}px;
         --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
+
+        --background-image: {% if settings.background_image != blank %}url('{{ settings.background_image | image_url }}'){% else %}none{% endif %};
+        --background-opacity: {{ settings.background_opacity | divided_by: 100.0 }};
+        --background-size: {{ settings.background_size | default: 'cover' }};
+        --background-position: {{ settings.background_position | default: 'center' }};
       }
 
       *,
@@ -246,6 +251,24 @@
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
         font-weight: var(--font-body-weight);
+        position: relative;
+      }
+
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: var(--background-image);
+        background-size: var(--background-size);
+        background-position: var(--background-position);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        opacity: var(--background-opacity);
+        z-index: -1;
+        pointer-events: none;
       }
 
       @media screen and (min-width: 750px) {
