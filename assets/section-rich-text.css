@@ -210,8 +210,8 @@
   -webkit-backdrop-filter: blur(15px) saturate(150%) !important;
   /* Ensure it's above other elements */
   z-index: 999 !important;
-  /* Make sure it overlaps */
-  margin: -80px 20px !important;
+  /* Make sure it overlaps with no white space */
+  margin: -120px 20px !important;
   /* Add a visible border for debugging */
   border: 2px solid rgba(255, 255, 255, 0.3) !important;
 }
@@ -219,6 +219,31 @@
 /* Mobile adjustments */
 @media screen and (max-width: 749px) {
   .rich-text.rich-text--glass {
-    margin: -60px 10px !important;
+    margin: -100px 10px !important;
   }
+}
+
+/* Remove white space from sections containing glass effect */
+.section:has(.rich-text.rich-text--glass) {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove white space from adjacent sections */
+.section:has(.rich-text.rich-text--glass) + .section,
+.section + .section:has(.rich-text.rich-text--glass) {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Ensure banner sections have no bottom margin when followed by glass */
+.banner + .section:has(.rich-text.rich-text--glass) {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Ensure glass sections have no top margin when following banners */
+.section:has(.rich-text.rich-text--glass) + .banner {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
