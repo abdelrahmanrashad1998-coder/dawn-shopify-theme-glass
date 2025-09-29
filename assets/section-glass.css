@@ -9,6 +9,12 @@
   background: transparent;
 }
 
+/* Override theme padding limits */
+.glass-section .page-width {
+  padding-top: inherit !important;
+  padding-bottom: inherit !important;
+}
+
 .glass-container {
   position: relative;
   width: 100%;
