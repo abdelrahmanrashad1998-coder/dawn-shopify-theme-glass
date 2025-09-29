@@ -15,7 +15,7 @@
 {%- endstyle -%}
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
-  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %}{% if section.settings.enable_glass_effect %} rich-text--glass{% if section.settings.glass_effect_dark %} rich-text--glass-dark{% endif %}{% endif %} section-{{ section.id }}-padding">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
@@ -154,6 +154,23 @@
       "id": "full_width",
       "default": true,
       "label": "t:sections.rich-text.settings.full_width.label"
+    },
+    {
+      "type": "header",
+      "content": "Glass Effect"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_glass_effect",
+      "default": false,
+      "label": "Enable glass effect"
+    },
+    {
+      "type": "checkbox",
+      "id": "glass_effect_dark",
+      "default": false,
+      "label": "Dark glass variant",
+      "info": "Use dark glass effect for light backgrounds"
     },
     {
       "type": "header",

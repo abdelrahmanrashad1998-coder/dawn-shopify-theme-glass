@@ -84,3 +84,78 @@
 .rich-text__blocks.right .rich-text__buttons {
   justify-content: flex-end;
 }
+
+/* Glass Effect Styles for Rich Text Section */
+.rich-text.rich-text--glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark glass variant for dark backgrounds */
+.rich-text.rich-text--glass.rich-text--glass-dark {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced glass effect with gradient overlay */
+.rich-text.rich-text--glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 16px;
+}
+
+.rich-text.rich-text--glass.rich-text--glass-dark::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(20px)) {
+  .rich-text.rich-text--glass {
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  .rich-text.rich-text--glass.rich-text--glass-dark {
+    background: rgba(0, 0, 0, 0.95);
+  }
+}
+
+/* Glass effect hover states */
+.rich-text.rich-text--glass:hover {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.rich-text.rich-text--glass.rich-text--glass-dark:hover {
+  background: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive adjustments for glass effect */
+@media screen and (max-width: 749px) {
+  .rich-text.rich-text--glass {
+    border-radius: 12px;
+    margin: 1rem;
+  }
+  
+  .rich-text.rich-text--glass::before {
+    border-radius: 12px;
+  }
+}
