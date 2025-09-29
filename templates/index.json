@@ -58,6 +58,49 @@
         "show_text_below": false
       }
     },
+    "glass_section_nDDtaK": {
+      "type": "glass-section",
+      "blocks": {
+        "heading_BmTJYr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass Section Heading",
+            "heading_size": "h1"
+          }
+        },
+        "text_DfXTJh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add some text content to your glass section. This text will appear with a beautiful glass effect overlay.</p>"
+          }
+        },
+        "button_wRyHP7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_BmTJYr",
+        "text_DfXTJh",
+        "button_wRyHP7"
+      ],
+      "name": "Glass Section",
+      "settings": {
+        "glass_style": "frosted",
+        "glass_opacity": 20,
+        "glass_blur": 10,
+        "glass_border_radius": 20,
+        "glass_border_width": 1,
+        "glass_border_opacity": 30,
+        "glass_padding": 40,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "video_48Hm4j": {
       "type": "video",
       "disabled": true,
@@ -109,11 +152,63 @@
         "text_wF8BfG",
         "buttons_ME8q8J"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/IMG_0186.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
+        "image_behavior": "fixed",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "background-2",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "image_banner_XaRjUX": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_waPKDG": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_jePVkH": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "buttons_fY4ywz": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_waPKDG",
+        "text_jePVkH",
+        "buttons_fY4ywz"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/IMG_0186.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
         "image_behavior": "fixed",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
@@ -176,57 +271,6 @@
         "padding_bottom": 0
       }
     },
-    "image_banner_XaRjUX": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_waPKDG": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "",
-            "heading_size": "h1"
-          }
-        },
-        "text_jePVkH": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "body"
-          }
-        },
-        "buttons_fY4ywz": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_waPKDG",
-        "text_jePVkH",
-        "buttons_fY4ywz"
-      ],
-      "disabled": true,
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/IMG_0186.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "image_behavior": "fixed",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "background-2",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
-      }
-    },
     "rich_text_yTTGad": {
       "type": "rich-text",
       "blocks": {
@@ -260,6 +304,7 @@
         "text_RWjHeH",
         "button_wN79zr"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -268,6 +313,7 @@
         "full_width": true,
         "enable_glass_effect": true,
         "glass_effect_dark": true,
+        "glass_offset": 0,
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -529,6 +575,7 @@
   },
   "order": [
     "image_banner_PbUe8K",
+    "glass_section_nDDtaK",
     "video_48Hm4j",
     "image_banner_Fy4zQt",
     "image_banner_XaRjUX",
