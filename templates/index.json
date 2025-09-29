@@ -116,8 +116,8 @@
         "full_width": true,
         "enable_glass_effect": true,
         "glass_effect_dark": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "image_banner_Fy4zQt": {
