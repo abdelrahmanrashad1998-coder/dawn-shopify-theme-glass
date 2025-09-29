@@ -218,6 +218,7 @@
   /* Ensure text content is visible */
   overflow: visible !important;
   min-height: 200px !important;
+  /* Keep essential padding for glass effect */
   padding: 40px 20px !important;
 }
 
@@ -389,8 +390,8 @@
   font-size: revert !important;
 }
 
-/* Remove ALL padding from rich text elements */
-.rich-text,
+/* Remove ALL padding from rich text elements (except glass container) */
+.rich-text:not(.rich-text--glass),
 .rich-text__wrapper,
 .rich-text__blocks,
 .rich-text__heading,
@@ -401,8 +402,8 @@
   padding: 0 !important;
 }
 
-/* Remove padding from rich text containers */
-.rich-text.content-container {
+/* Remove padding from rich text containers (except glass) */
+.rich-text.content-container:not(.rich-text--glass) {
   padding: 0 !important;
   margin: 0 !important;
 }
