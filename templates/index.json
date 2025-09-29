@@ -9,8 +9,58 @@
  */
 {
   "sections": {
+    "image_banner_PbUe8K": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_ppzp48": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome to <strong>Danutti</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_UbUrRW": {
+          "type": "text",
+          "settings": {
+            "text": "Upholding the highest standards of artistry and quality in every piece.",
+            "text_style": "body"
+          }
+        },
+        "buttons_nGf7q4": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ppzp48",
+        "text_UbUrRW",
+        "buttons_nGf7q4"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/IMG_0186.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "image_behavior": "fixed",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "background-2",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
     "video_48Hm4j": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "",
@@ -68,24 +118,24 @@
         "padding_bottom": 52
       }
     },
-    "image_banner_PbUe8K": {
+    "image_banner_Fy4zQt": {
       "type": "image-banner",
       "blocks": {
-        "heading_ppzp48": {
+        "heading_iCiLUL": {
           "type": "heading",
           "settings": {
             "heading": "",
             "heading_size": "h1"
           }
         },
-        "text_UbUrRW": {
+        "text_wF8BfG": {
           "type": "text",
           "settings": {
             "text": "",
             "text_style": "body"
           }
         },
-        "buttons_nGf7q4": {
+        "buttons_ME8q8J": {
           "type": "buttons",
           "settings": {
             "button_label_1": "",
@@ -98,15 +148,15 @@
         }
       },
       "block_order": [
-        "heading_ppzp48",
-        "text_UbUrRW",
-        "buttons_nGf7q4"
+        "heading_iCiLUL",
+        "text_wF8BfG",
+        "buttons_ME8q8J"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/IMG_0186.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "adapt",
+        "image_height": "small",
         "image_behavior": "fixed",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
@@ -167,6 +217,57 @@
         "color_scheme": "background-1",
         "padding_top": 20,
         "padding_bottom": 0
+      }
+    },
+    "image_banner_XaRjUX": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_waPKDG": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_jePVkH": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "buttons_fY4ywz": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_waPKDG",
+        "text_jePVkH",
+        "buttons_fY4ywz"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/IMG_0186.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "fixed",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "background-2",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
       }
     },
     "featured_collection_MDAxGp": {
@@ -425,10 +526,12 @@
     }
   },
   "order": [
+    "image_banner_PbUe8K",
     "video_48Hm4j",
     "rich_text_yTTGad",
-    "image_banner_PbUe8K",
+    "image_banner_Fy4zQt",
     "image_with_text_UWLAfV",
+    "image_banner_XaRjUX",
     "featured_collection_MDAxGp",
     "featured_collection",
     "image_with_text_n9zJcp",
