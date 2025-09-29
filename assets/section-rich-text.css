@@ -301,69 +301,28 @@
   background-color: rgba(var(--color-secondary-button), 1) !important;
 }
 
-/* Make banners touch each other by removing all spacing */
-.banner {
+/* Robust fix: Only target sections with glass effect and their adjacent sections */
+.section:has(.rich-text.rich-text--glass) {
   margin: 0 !important;
   padding: 0 !important;
+  position: relative !important;
 }
 
-/* Ensure banners connect seamlessly */
-.banner + .banner {
+/* Remove spacing between glass section and adjacent banners */
+.section:has(.rich-text.rich-text--glass) + .section:has(.banner),
+.section:has(.banner) + .section:has(.rich-text.rich-text--glass) {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* Remove any default section spacing */
-.section {
-  margin: 0 !important;
-  padding: 0 !important;
+/* Ensure banners adjacent to glass sections have no bottom spacing */
+.section:has(.banner) + .section:has(.rich-text.rich-text--glass) .banner {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
-.section + .section {
+/* Ensure glass sections adjacent to banners have no top spacing */
+.section:has(.rich-text.rich-text--glass) + .section:has(.banner) .banner {
   margin-top: 0 !important;
   padding-top: 0 !important;
-}
-
-/* Aggressive white space removal for all banner-related elements */
-.banner,
-.banner__media,
-.banner__content,
-.banner__box,
-.section:has(.banner),
-.section .banner {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Remove spacing from banner containers */
-.banner__media,
-.banner__content {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Ensure no gaps between banner elements */
-.banner__media + .banner__content,
-.banner__content + .banner__media {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Remove any theme default spacing */
-.page-width {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Force banners to extend full width and height */
-.banner {
-  width: 100% !important;
-  min-height: auto !important;
-}
-
-/* Remove any container spacing that might create white space */
-.container,
-.content-container {
-  margin: 0 !important;
-  padding: 0 !important;
 }
