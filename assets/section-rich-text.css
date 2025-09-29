@@ -87,25 +87,25 @@
 
 /* Glass Effect Styles for Rich Text Section */
 .rich-text.rich-text--glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  z-index: 10;
-  margin: -60px 0;
-  transform: translateZ(0);
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 10 !important;
+  margin: -60px 0 !important;
+  transform: translateZ(0) !important;
 }
 
 /* Dark glass variant for dark backgrounds */
 .rich-text.rich-text--glass.rich-text--glass-dark {
-  background: rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Enhanced glass effect with gradient overlay */
@@ -165,30 +165,60 @@
 
 /* Enhanced overflow effect for background images */
 .rich-text.rich-text--glass {
-  position: relative;
-  z-index: 10;
+  position: relative !important;
+  z-index: 10 !important;
 }
 
-/* Ensure proper stacking context */
-.section:has(.rich-text.rich-text--glass) {
-  position: relative;
-  z-index: 5;
+/* Ensure proper stacking context - use more specific selectors */
+.section .rich-text.rich-text--glass {
+  position: relative !important;
+  z-index: 10 !important;
 }
 
 /* Create overlap effect with adjacent sections */
-.section:has(.rich-text.rich-text--glass) + .section,
-.section + .section:has(.rich-text.rich-text--glass) {
-  position: relative;
-  z-index: 1;
+.section + .section .rich-text.rich-text--glass,
+.section .rich-text.rich-text--glass + .section {
+  position: relative !important;
+  z-index: 10 !important;
 }
 
 /* Additional padding to accommodate the overflow */
-.section:has(.rich-text.rich-text--glass) {
-  padding: 60px 0;
+.section .rich-text.rich-text--glass {
+  padding: 60px 0 !important;
 }
 
 @media screen and (max-width: 749px) {
-  .section:has(.rich-text.rich-text--glass) {
-    padding: 40px 0;
+  .section .rich-text.rich-text--glass {
+    padding: 40px 0 !important;
+  }
+}
+
+/* Override any conflicting styles from other sections */
+.banner + .section .rich-text.rich-text--glass,
+.section + .banner .rich-text.rich-text--glass {
+  margin: -60px 0 !important;
+  z-index: 10 !important;
+  position: relative !important;
+}
+
+/* Force glass effect visibility - debugging styles */
+.rich-text.rich-text--glass {
+  /* Ensure transparency is visible */
+  background: rgba(255, 255, 255, 0.15) !important;
+  /* Make sure backdrop filter works */
+  backdrop-filter: blur(15px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(15px) saturate(150%) !important;
+  /* Ensure it's above other elements */
+  z-index: 999 !important;
+  /* Make sure it overlaps */
+  margin: -80px 20px !important;
+  /* Add a visible border for debugging */
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 749px) {
+  .rich-text.rich-text--glass {
+    margin: -60px 10px !important;
   }
 }
