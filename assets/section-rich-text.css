@@ -323,3 +323,47 @@
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+
+/* Aggressive white space removal for all banner-related elements */
+.banner,
+.banner__media,
+.banner__content,
+.banner__box,
+.section:has(.banner),
+.section .banner {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove spacing from banner containers */
+.banner__media,
+.banner__content {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure no gaps between banner elements */
+.banner__media + .banner__content,
+.banner__content + .banner__media {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove any theme default spacing */
+.page-width {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force banners to extend full width and height */
+.banner {
+  width: 100% !important;
+  min-height: auto !important;
+}
+
+/* Remove any container spacing that might create white space */
+.container,
+.content-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
