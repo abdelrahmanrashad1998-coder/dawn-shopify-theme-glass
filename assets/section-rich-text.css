@@ -388,3 +388,57 @@
   line-height: normal !important;
   font-size: revert !important;
 }
+
+/* Remove ALL padding from rich text elements */
+.rich-text,
+.rich-text__wrapper,
+.rich-text__blocks,
+.rich-text__heading,
+.rich-text__text,
+.rich-text__caption,
+.rich-text__buttons {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove padding from rich text containers */
+.rich-text.content-container {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove padding from rich text wrapper */
+.rich-text__wrapper {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove padding from rich text blocks */
+.rich-text__blocks {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove any default spacing from rich text elements */
+.rich-text__blocks > * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove spacing between rich text elements */
+.rich-text__blocks > * + * {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Remove spacing from rich text buttons */
+.rich-text__buttons {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove spacing from rich text buttons + buttons */
+.rich-text__buttons + .rich-text__buttons {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
