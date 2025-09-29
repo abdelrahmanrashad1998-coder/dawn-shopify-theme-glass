@@ -348,6 +348,37 @@
   padding: 0 !important;
 }
 
+/* FORCE consecutive banner sections to touch */
+.section:has(.banner) + .section:has(.banner) {
+  margin-top: -1px !important;
+  padding-top: 0 !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Force banner elements to extend and touch */
+.section:has(.banner) .banner {
+  margin-bottom: -1px !important;
+  padding-bottom: 0 !important;
+}
+
+.section:has(.banner) + .section:has(.banner) .banner {
+  margin-top: -1px !important;
+  padding-top: 0 !important;
+}
+
+/* Override any theme section spacing */
+.section {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force all sections to have no spacing */
+.section + .section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 /* FORCE banners to touch - more aggressive approach */
 .banner {
   margin: 0 !important;
