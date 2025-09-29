@@ -96,6 +96,9 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  z-index: 10;
+  margin: -60px 0;
+  transform: translateZ(0);
 }
 
 /* Dark glass variant for dark backgrounds */
@@ -152,10 +155,40 @@
 @media screen and (max-width: 749px) {
   .rich-text.rich-text--glass {
     border-radius: 12px;
-    margin: 1rem;
+    margin: -40px 1rem;
   }
   
   .rich-text.rich-text--glass::before {
     border-radius: 12px;
+  }
+}
+
+/* Enhanced overflow effect for background images */
+.rich-text.rich-text--glass {
+  position: relative;
+  z-index: 10;
+}
+
+/* Ensure proper stacking context */
+.section:has(.rich-text.rich-text--glass) {
+  position: relative;
+  z-index: 5;
+}
+
+/* Create overlap effect with adjacent sections */
+.section:has(.rich-text.rich-text--glass) + .section,
+.section + .section:has(.rich-text.rich-text--glass) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Additional padding to accommodate the overflow */
+.section:has(.rich-text.rich-text--glass) {
+  padding: 60px 0;
+}
+
+@media screen and (max-width: 749px) {
+  .section:has(.rich-text.rich-text--glass) {
+    padding: 40px 0;
   }
 }
