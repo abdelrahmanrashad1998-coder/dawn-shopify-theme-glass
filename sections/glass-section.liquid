@@ -16,13 +16,14 @@
 
 <div class="glass-section">
   <div class="page-width section-{{ section.id }}-padding">
-    <div class="glass-container glass-{{ section.settings.glass_style }}" style="
+    <div class="glass-container glass-{{ section.settings.glass_style }} width-{{ section.settings.banner_width }}" style="
       --glass-opacity: {{ section.settings.glass_opacity | divided_by: 100.0 }};
       --glass-blur: {{ section.settings.glass_blur }}px;
       --glass-border-radius: {{ section.settings.glass_border_radius }}px;
       --glass-border-width: {{ section.settings.glass_border_width }}px;
       --glass-border-opacity: {{ section.settings.glass_border_opacity | divided_by: 100.0 }};
       --glass-padding: {{ section.settings.glass_padding }}px;
+      {% if section.settings.banner_width == 'custom' %}--custom-width: {{ section.settings.custom_width }}px;{% endif %}
     ">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -157,6 +158,49 @@
       "unit": "px",
       "label": "Internal Padding",
       "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Banner Width"
+    },
+    {
+      "type": "select",
+      "id": "banner_width",
+      "options": [
+        {
+          "value": "narrow",
+          "label": "Narrow (600px)"
+        },
+        {
+          "value": "medium",
+          "label": "Medium (800px)"
+        },
+        {
+          "value": "wide",
+          "label": "Wide (1000px)"
+        },
+        {
+          "value": "full",
+          "label": "Full Width"
+        },
+        {
+          "value": "custom",
+          "label": "Custom"
+        }
+      ],
+      "default": "medium",
+      "label": "Banner Width"
+    },
+    {
+      "type": "range",
+      "id": "custom_width",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Custom Width",
+      "default": 800,
+      "info": "Only applies when Custom width is selected"
     },
     {
       "type": "header",
