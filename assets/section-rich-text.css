@@ -346,3 +346,45 @@
   margin: 0 !important;
   padding: 0 !important;
 }
+
+/* FORCE banners to touch - more aggressive approach */
+.banner {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* Force all banner-related elements to have no spacing */
+.banner *,
+.banner__media,
+.banner__content,
+.banner__box,
+.banner__media *,
+.banner__content * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force sections to have zero height when they only contain spacing */
+.section:has(.banner):not(:has(.rich-text)) {
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+/* Override any theme spacing variables */
+:root {
+  --section-padding: 0px !important;
+  --section-margin: 0px !important;
+}
+
+/* Force banner sections to collapse */
+.section:has(.banner) {
+  line-height: 0 !important;
+  font-size: 0 !important;
+}
+
+.section:has(.banner) * {
+  line-height: normal !important;
+  font-size: revert !important;
+}
