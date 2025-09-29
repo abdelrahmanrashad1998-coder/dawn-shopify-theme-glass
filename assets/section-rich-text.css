@@ -203,27 +203,30 @@
 
 /* Force glass effect visibility - debugging styles */
 .rich-text.rich-text--glass {
-  /* Ensure transparency is visible */
-  background: rgba(255, 255, 255, 0.15) !important;
-  /* Make sure backdrop filter works */
-  backdrop-filter: blur(15px) saturate(150%) !important;
-  -webkit-backdrop-filter: blur(15px) saturate(150%) !important;
+  /* Make it more transparent to show banner content */
+  background: rgba(255, 255, 255, 0.05) !important;
+  /* Reduce blur to show more banner detail */
+  backdrop-filter: blur(8px) saturate(120%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(120%) !important;
   /* Ensure it's above other elements */
   z-index: 999 !important;
-  /* Reduced overlap to show more banner content */
-  margin: -40px 20px !important;
-  /* Add a visible border for debugging */
-  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  /* Keep aggressive overlap to eliminate white space */
+  margin: -120px 20px !important;
+  /* Make border more subtle */
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
   /* Ensure text content is visible */
   overflow: visible !important;
   min-height: 200px !important;
   padding: 40px 20px !important;
+  /* Position to show more banner content */
+  position: relative !important;
+  top: 60px !important;
 }
 
 /* Mobile adjustments */
 @media screen and (max-width: 749px) {
   .rich-text.rich-text--glass {
-    margin: -30px 10px !important;
+    margin: -100px 10px !important;
   }
 }
 
