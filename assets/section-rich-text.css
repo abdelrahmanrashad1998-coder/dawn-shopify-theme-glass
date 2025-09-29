@@ -348,35 +348,49 @@
   padding: 0 !important;
 }
 
-/* FORCE consecutive banner sections to touch */
-.section:has(.banner) + .section:has(.banner) {
-  margin-top: -1px !important;
-  padding-top: 0 !important;
-  position: relative !important;
+/* FORCE banner sections to have ZERO height and only overflow */
+.section:has(.banner) {
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+/* Force banner elements to overflow their zero-height containers */
+.section:has(.banner) .banner {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
   z-index: 1 !important;
 }
 
-/* Force banner elements to extend and touch */
-.section:has(.banner) .banner {
-  margin-bottom: -1px !important;
-  padding-bottom: 0 !important;
+/* Stack consecutive banners on top of each other */
+.section:has(.banner) + .section:has(.banner) {
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
 .section:has(.banner) + .section:has(.banner) .banner {
-  margin-top: -1px !important;
-  padding-top: 0 !important;
-}
-
-/* Override any theme section spacing */
-.section {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: auto !important;
   margin: 0 !important;
   padding: 0 !important;
-}
-
-/* Force all sections to have no spacing */
-.section + .section {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+  z-index: 2 !important;
 }
 
 /* FORCE banners to touch - more aggressive approach */
