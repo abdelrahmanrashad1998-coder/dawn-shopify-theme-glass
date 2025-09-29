@@ -114,6 +114,8 @@
         "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
+        "enable_glass_effect": true,
+        "glass_effect_dark": true,
         "padding_top": 40,
         "padding_bottom": 52
       }
