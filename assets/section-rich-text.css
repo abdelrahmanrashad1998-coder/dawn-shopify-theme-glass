@@ -442,3 +442,85 @@
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+
+/* Remove padding from specific rich text elements */
+.rich-text h1,
+.rich-text h2,
+.rich-text h3,
+.rich-text h4,
+.rich-text h5,
+.rich-text h6,
+.rich-text .h1,
+.rich-text .h2,
+.rich-text .h3,
+.rich-text .h4,
+.rich-text .h5,
+.rich-text .h6 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove padding from rich text headings */
+.rich-text__heading,
+.rich-text__heading * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove padding from rich text text content */
+.rich-text__text,
+.rich-text__text *,
+.rich-text__text p,
+.rich-text__text div,
+.rich-text__text span {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove padding from rich text captions */
+.rich-text__caption,
+.rich-text__caption * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove padding from buttons specifically */
+.rich-text .button,
+.rich-text .button *,
+.rich-text a.button,
+.rich-text a.button * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove padding from button containers */
+.rich-text__buttons .button,
+.rich-text__buttons a {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove any default browser spacing */
+.rich-text * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Restore essential button padding for functionality */
+.rich-text .button {
+  padding: 1rem 2rem !important;
+  min-height: 4.5rem !important;
+}
+
+/* Restore essential text spacing for readability */
+.rich-text__text p + p {
+  margin-top: 1rem !important;
+}
+
+.rich-text__heading + .rich-text__text {
+  margin-top: 1rem !important;
+}
+
+.rich-text__text + .rich-text__buttons {
+  margin-top: 2rem !important;
+}
