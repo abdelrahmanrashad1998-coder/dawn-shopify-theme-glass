@@ -186,6 +186,9 @@
     inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
 }
 
+.glass-button-link:after{
+  border:none;
+}
 /* Glass Image */
 .glass-image {
   text-align: center;
