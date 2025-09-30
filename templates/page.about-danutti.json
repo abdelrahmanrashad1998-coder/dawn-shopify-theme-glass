@@ -191,59 +191,6 @@
         "padding_bottom": 0
       }
     },
-    "glass_section_HYGKfL": {
-      "type": "glass-section",
-      "blocks": {
-        "heading_BwyV6K": {
-          "type": "heading",
-          "settings": {
-            "heading": "Mission",
-            "heading_size": "h1"
-          }
-        },
-        "text_QKFmiJ": {
-          "type": "text",
-          "settings": {
-            "text": "<p>At Danutti, our mission is to redefine luxury in women’s accessories through exceptional quality, timeless design, and personal expression. </p><p>We strive to enhance the lives of our customers by offering pieces that celebrate their individuality and bring elegance to their everyday lives.</p>"
-          }
-        },
-        "button_39TRXK": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_BwyV6K",
-        "text_QKFmiJ",
-        "button_39TRXK"
-      ],
-      "name": "mission",
-      "settings": {
-        "color_scheme": "",
-        "heading_color": "#000000",
-        "text_color": "#000000",
-        "button_color": "#000000",
-        "button_text_color": "#ffffff",
-        "glass_style": "frosted",
-        "glass_position": "absolute",
-        "glass_position_bottom": "0",
-        "glass_opacity": 10,
-        "glass_blur": 10,
-        "glass_border_radius": 20,
-        "glass_border_width": 1,
-        "glass_border_opacity": 30,
-        "glass_padding": 40,
-        "glass_height": 300,
-        "banner_width": "medium",
-        "custom_width": 800,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "rich_text_k4EETc": {
       "type": "rich-text",
       "blocks": {
@@ -343,6 +290,59 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "glass_section_HYGKfL": {
+      "type": "glass-section",
+      "blocks": {
+        "heading_BwyV6K": {
+          "type": "heading",
+          "settings": {
+            "heading": "Mission",
+            "heading_size": "h1"
+          }
+        },
+        "text_QKFmiJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Danutti, our mission is to redefine luxury in women’s accessories through exceptional quality, timeless design, and personal expression. </p><p>We strive to enhance the lives of our customers by offering pieces that celebrate their individuality and bring elegance to their everyday lives.</p>"
+          }
+        },
+        "button_39TRXK": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_BwyV6K",
+        "text_QKFmiJ",
+        "button_39TRXK"
+      ],
+      "name": "mission",
+      "settings": {
+        "color_scheme": "",
+        "heading_color": "#000000",
+        "text_color": "#000000",
+        "button_color": "#000000",
+        "button_text_color": "#ffffff",
+        "glass_style": "frosted",
+        "glass_position": "absolute",
+        "glass_position_bottom": "0",
+        "glass_opacity": 10,
+        "glass_blur": 10,
+        "glass_border_radius": 20,
+        "glass_border_width": 1,
+        "glass_border_opacity": 30,
+        "glass_padding": 40,
+        "glass_height": 300,
+        "banner_width": "medium",
+        "custom_width": 800,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "rich_text_WJrpJQ": {
       "type": "rich-text",
       "blocks": {
@@ -364,6 +364,7 @@
         "heading_xeRPgd",
         "text_f7kWJR"
       ],
+      "disabled": true,
       "name": "MIssion",
       "settings": {
         "desktop_content_position": "center",
@@ -433,6 +434,59 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "glass_section_6aqj6A": {
+      "type": "glass-section",
+      "blocks": {
+        "heading_Fk3jEy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Offerings",
+            "heading_size": "h1"
+          }
+        },
+        "text_GTBXdD": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Danutti offers a curated collection of exquisite accessories, including:</strong></p><ul><li><strong>Bracelets:</strong> Elegant designs that add a<br/>     sophisticated touch to any outfit.</li><li><strong>Necklaces:</strong> Statement pieces and subtle<br/>     adornments that elevate your style.</li><li><strong>Earrings:</strong> From minimalist studs to bold<br/>     designs, perfect for any occasion.</li></ul><p>Each product is a blend of traditional craftsmanship and modern aesthetics, featuring high-quality materials and meticulous attention to detail.</p>"
+          }
+        },
+        "button_YPJA49": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fk3jEy",
+        "text_GTBXdD",
+        "button_YPJA49"
+      ],
+      "name": "Offerings",
+      "settings": {
+        "color_scheme": "",
+        "heading_color": "#000000",
+        "text_color": "#000000",
+        "button_color": "#000000",
+        "button_text_color": "#ffffff",
+        "glass_style": "frosted",
+        "glass_position": "relative",
+        "glass_position_bottom": "none",
+        "glass_opacity": 10,
+        "glass_blur": 10,
+        "glass_border_radius": 20,
+        "glass_border_width": 1,
+        "glass_border_opacity": 30,
+        "glass_padding": 40,
+        "glass_height": 300,
+        "banner_width": "wide",
+        "custom_width": 800,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "rich_text_M7gNLC": {
       "type": "rich-text",
       "blocks": {
@@ -454,6 +508,7 @@
         "heading_Cyjhwq",
         "text_agz9Hx"
       ],
+      "disabled": true,
       "name": "vision",
       "settings": {
         "desktop_content_position": "center",
@@ -514,12 +569,13 @@
     "blocks_pX4x9A",
     "image_with_text_gUTep7",
     "glass_section_YjFiQ6",
-    "glass_section_HYGKfL",
     "rich_text_k4EETc",
     "main",
     "slideshow_tbDQU8",
+    "glass_section_HYGKfL",
     "rich_text_WJrpJQ",
     "slideshow_hdNpdT",
+    "glass_section_6aqj6A",
     "rich_text_M7gNLC",
     "collection_list_CWdAxW"
   ]
