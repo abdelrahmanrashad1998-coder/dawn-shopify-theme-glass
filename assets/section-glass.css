@@ -30,6 +30,7 @@
 }
 
 .hero-body{
+  inset:0;
   position: absolute;
   bottom:0;
 }
