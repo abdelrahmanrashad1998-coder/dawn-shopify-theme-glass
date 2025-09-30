@@ -273,30 +273,44 @@
 
       /* Fix for Safari and mobile browsers - prevent background jumping when UI appears/disappears */
       @supports (-webkit-touch-callout: none) {
-        /* Safari-specific fix */
+        /* Safari-specific fix - use fixed positioning with viewport units */
         body::before {
-          background-attachment: scroll;
-          position: absolute;
+          background-attachment: fixed;
+          position: fixed;
           height: 100vh;
+          width: 100vw;
+          top: 0;
+          left: 0;
+          transform: translateZ(0);
+          -webkit-transform: translateZ(0);
         }
       }
 
       @media screen and (max-width: 749px) {
         body::before {
-          background-attachment: scroll;
-          position: absolute;
+          background-attachment: fixed;
+          position: fixed;
           height: 100vh;
+          width: 100vw;
+          top: 0;
+          left: 0;
+          transform: translateZ(0);
+          -webkit-transform: translateZ(0);
         }
       }
 
-      /* Additional Safari mobile fix */
+      /* Additional Safari mobile fix with viewport units */
       @media screen and (max-width: 749px) and (-webkit-min-device-pixel-ratio: 1) {
         body::before {
-          background-attachment: scroll;
-          position: absolute;
+          background-attachment: fixed;
+          position: fixed;
           height: 100vh;
+          width: 100vw;
+          top: 0;
+          left: 0;
           transform: translateZ(0);
           -webkit-transform: translateZ(0);
+          will-change: transform;
         }
       }
 
