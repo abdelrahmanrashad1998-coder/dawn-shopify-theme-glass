@@ -271,12 +271,32 @@
         pointer-events: none;
       }
 
-      /* Fix for mobile browsers - prevent background jumping when UI appears/disappears */
+      /* Fix for Safari and mobile browsers - prevent background jumping when UI appears/disappears */
+      @supports (-webkit-touch-callout: none) {
+        /* Safari-specific fix */
+        body::before {
+          background-attachment: scroll;
+          position: absolute;
+          height: 100vh;
+        }
+      }
+
       @media screen and (max-width: 749px) {
         body::before {
           background-attachment: scroll;
           position: absolute;
           height: 100vh;
+        }
+      }
+
+      /* Additional Safari mobile fix */
+      @media screen and (max-width: 749px) and (-webkit-min-device-pixel-ratio: 1) {
+        body::before {
+          background-attachment: scroll;
+          position: absolute;
+          height: 100vh;
+          transform: translateZ(0);
+          -webkit-transform: translateZ(0);
         }
       }
 
