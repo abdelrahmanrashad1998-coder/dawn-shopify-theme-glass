@@ -23,10 +23,7 @@
   bottom:{{section.settings.glass_position_bottom}};
 }
 
-.hero2{
-  
-  display:flex;
-}
+
 
 .section-{{ section.id }}-padding {
   {% if section.settings.heading_color != blank %}--glass-heading-color: {{ section.settings.heading_color }};{% endif %}
@@ -182,6 +179,16 @@
       ],
       "default": "absolute",
       "label": "absolute"
+    },
+    {
+      "type": "range",
+      "id": "hero_height",
+      "min": 0,
+      "max": 95,
+      "step": 5,
+      "unit": "vh",
+      "label": "Hero Height",
+      "default": 10
     },
     {
       "type": "select",
