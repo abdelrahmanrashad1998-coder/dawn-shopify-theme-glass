@@ -39,15 +39,15 @@
             "image_width": 200,
             "image_height": 200,
             "image_border_radius": 20,
-            "glass_background": "rgba(255,255,255,0.15)",
-            "glass_border_color": "rgba(255,255,255,0.25)",
+            "glass_background": "#ffffff26",
+            "glass_border_color": "#ffffff40",
             "blur_intensity": 20,
             "glass_border_radius": 24,
             "glass_padding": 40,
             "shadow_horizontal": 0,
             "shadow_vertical": 8,
             "shadow_blur": 30,
-            "shadow_color": "rgba(0,0,0,0.15)",
+            "shadow_color": "#00000026",
             "heading": "Danutti",
             "text": "<p><br/>A lifestyle, a statement of differentiation, and a celebration of you since<br/>2020 .</p>",
             "button_text": "Explore now",
@@ -57,15 +57,15 @@
             "heading_size": 32,
             "heading_weight": "600",
             "heading_margin_bottom": 16,
-            "text_color": "rgba(255,255,255,0.9)",
+            "text_color": "#ffffffe6",
             "text_size": 16,
             "text_margin_bottom": 20,
-            "button_background_color": "rgba(255,255,255,0.2)",
+            "button_background_color": "#ffffff33",
             "button_text_color": "#ffffff",
-            "button_hover_background_color": "rgba(255,255,255,0.3)",
+            "button_hover_background_color": "#ffffff4d",
             "button_hover_text_color": "#ffffff",
-            "button_border_color": "rgba(255,255,255,0.3)",
-            "button_hover_border_color": "rgba(255,255,255,0.5)",
+            "button_border_color": "#ffffff4d",
+            "button_hover_border_color": "#ffffff80",
             "button_border_width": 1,
             "button_blur": 15,
             "button_font_size": 14,
@@ -252,7 +252,7 @@
             "box_align": "middle-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "color_scheme": "background-1"
+            "color_scheme": "background-2"
           }
         },
         "slide_mkBEJq": {
@@ -270,7 +270,7 @@
             "box_align": "middle-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "color_scheme": "background-1"
+            "color_scheme": "background-2"
           }
         }
       },
