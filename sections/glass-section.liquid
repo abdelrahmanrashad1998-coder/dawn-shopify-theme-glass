@@ -24,7 +24,7 @@
 }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+{% comment %} <div class="color-{{ section.settings.color_scheme }} gradient"> {% endcomment %}
   <div class="glass-section section-{{ section.id }}-padding">
     <div class="glass-container-wrapper hero">
       <div class="glass-container hero-body glass-{{ section.settings.glass_style }} width-{{ section.settings.banner_width }}" style="
@@ -82,7 +82,7 @@
       </div>
     </div>
   </div>
-</div>
+{% comment %} </div> {% endcomment %}
 
 {% schema %}
 {
