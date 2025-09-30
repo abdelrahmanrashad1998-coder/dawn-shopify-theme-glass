@@ -128,6 +128,7 @@
       ],
       "name": "Glass Section",
       "settings": {
+        "color_scheme": "background-2",
         "glass_style": "frosted",
         "glass_position": "absolute",
         "glass_position_bottom": "0",
@@ -765,6 +766,7 @@
       "disabled": true,
       "name": "Glass Section",
       "settings": {
+        "color_scheme": "",
         "glass_style": "frosted",
         "glass_position": "absolute",
         "glass_position_bottom": "0",
