@@ -162,7 +162,7 @@
 
 .glass-button-link {
   display: inline-block;
-  padding: 1rem 2rem;
+  /*padding: 1rem 2rem;*/
   background: rgba(var(--color-button), 0.9);
   color: rgb(var(--color-button-text));
   text-decoration: none;
