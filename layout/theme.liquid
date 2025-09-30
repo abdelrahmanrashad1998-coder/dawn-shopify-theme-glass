@@ -223,7 +223,7 @@
 
         --background-image: {% if settings.background_image != blank %}url('{{ settings.background_image | image_url }}'){% else %}none{% endif %};
         --background-opacity: {{ settings.background_opacity | divided_by: 100.0 }};
-        --background-size: {{ settings.background_size | default: 'cover' }};
+        --background-size: {{ settings.background_size | default: 'fill' }};
         --background-position: {{ settings.background_position | default: 'center' }};
       }
 
