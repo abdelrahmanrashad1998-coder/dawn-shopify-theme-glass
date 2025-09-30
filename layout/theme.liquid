@@ -269,7 +269,15 @@
         opacity: var(--background-opacity);
         z-index: -1;
         pointer-events: none;
-        background-attachment: fixed;
+      }
+
+      /* Fix for mobile browsers - prevent background jumping when UI appears/disappears */
+      @media screen and (max-width: 749px) {
+        body::before {
+          background-attachment: scroll;
+          position: absolute;
+          height: 100vh;
+        }
       }
 
       @media screen and (min-width: 750px) {
