@@ -24,6 +24,12 @@
   }
 }
 
+.hero{
+  height:95vh;
+  position:absolute;
+  bottom:0;
+}
+
 .glass-container {
   position: relative;
   width: 100%;
