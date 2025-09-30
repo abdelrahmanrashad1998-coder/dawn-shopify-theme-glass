@@ -24,23 +24,24 @@
 }
 {%- endstyle -%}
 
-<div class="glass-section section-{{ section.id }}-padding">
-  <div class="glass-container-wrapper hero">
-    <div class="glass-container hero-body glass-{{ section.settings.glass_style }} width-{{ section.settings.banner_width }}" style="
-      --glass-opacity: {{ section.settings.glass_opacity | divided_by: 100.0 }};
-      --glass-blur: {{ section.settings.glass_blur }}px;
-      --glass-border-radius: {{ section.settings.glass_border_radius }}px;
-      --glass-border-width: {{ section.settings.glass_border_width }}px;
-      --glass-border-opacity: {{ section.settings.glass_border_opacity | divided_by: 100.0 }};
-      --glass-padding: {{ section.settings.glass_padding }}px;
-      --glass-height: {{ section.settings.glass_height }}px;
-      {% if section.settings.banner_width == 'custom' %}--custom-width: {{ section.settings.custom_width }}px;{% endif %}
-      {% if section.settings.banner_width == 'narrow' %}max-width: 600px; width: 600px;{% endif %}
-      {% if section.settings.banner_width == 'medium' %}max-width: 800px; width: 800px;{% endif %}
-      {% if section.settings.banner_width == 'wide' %}max-width: 1000px; width: 1000px;{% endif %}
-      {% if section.settings.banner_width == 'full' %}max-width: 100%; width: 100%;{% endif %}
-      {% if section.settings.banner_width == 'custom' %}max-width: {{ section.settings.custom_width }}px; width: {{ section.settings.custom_width }}px;{% endif %}
-    ">
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="glass-section section-{{ section.id }}-padding">
+    <div class="glass-container-wrapper hero">
+      <div class="glass-container hero-body glass-{{ section.settings.glass_style }} width-{{ section.settings.banner_width }}" style="
+        --glass-opacity: {{ section.settings.glass_opacity | divided_by: 100.0 }};
+        --glass-blur: {{ section.settings.glass_blur }}px;
+        --glass-border-radius: {{ section.settings.glass_border_radius }}px;
+        --glass-border-width: {{ section.settings.glass_border_width }}px;
+        --glass-border-opacity: {{ section.settings.glass_border_opacity | divided_by: 100.0 }};
+        --glass-padding: {{ section.settings.glass_padding }}px;
+        --glass-height: {{ section.settings.glass_height }}px;
+        {% if section.settings.banner_width == 'custom' %}--custom-width: {{ section.settings.custom_width }}px;{% endif %}
+        {% if section.settings.banner_width == 'narrow' %}max-width: 600px; width: 600px;{% endif %}
+        {% if section.settings.banner_width == 'medium' %}max-width: 800px; width: 800px;{% endif %}
+        {% if section.settings.banner_width == 'wide' %}max-width: 1000px; width: 1000px;{% endif %}
+        {% if section.settings.banner_width == 'full' %}max-width: 100%; width: 100%;{% endif %}
+        {% if section.settings.banner_width == 'custom' %}max-width: {{ section.settings.custom_width }}px; width: {{ section.settings.custom_width }}px;{% endif %}
+      ">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
@@ -78,6 +79,7 @@
             </div>
         {%- endcase -%}
       {%- endfor -%}
+      </div>
     </div>
   </div>
 </div>
@@ -91,6 +93,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
     {
       "type": "header",
       "content": "Glass Appearance"
