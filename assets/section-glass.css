@@ -24,16 +24,7 @@
   }
 }
 
-.hero{
-  height:95vh;
-  display:flex;
-}
 
-.hero-body{
-  
-  position: absolute;
-  bottom:0;
-}
 
 .glass-container {
 
