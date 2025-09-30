@@ -3412,7 +3412,7 @@ details-disclosure > details {
     right: 0;
   }
 
-  /* .animate--hover-3d-lift .card-wrapper .card--card:before,
+  .animate--hover-3d-lift .card-wrapper .card--card:before,
   .animate--hover-3d-lift .card-wrapper .card--standard .card__media:after {
     content: '';
     position: absolute;
@@ -3433,7 +3433,7 @@ details-disclosure > details {
       rgba(255, 255, 255, 1) 50%,
       rgba(255, 255, 255, 0) 55%
     );
-  } */
+  }
 
   .animate--hover-3d-lift .card-wrapper:hover .card--card:before,
   .animate--hover-3d-lift .card-wrapper:hover .card--standard .card__media:after {
