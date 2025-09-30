@@ -23,6 +23,7 @@
       --glass-border-width: {{ section.settings.glass_border_width }}px;
       --glass-border-opacity: {{ section.settings.glass_border_opacity | divided_by: 100.0 }};
       --glass-padding: {{ section.settings.glass_padding }}px;
+      --glass-height: {{ section.settings.glass_height }}px;
       {% if section.settings.banner_width == 'custom' %}--custom-width: {{ section.settings.custom_width }}px;{% endif %}
       {% if section.settings.banner_width == 'narrow' %}max-width: 600px; width: 600px;{% endif %}
       {% if section.settings.banner_width == 'medium' %}max-width: 800px; width: 800px;{% endif %}
@@ -163,6 +164,17 @@
       "unit": "px",
       "label": "Internal Padding",
       "default": 40
+    },
+    {
+      "type": "range",
+      "id": "glass_height",
+      "min": 200,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "label": "Glass Container Height",
+      "default": 300,
+      "info": "Minimum height of the glass container"
     },
     {
       "type": "header",

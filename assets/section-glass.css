@@ -28,6 +28,7 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
+  min-height: var(--glass-height, 300px);
   padding: var(--glass-padding);
   border-radius: var(--glass-border-radius);
   border: var(--glass-border-width) solid rgba(255, 255, 255, var(--glass-border-opacity));
