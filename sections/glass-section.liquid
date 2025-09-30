@@ -22,6 +22,13 @@
   position: {{section.settings.glass_position}};
   bottom:{{section.settings.glass_position_bottom}};
 }
+
+.section-{{ section.id }}-padding {
+  {% if section.settings.heading_color != blank %}--glass-heading-color: {{ section.settings.heading_color }};{% endif %}
+  {% if section.settings.text_color != blank %}--glass-text-color: {{ section.settings.text_color }};{% endif %}
+  {% if section.settings.button_color != blank %}--glass-button-color: {{ section.settings.button_color }};{% endif %}
+  {% if section.settings.button_text_color != blank %}--glass-button-text-color: {{ section.settings.button_text_color }};{% endif %}
+}
 {%- endstyle -%}
 
 {% comment %} <div class="color-{{ section.settings.color_scheme }} gradient"> {% endcomment %}
@@ -98,6 +105,38 @@
       "id": "color_scheme",
       "label": "Color scheme",
       "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Text Colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000",
+      "info": "Custom color for the section heading. Leave empty to use theme colors."
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000",
+      "info": "Custom color for the section text. Leave empty to use theme colors."
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button background color",
+      "default": "#000000",
+      "info": "Custom color for the button background. Leave empty to use theme colors."
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff",
+      "info": "Custom color for the button text. Leave empty to use theme colors."
     },
     {
       "type": "header",
