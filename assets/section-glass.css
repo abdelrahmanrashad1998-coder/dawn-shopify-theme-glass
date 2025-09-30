@@ -247,7 +247,7 @@
   transform: translateY(-5px);
   box-shadow: 
     0 12px 40px 0 rgba(var(--color-shadow), 0.2),
-    inset 0 1px 0 0 rgba(255, 255, 255, 1);
+    inset 0 1px 0 0 rgba(var(--color-foreground), 0.15);
 }
 
 /* Accessibility */
@@ -275,7 +275,7 @@
   
   .glass-heading-text,
   .glass-text-content {
-    color: rgba(var(--color-foreground), 0.9);
+    color: rgba(255, 255, 255, 1);
   }
 }
 
