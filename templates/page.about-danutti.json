@@ -11,6 +11,7 @@
   "sections": {
     "video_9CzytT": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "",
@@ -171,8 +172,8 @@
       "name": "about text",
       "settings": {
         "color_scheme": "",
-        "heading_color": "#000000",
-        "text_color": "#000000",
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
         "button_color": "#000000",
         "button_text_color": "#ffffff",
         "glass_style": "frosted",
