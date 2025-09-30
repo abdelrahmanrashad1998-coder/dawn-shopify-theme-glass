@@ -718,6 +718,7 @@
         "slide_QMntgr",
         "slide_4gAJEf"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "Picture Slideshow",
       "settings": {
@@ -761,6 +762,7 @@
         "text_RT3n7M",
         "button_bTf6Wq"
       ],
+      "disabled": true,
       "name": "Glass Section",
       "settings": {
         "glass_style": "frosted",
