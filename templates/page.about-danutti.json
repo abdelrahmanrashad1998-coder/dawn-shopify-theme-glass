@@ -25,6 +25,64 @@
         "padding_bottom": 0
       }
     },
+    "blocks_pX4x9A": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_c0425cb_hixzWj": {
+          "type": "ai_gen_block_c0425cb",
+          "settings": {
+            "image_position": "left",
+            "gap": 40,
+            "container_padding": 20,
+            "min_height": 360,
+            "image": "shopify://shop_images/Marbles_of_Magic_2.jpg",
+            "image_width": 200,
+            "image_height": 200,
+            "image_border_radius": 20,
+            "glass_background": "rgba(255,255,255,0.15)",
+            "glass_border_color": "rgba(255,255,255,0.25)",
+            "blur_intensity": 20,
+            "glass_border_radius": 24,
+            "glass_padding": 40,
+            "shadow_horizontal": 0,
+            "shadow_vertical": 8,
+            "shadow_blur": 30,
+            "shadow_color": "rgba(0,0,0,0.15)",
+            "heading": "Danutti",
+            "text": "<p><br/>A lifestyle, a statement of differentiation, and a celebration of you since<br/>2020 .</p>",
+            "button_text": "Explore now",
+            "button_link": "",
+            "text_alignment": "left",
+            "heading_color": "#ffffff",
+            "heading_size": 32,
+            "heading_weight": "600",
+            "heading_margin_bottom": 16,
+            "text_color": "rgba(255,255,255,0.9)",
+            "text_size": 16,
+            "text_margin_bottom": 20,
+            "button_background_color": "rgba(255,255,255,0.2)",
+            "button_text_color": "#ffffff",
+            "button_hover_background_color": "rgba(255,255,255,0.3)",
+            "button_hover_text_color": "#ffffff",
+            "button_border_color": "rgba(255,255,255,0.3)",
+            "button_hover_border_color": "rgba(255,255,255,0.5)",
+            "button_border_width": 1,
+            "button_blur": 15,
+            "button_font_size": 14,
+            "button_font_weight": "500",
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 24,
+            "button_border_radius": 12
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_c0425cb_hixzWj"
+      ],
+      "name": "Transparent glass banner",
+      "settings": {}
+    },
     "image_with_text_gUTep7": {
       "type": "image-with-text",
       "blocks": {
@@ -58,6 +116,7 @@
         "text_nq3V8z",
         "button_pbijgG"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/Marbles_of_Magic_2.jpg",
@@ -76,6 +135,59 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "glass_section_YjFiQ6": {
+      "type": "glass-section",
+      "blocks": {
+        "heading_mwF9BX": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Danutti",
+            "heading_size": "h1"
+          }
+        },
+        "text_YyMMG3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to <strong>Danutti</strong>, </p><p>where timeless elegance meets modern sophistication. At Danutti, we craft more than just accessories; we create pieces that tell<br/>stories, inspire confidence, and celebrate individuality. </p><p>Rooted in a passion for exquisite craftsmanship and innovation, our collections are designed to empower women with a touch of luxury and refinement. </p><p>From our carefully selected materials to the intricate designs, every Danutti piece is a testament to our commitment to quality and elegance. Based in <strong>Egypt, </strong>for queens who seek exclusivity, </p><p><strong>Danutti </strong>is proud to serve.</p>"
+          }
+        },
+        "button_4VwTqc": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_mwF9BX",
+        "text_YyMMG3",
+        "button_4VwTqc"
+      ],
+      "name": "about text",
+      "settings": {
+        "color_scheme": "",
+        "heading_color": "#000000",
+        "text_color": "#000000",
+        "button_color": "#000000",
+        "button_text_color": "#ffffff",
+        "glass_style": "frosted",
+        "glass_position": "absolute",
+        "glass_position_bottom": "0",
+        "glass_opacity": 10,
+        "glass_blur": 10,
+        "glass_border_radius": 20,
+        "glass_border_width": 1,
+        "glass_border_opacity": 30,
+        "glass_padding": 40,
+        "glass_height": 300,
+        "banner_width": "medium",
+        "custom_width": 800,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -100,6 +212,7 @@
         "heading_XMiWrX",
         "text_RaJGYx"
       ],
+      "disabled": true,
       "name": "About Danutti text",
       "settings": {
         "desktop_content_position": "center",
@@ -341,76 +454,19 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "blocks_pX4x9A": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_c0425cb_hixzWj": {
-          "type": "ai_gen_block_c0425cb",
-          "settings": {
-            "image_position": "left",
-            "gap": 40,
-            "container_padding": 40,
-            "min_height": 360,
-            "image": "shopify://shop_images/Marbles_of_Magic_2.jpg",
-            "image_width": 200,
-            "image_height": 200,
-            "image_border_radius": 20,
-            "glass_background": "rgba(255,255,255,0.15)",
-            "glass_border_color": "rgba(255,255,255,0.25)",
-            "blur_intensity": 20,
-            "glass_border_radius": 24,
-            "glass_padding": 40,
-            "shadow_horizontal": 0,
-            "shadow_vertical": 8,
-            "shadow_blur": 30,
-            "shadow_color": "rgba(0,0,0,0.15)",
-            "heading": "Danutti",
-            "text": "<p><br/>A lifestyle, a statement of differentiation, and a celebration of you since<br/>2020 .</p>",
-            "button_text": "Explore now",
-            "button_link": "",
-            "text_alignment": "left",
-            "heading_color": "#ffffff",
-            "heading_size": 32,
-            "heading_weight": "600",
-            "heading_margin_bottom": 16,
-            "text_color": "rgba(255,255,255,0.9)",
-            "text_size": 16,
-            "text_margin_bottom": 20,
-            "button_background_color": "rgba(255,255,255,0.2)",
-            "button_text_color": "#ffffff",
-            "button_hover_background_color": "rgba(255,255,255,0.3)",
-            "button_hover_text_color": "#ffffff",
-            "button_border_color": "rgba(255,255,255,0.3)",
-            "button_hover_border_color": "rgba(255,255,255,0.5)",
-            "button_border_width": 1,
-            "button_blur": 15,
-            "button_font_size": 14,
-            "button_font_weight": "500",
-            "button_padding_vertical": 12,
-            "button_padding_horizontal": 24,
-            "button_border_radius": 12
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_c0425cb_hixzWj"
-      ],
-      "name": "Transparent glass banner",
-      "settings": {}
     }
   },
   "order": [
     "video_9CzytT",
+    "blocks_pX4x9A",
     "image_with_text_gUTep7",
+    "glass_section_YjFiQ6",
     "rich_text_k4EETc",
     "main",
     "slideshow_tbDQU8",
     "rich_text_WJrpJQ",
     "slideshow_hdNpdT",
     "rich_text_M7gNLC",
-    "collection_list_CWdAxW",
-    "blocks_pX4x9A"
+    "collection_list_CWdAxW"
   ]
 }
