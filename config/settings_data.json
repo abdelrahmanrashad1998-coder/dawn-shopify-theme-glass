@@ -17,7 +17,7 @@
     "body_scale": 100,
     "background_image": "shopify://shop_images/IMG_0184_2.jpg",
     "background_opacity": 100,
-    "background_size": "cover",
+    "background_size": "auto",
     "background_position": "center",
     "page_width": 1600,
     "spacing_sections": 0,
