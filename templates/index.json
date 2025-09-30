@@ -134,11 +134,11 @@
         "glass_border_radius": 20,
         "glass_border_width": 0,
         "glass_border_opacity": 30,
-        "glass_padding": 40,
+        "glass_padding": 60,
         "banner_width": "wide",
         "custom_width": 800,
-        "padding_top": 28,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "video_48Hm4j": {
