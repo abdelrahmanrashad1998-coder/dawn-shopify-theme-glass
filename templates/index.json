@@ -103,13 +103,13 @@
           "type": "heading",
           "settings": {
             "heading": "Welcome to Danutti",
-            "heading_size": "h1"
+            "heading_size": "h0"
           }
         },
         "text_DfXTJh": {
           "type": "text",
           "settings": {
-            "text": "<p>Upholding<br/>the highest standards of artistry and quality in every piece.</p>"
+            "text": "<h3>Upholding<br/>the highest standards of artistry and quality in every piece.</h3>"
           }
         },
         "button_wRyHP7": {
