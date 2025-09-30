@@ -26,6 +26,10 @@
 
 .hero{
   height:95vh;
+}
+
+.hero-body{
+  display:inherit;
   position:absolute;
   bottom:0;
 }
