@@ -129,6 +129,10 @@
       "name": "Glass Section",
       "settings": {
         "color_scheme": "background-2",
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "button_color": "#000000",
+        "button_text_color": "#ffffff",
         "glass_style": "frosted",
         "glass_position": "absolute",
         "glass_position_bottom": "0",
@@ -767,6 +771,10 @@
       "name": "Glass Section",
       "settings": {
         "color_scheme": "",
+        "heading_color": "#000000",
+        "text_color": "#000000",
+        "button_color": "#000000",
+        "button_text_color": "#ffffff",
         "glass_style": "frosted",
         "glass_position": "absolute",
         "glass_position_bottom": "0",
