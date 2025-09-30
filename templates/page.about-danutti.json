@@ -186,7 +186,7 @@
         "glass_border_opacity": 30,
         "glass_padding": 40,
         "glass_height": 300,
-        "banner_width": "medium",
+        "banner_width": "wide",
         "custom_width": 800,
         "padding_top": 0,
         "padding_bottom": 0
@@ -338,7 +338,7 @@
         "glass_border_opacity": 30,
         "glass_padding": 40,
         "glass_height": 300,
-        "banner_width": "medium",
+        "banner_width": "wide",
         "custom_width": 800,
         "padding_top": 0,
         "padding_bottom": 0
