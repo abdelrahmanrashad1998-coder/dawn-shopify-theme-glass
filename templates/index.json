@@ -44,7 +44,6 @@
       "block_order": [
         "ai_gen_block_0400a08_zEefQb"
       ],
-      "disabled": true,
       "settings": {}
     },
     "image_banner_PbUe8K": {
@@ -135,6 +134,7 @@
         "button_text_color": "#ffffff",
         "glass_style": "frosted",
         "glass_position": "absolute",
+        "hero_height": 95,
         "glass_position_bottom": "0",
         "glass_opacity": 20,
         "glass_blur": 10,
@@ -777,6 +777,7 @@
         "button_text_color": "#ffffff",
         "glass_style": "frosted",
         "glass_position": "absolute",
+        "hero_height": 95,
         "glass_position_bottom": "0",
         "glass_opacity": 10,
         "glass_blur": 10,
