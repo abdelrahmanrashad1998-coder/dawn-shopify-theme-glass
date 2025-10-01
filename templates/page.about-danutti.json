@@ -172,6 +172,10 @@
       "name": "about text",
       "settings": {
         "color_scheme": "",
+        "page_background_image": "shopify://shop_images/IMG_0186.jpg",
+        "page_background_opacity": 100,
+        "page_background_size": "cover",
+        "page_background_position": "center",
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
         "button_color": "#000000",
@@ -232,6 +236,9 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
+        "page_background_opacity": 100,
+        "page_background_size": "cover",
+        "page_background_position": "center",
         "padding_top": 28,
         "padding_bottom": 28
       }
@@ -325,6 +332,9 @@
       "name": "mission",
       "settings": {
         "color_scheme": "",
+        "page_background_opacity": 100,
+        "page_background_size": "cover",
+        "page_background_position": "center",
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
         "button_color": "#000000",
@@ -470,6 +480,9 @@
       "name": "Offerings",
       "settings": {
         "color_scheme": "",
+        "page_background_opacity": 100,
+        "page_background_size": "cover",
+        "page_background_position": "center",
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
         "button_color": "#000000",
