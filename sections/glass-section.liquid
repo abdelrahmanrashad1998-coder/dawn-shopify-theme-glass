@@ -25,12 +25,21 @@
 
 
 
-.section-{{ section.id }}-padding {
-  {% if section.settings.heading_color != blank %}--glass-heading-color: {{ section.settings.heading_color }};{% endif %}
-  {% if section.settings.text_color != blank %}--glass-text-color: {{ section.settings.text_color }};{% endif %}
-  {% if section.settings.button_color != blank %}--glass-button-color: {{ section.settings.button_color }};{% endif %}
-  {% if section.settings.button_text_color != blank %}--glass-button-text-color: {{ section.settings.button_text_color }};{% endif %}
-}
+  .section-{{ section.id }}-padding {
+    {% if section.settings.heading_color != blank %}--glass-heading-color: {{ section.settings.heading_color }};{% endif %}
+    {% if section.settings.text_color != blank %}--glass-text-color: {{ section.settings.text_color }};{% endif %}
+    {% if section.settings.button_color != blank %}--glass-button-color: {{ section.settings.button_color }};{% endif %}
+    {% if section.settings.button_text_color != blank %}--glass-button-text-color: {{ section.settings.button_text_color }};{% endif %}
+  }
+
+  {%- if section.settings.page_background_image != blank -%}
+    body {
+      --background-image: url('{{ section.settings.page_background_image | image_url }}');
+      --background-opacity: {{ section.settings.page_background_opacity | divided_by: 100.0 }};
+      --background-size: {{ section.settings.page_background_size | default: 'cover' }};
+      --background-position: {{ section.settings.page_background_position | default: 'center' }};
+    }
+  {%- endif -%}
 {%- endstyle -%}
 
 {% comment %} <div class="color-{{ section.settings.color_scheme }} gradient"> {% endcomment %}
@@ -107,6 +116,74 @@
       "id": "color_scheme",
       "label": "Color scheme",
       "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Page Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "page_background_image",
+      "label": "Page Background Image",
+      "info": "Upload an image to use as a fixed background for this page. This will override the global background image."
+    },
+    {
+      "type": "range",
+      "id": "page_background_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 100,
+      "unit": "%",
+      "label": "Background Image Opacity"
+    },
+    {
+      "type": "select",
+      "id": "page_background_size",
+      "options": [
+        {
+          "value": "cover",
+          "label": "Cover"
+        },
+        {
+          "value": "contain",
+          "label": "Contain"
+        },
+        {
+          "value": "auto",
+          "label": "Auto"
+        }
+      ],
+      "default": "cover",
+      "label": "Background Size"
+    },
+    {
+      "type": "select",
+      "id": "page_background_position",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Background Position"
     },
     {
       "type": "header",
