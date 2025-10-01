@@ -128,8 +128,11 @@
       "name": "Glass Section",
       "settings": {
         "color_scheme": "background-2",
-        "heading_color": "#ffffff",
-        "text_color": "#ffffff",
+        "page_background_opacity": 100,
+        "page_background_size": "cover",
+        "page_background_position": "center",
+        "heading_color": "#000000",
+        "text_color": "#000000",
         "button_color": "#000000",
         "button_text_color": "#ffffff",
         "glass_style": "frosted",
@@ -147,6 +150,74 @@
         "custom_width": 800,
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "picture_card_slideshow_XQzrax": {
+      "type": "picture-card-slideshow",
+      "blocks": {
+        "slide_grjBpD": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hecate_s_Halo_2.jpg"
+          }
+        },
+        "slide_EnfTcj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Mystic_Key_2_def1070f-861c-4c00-8c82-3a30d850b07b.jpg"
+          }
+        },
+        "slide_BqpYjD": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Night_Flame_Pendant_2_258676e8-7df5-4c79-b1ec-72052b85eeca.jpg"
+          }
+        },
+        "slide_gGijtq": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/The_Secret_is_for_ever_2.jpg"
+          }
+        },
+        "slide_nBzpKa": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Marbles_of_Magic_2.jpg"
+          }
+        },
+        "slide_QMntgr": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Eternal_Elegance_2.jpg"
+          }
+        },
+        "slide_4gAJEf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/The_Infinity_Edge_2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "slide_grjBpD",
+        "slide_EnfTcj",
+        "slide_BqpYjD",
+        "slide_gGijtq",
+        "slide_nBzpKa",
+        "slide_QMntgr",
+        "slide_4gAJEf"
+      ],
+      "custom_css": [],
+      "name": "Picture Slideshow",
+      "settings": {
+        "slides_to_show": "4",
+        "slides_to_show_mobile": "2",
+        "auto_rotate": true,
+        "change_slides_speed": 20,
+        "speed_preset": "custom",
+        "animation_easing": "linear",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "video_48Hm4j": {
@@ -668,75 +739,6 @@
         "padding_bottom": 12
       }
     },
-    "picture_card_slideshow_XQzrax": {
-      "type": "picture-card-slideshow",
-      "blocks": {
-        "slide_grjBpD": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Hecate_s_Halo_2.jpg"
-          }
-        },
-        "slide_EnfTcj": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Mystic_Key_2_def1070f-861c-4c00-8c82-3a30d850b07b.jpg"
-          }
-        },
-        "slide_BqpYjD": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Night_Flame_Pendant_2_258676e8-7df5-4c79-b1ec-72052b85eeca.jpg"
-          }
-        },
-        "slide_gGijtq": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/The_Secret_is_for_ever_2.jpg"
-          }
-        },
-        "slide_nBzpKa": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Marbles_of_Magic_2.jpg"
-          }
-        },
-        "slide_QMntgr": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Eternal_Elegance_2.jpg"
-          }
-        },
-        "slide_4gAJEf": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/The_Infinity_Edge_2.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "slide_grjBpD",
-        "slide_EnfTcj",
-        "slide_BqpYjD",
-        "slide_gGijtq",
-        "slide_nBzpKa",
-        "slide_QMntgr",
-        "slide_4gAJEf"
-      ],
-      "custom_css": [],
-      "name": "Picture Slideshow",
-      "settings": {
-        "slides_to_show": "4",
-        "slides_to_show_mobile": "2",
-        "auto_rotate": true,
-        "change_slides_speed": 20,
-        "speed_preset": "custom",
-        "animation_easing": "linear",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "glass_section_pYmQjb": {
       "type": "glass-section",
       "blocks": {
@@ -770,6 +772,9 @@
       "name": "Glass Section",
       "settings": {
         "color_scheme": "",
+        "page_background_opacity": 100,
+        "page_background_size": "cover",
+        "page_background_position": "center",
         "heading_color": "#000000",
         "text_color": "#000000",
         "button_color": "#000000",
