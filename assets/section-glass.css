@@ -148,6 +148,27 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
+/* Ensure all text elements inherit the color */
+.glass-text-content *,
+.glass-text-content p,
+.glass-text-content div,
+.glass-text-content span,
+.glass-text-content strong,
+.glass-text-content em,
+.glass-text-content b,
+.glass-text-content i,
+.glass-text-content ul,
+.glass-text-content ol,
+.glass-text-content li,
+.glass-text-content h1,
+.glass-text-content h2,
+.glass-text-content h3,
+.glass-text-content h4,
+.glass-text-content h5,
+.glass-text-content h6 {
+  color: inherit;
+}
+
 .glass-text-content p {
   margin-bottom: 1rem;
 }
