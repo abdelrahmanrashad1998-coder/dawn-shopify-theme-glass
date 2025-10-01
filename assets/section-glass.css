@@ -178,6 +178,15 @@
 }
 
 /* Glass Button - Uses theme standard button styles */
+.glass-section .button {
+  border-radius: var(--buttons-radius-outset) !important;
+  min-width: calc(12rem + var(--buttons-border-width) * 2) !important;
+  min-height: calc(4.5rem + var(--buttons-border-width) * 2) !important;
+  padding: 0 3rem !important;
+  font-size: 1.5rem !important;
+  letter-spacing: 0.1rem !important;
+  line-height: calc(1 + 0.2 / var(--font-body-scale)) !important;
+}
 /* Glass Image */
 .glass-image {
   text-align: center;
