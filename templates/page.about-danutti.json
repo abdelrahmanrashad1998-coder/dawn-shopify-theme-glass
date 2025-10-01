@@ -102,6 +102,7 @@
         "slide_P6wBBp",
         "slide_CDH6U4"
       ],
+      "disabled": true,
       "name": "Picture Slideshow",
       "settings": {
         "slides_to_show": "4",
