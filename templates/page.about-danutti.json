@@ -9,6 +9,44 @@
  */
 {
   "sections": {
+    "blocks_JVk3YJ": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_0400a08_rz9K7Q": {
+          "type": "ai_gen_block_0400a08",
+          "settings": {
+            "min_height": 390,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_right": 0,
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "min_height_mobile": 300,
+            "padding_top_mobile": 0,
+            "padding_bottom_mobile": 0,
+            "padding_left_mobile": 0,
+            "padding_right_mobile": 0,
+            "margin_top_mobile": 100,
+            "margin_bottom_mobile": 0,
+            "background_color": "#ffffff",
+            "background_opacity": 0,
+            "show_border": false,
+            "border_width": 1,
+            "border_style": "solid",
+            "border_color": "#cccccc",
+            "border_radius": 0,
+            "show_placeholder": true
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_0400a08_rz9K7Q"
+      ],
+      "name": "Transparent section",
+      "settings": {}
+    },
     "video_9CzytT": {
       "type": "video",
       "disabled": true,
@@ -59,7 +97,7 @@
             "heading_weight": "600",
             "heading_margin_bottom": 16,
             "text_color": "#ffffffe6",
-            "text_size": 16,
+            "text_size": 19,
             "text_margin_bottom": 20,
             "button_background_color": "#ffffff33",
             "button_text_color": "#ffffff",
@@ -172,7 +210,7 @@
       "name": "about text",
       "settings": {
         "color_scheme": "",
-        "page_background_image": "shopify://shop_images/IMG_0186.jpg",
+        "page_background_image": "shopify://shop_images/IMG_0186_2.jpg",
         "page_background_opacity": 100,
         "page_background_size": "cover",
         "page_background_position": "center",
@@ -582,6 +620,7 @@
     }
   },
   "order": [
+    "blocks_JVk3YJ",
     "video_9CzytT",
     "blocks_pX4x9A",
     "image_with_text_gUTep7",
