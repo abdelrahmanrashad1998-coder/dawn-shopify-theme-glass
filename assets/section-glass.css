@@ -180,40 +180,9 @@
 /* Glass Button */
 .glass-button {
   text-align: center;
-  /*margin-top: 2rem;*/
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.glass-button-link {
-  display: flex;
-  padding: 1rem 2rem;
-  background: var(--glass-button-color, rgba(var(--color-button), 0.9));
-  color: var(--glass-button-text-color, rgb(var(--color-button-text)));
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  /* box-shadow: 
-    0 4px 15px 0 rgba(0, 0, 0, 0.1); */
-   
-  justify-content: center;
-  align-items: center;
-}
-
-.glass-button-link:hover {
-  background: var(--glass-button-color, rgba(var(--color-button), 1));
-  transform: translateY(-2px);
-  box-shadow: 
-    0 6px 20px 0 rgba(var(--color-shadow), 0.15),
-    inset 0 1px 0 0 rgba(var(--color-foreground), 0.3);
-}
-
-.glass-button-link:after{
-  box-shadow:none;
 }
 /* Glass Image */
 .glass-image {
@@ -261,10 +230,6 @@
     font-size: 1rem;
   }
   
-  .glass-button-link {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
-  }
 }
 
 /* Dark Mode Support - Now handled by color scheme variables */
@@ -279,16 +244,11 @@
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
-  .glass-container,
-  .glass-button-link {
+  .glass-container {
     transition: none;
   }
   
   .glass-container:hover {
-    transform: none;
-  }
-  
-  .glass-button-link:hover {
     transform: none;
   }
 }

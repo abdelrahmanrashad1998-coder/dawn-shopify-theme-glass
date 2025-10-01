@@ -76,7 +76,7 @@
             </div>
           {%- when 'button' -%}
             <div class="glass-block glass-button" {{ block.shopify_attributes }}>
-              <a href="{{ block.settings.button_link }}" class="glass-button-link button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">
+              <a href="{{ block.settings.button_link }}" class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">
                 {{ block.settings.button_label | escape }}
               </a>
             </div>
