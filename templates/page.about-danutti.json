@@ -47,6 +47,131 @@
       "name": "Transparent section",
       "settings": {}
     },
+    "picture_card_slideshow_4XLQWi": {
+      "type": "picture-card-slideshow",
+      "blocks": {
+        "slide_fPQnpC": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hecate_s_Halo_2.jpg"
+          }
+        },
+        "slide_EMfAPh": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Mystic_Key_2_def1070f-861c-4c00-8c82-3a30d850b07b.jpg"
+          }
+        },
+        "slide_wjKAyK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Night_Flame_Pendant_2_258676e8-7df5-4c79-b1ec-72052b85eeca.jpg"
+          }
+        },
+        "slide_YDz3GU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/The_Secret_is_for_ever_2.jpg"
+          }
+        },
+        "slide_X4JLVE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Marbles_of_Magic_2.jpg"
+          }
+        },
+        "slide_P6wBBp": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Eternal_Elegance_2.jpg"
+          }
+        },
+        "slide_CDH6U4": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/The_Infinity_Edge_2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "slide_fPQnpC",
+        "slide_EMfAPh",
+        "slide_wjKAyK",
+        "slide_YDz3GU",
+        "slide_X4JLVE",
+        "slide_P6wBBp",
+        "slide_CDH6U4"
+      ],
+      "name": "Picture Slideshow",
+      "settings": {
+        "slides_to_show": "4",
+        "slides_to_show_mobile": "2",
+        "auto_rotate": true,
+        "change_slides_speed": 20,
+        "speed_preset": "custom",
+        "animation_easing": "linear",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "glass_section_bN6g6X": {
+      "type": "glass-section",
+      "blocks": {
+        "heading_BWzM6T": {
+          "type": "heading",
+          "settings": {
+            "heading": "Danutti",
+            "heading_size": "h0"
+          }
+        },
+        "text_f3r66U": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>A lifestyle, a statement of differentiation, and a celebration of you since<br/>2020 .</h3>"
+          }
+        },
+        "button_FkktBp": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_BWzM6T",
+        "text_f3r66U",
+        "button_FkktBp"
+      ],
+      "name": "about text",
+      "settings": {
+        "color_scheme": "",
+        "page_background_image": "shopify://shop_images/IMG_0186_2.jpg",
+        "page_background_opacity": 100,
+        "page_background_size": "cover",
+        "page_background_position": "center",
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "button_color": "#000000",
+        "button_text_color": "#ffffff",
+        "glass_style": "frosted",
+        "glass_position": "relative",
+        "hero_height": 75,
+        "glass_position_bottom": "none",
+        "glass_opacity": 10,
+        "glass_blur": 10,
+        "glass_border_radius": 20,
+        "glass_border_width": 1,
+        "glass_border_opacity": 30,
+        "glass_padding": 40,
+        "glass_height": 250,
+        "banner_width": "wide",
+        "custom_width": 800,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "picture_card_slideshow_8WBwry": {
       "type": "picture-card-slideshow",
       "blocks": {
@@ -141,7 +266,6 @@
             "gap": 40,
             "container_padding": 20,
             "min_height": 360,
-            "image": "shopify://shop_images/Marbles_of_Magic_2.jpg",
             "image_width": 200,
             "image_height": 200,
             "image_border_radius": 20,
@@ -186,49 +310,9 @@
       "block_order": [
         "ai_gen_block_c0425cb_hixzWj"
       ],
+      "disabled": true,
       "name": "Transparent glass banner",
       "settings": {}
-    },
-    "collection_list_CWdAxW": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_6N39EP": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "necklaces"
-          }
-        },
-        "featured_collection_XnWTzF": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "earrings"
-          }
-        },
-        "featured_collection_kRwkd3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "bracelets"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_6N39EP",
-        "featured_collection_XnWTzF",
-        "featured_collection_kRwkd3"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "title": "Collections",
-        "heading_size": "h1",
-        "image_ratio": "portrait",
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     },
     "image_with_text_gUTep7": {
       "type": "image-with-text",
@@ -433,6 +517,7 @@
         "slide_QEdXdJ",
         "slide_mkBEJq"
       ],
+      "disabled": true,
       "name": "Slideshow 1",
       "settings": {
         "layout": "full_bleed",
@@ -443,6 +528,73 @@
         "image_behavior": "ambient",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "picture_card_slideshow_dPmUHF": {
+      "type": "picture-card-slideshow",
+      "blocks": {
+        "slide_XxBykp": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hecate_s_Halo_2.jpg"
+          }
+        },
+        "slide_Wnhk7Y": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Mystic_Key_2_def1070f-861c-4c00-8c82-3a30d850b07b.jpg"
+          }
+        },
+        "slide_6Wbbzm": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Night_Flame_Pendant_2_258676e8-7df5-4c79-b1ec-72052b85eeca.jpg"
+          }
+        },
+        "slide_Et8WGg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/The_Secret_is_for_ever_2.jpg"
+          }
+        },
+        "slide_EdXwNa": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Marbles_of_Magic_2.jpg"
+          }
+        },
+        "slide_8JnhYz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Eternal_Elegance_2.jpg"
+          }
+        },
+        "slide_JmMFPn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/The_Infinity_Edge_2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "slide_XxBykp",
+        "slide_Wnhk7Y",
+        "slide_6Wbbzm",
+        "slide_Et8WGg",
+        "slide_EdXwNa",
+        "slide_8JnhYz",
+        "slide_JmMFPn"
+      ],
+      "name": "Picture Slideshow",
+      "settings": {
+        "slides_to_show": "4",
+        "slides_to_show_mobile": "2",
+        "auto_rotate": true,
+        "change_slides_speed": 20,
+        "speed_preset": "custom",
+        "animation_easing": "linear",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "glass_section_HYGKfL": {
@@ -581,6 +733,7 @@
         "slide_rHNanG",
         "slide_rExpMQ"
       ],
+      "disabled": true,
       "name": "Slideshow 2",
       "settings": {
         "layout": "full_bleed",
@@ -591,6 +744,47 @@
         "image_behavior": "ambient",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "collection_list_CWdAxW": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_6N39EP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "necklaces"
+          }
+        },
+        "featured_collection_XnWTzF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "earrings"
+          }
+        },
+        "featured_collection_kRwkd3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bracelets"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_6N39EP",
+        "featured_collection_XnWTzF",
+        "featured_collection_kRwkd3"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "glass_section_6aqj6A": {
@@ -646,8 +840,8 @@
         "glass_height": 300,
         "banner_width": "wide",
         "custom_width": 800,
-        "padding_top": 0,
-        "padding_bottom": 27
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
     "rich_text_M7gNLC": {
@@ -688,18 +882,21 @@
   },
   "order": [
     "blocks_JVk3YJ",
+    "picture_card_slideshow_4XLQWi",
+    "glass_section_bN6g6X",
     "picture_card_slideshow_8WBwry",
     "video_9CzytT",
     "blocks_pX4x9A",
-    "collection_list_CWdAxW",
     "image_with_text_gUTep7",
     "glass_section_YjFiQ6",
     "rich_text_k4EETc",
     "main",
     "slideshow_tbDQU8",
+    "picture_card_slideshow_dPmUHF",
     "glass_section_HYGKfL",
     "rich_text_WJrpJQ",
     "slideshow_hdNpdT",
+    "collection_list_CWdAxW",
     "glass_section_6aqj6A",
     "rich_text_M7gNLC"
   ]
