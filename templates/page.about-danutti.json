@@ -122,6 +122,47 @@
       "name": "Transparent glass banner",
       "settings": {}
     },
+    "collection_list_CWdAxW": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_6N39EP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "necklaces"
+          }
+        },
+        "featured_collection_XnWTzF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "earrings"
+          }
+        },
+        "featured_collection_kRwkd3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bracelets"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_6N39EP",
+        "featured_collection_XnWTzF",
+        "featured_collection_kRwkd3"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_gUTep7": {
       "type": "image-with-text",
       "blocks": {
@@ -184,13 +225,13 @@
           "type": "heading",
           "settings": {
             "heading": "About Danutti",
-            "heading_size": "h1"
+            "heading_size": "h0"
           }
         },
         "text_YyMMG3": {
           "type": "text",
           "settings": {
-            "text": "<p>Welcome to <strong>Danutti</strong>, </p><p>where timeless elegance meets modern sophistication. At Danutti, we craft more than just accessories; we create pieces that tell<br/>stories, inspire confidence, and celebrate individuality. </p><p>Rooted in a passion for exquisite craftsmanship and innovation, our collections are designed to empower women with a touch of luxury and refinement. </p><p>From our carefully selected materials to the intricate designs, every Danutti piece is a testament to our commitment to quality and elegance. Based in <strong>Egypt, </strong>for queens who seek exclusivity, </p><p><strong>Danutti </strong>is proud to serve.</p>"
+            "text": "<h3>Welcome to <strong>Danutti</strong>, </h3><h3>where timeless elegance meets modern sophistication. At Danutti, we craft more than just accessories; we create pieces that tell<br/>stories, inspire confidence, and celebrate individuality. </h3><h3>Rooted in a passion for exquisite craftsmanship and innovation, our collections are designed to empower women with a touch of luxury and refinement. </h3><h3>From our carefully selected materials to the intricate designs, every Danutti piece is a testament to our commitment to quality and elegance. Based in <strong>Egypt, </strong>for queens who seek exclusivity, </h3><h3><strong>Danutti </strong>is proud to serve.</h3>"
           }
         },
         "button_4VwTqc": {
@@ -231,8 +272,8 @@
         "glass_height": 300,
         "banner_width": "wide",
         "custom_width": 800,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
     "rich_text_k4EETc": {
@@ -344,13 +385,13 @@
           "type": "heading",
           "settings": {
             "heading": "Mission",
-            "heading_size": "h1"
+            "heading_size": "h0"
           }
         },
         "text_QKFmiJ": {
           "type": "text",
           "settings": {
-            "text": "<p>At Danutti, our mission is to redefine luxury in women’s accessories through exceptional quality, timeless design, and personal expression. </p><p>We strive to enhance the lives of our customers by offering pieces that celebrate their individuality and bring elegance to their everyday lives.</p>"
+            "text": "<h3>At Danutti, our mission is to redefine luxury in women’s accessories through exceptional quality, timeless design, and personal expression. </h3><h3>We strive to enhance the lives of our customers by offering pieces that celebrate their individuality and bring elegance to their everyday lives.</h3>"
           }
         },
         "button_39TRXK": {
@@ -498,7 +539,7 @@
         "text_GTBXdD": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Danutti offers a curated collection of exquisite accessories, including:</strong></p><ul><li><strong>Bracelets:</strong> Elegant designs that add a<br/>     sophisticated touch to any outfit.</li><li><strong>Necklaces:</strong> Statement pieces and subtle<br/>     adornments that elevate your style.</li><li><strong>Earrings:</strong> From minimalist studs to bold<br/>     designs, perfect for any occasion.</li></ul><p>Each product is a blend of traditional craftsmanship and modern aesthetics, featuring high-quality materials and meticulous attention to detail.</p>"
+            "text": "<h3><strong>Danutti offers a curated collection of exquisite accessories, including:</strong></h3><ul><li><h3><strong>Bracelets:</strong> Elegant designs that add a<br/>     sophisticated touch to any outfit.</h3></li><li><h3><strong>Necklaces:</strong> Statement pieces and subtle<br/>     adornments that elevate your style.</h3></li><li><h3><strong>Earrings:</strong> From minimalist studs to bold<br/>     designs, perfect for any occasion.</h3></li></ul><h3>Each product is a blend of traditional craftsmanship and modern aesthetics, featuring high-quality materials and meticulous attention to detail.</h3>"
           }
         },
         "button_YPJA49": {
@@ -539,7 +580,7 @@
         "banner_width": "wide",
         "custom_width": 800,
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 27
       }
     },
     "rich_text_M7gNLC": {
@@ -576,53 +617,13 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "collection_list_CWdAxW": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_6N39EP": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "necklaces"
-          }
-        },
-        "featured_collection_XnWTzF": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "earrings"
-          }
-        },
-        "featured_collection_kRwkd3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "bracelets"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_6N39EP",
-        "featured_collection_XnWTzF",
-        "featured_collection_kRwkd3"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "title": "Collections",
-        "heading_size": "h1",
-        "image_ratio": "portrait",
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "blocks_JVk3YJ",
     "video_9CzytT",
     "blocks_pX4x9A",
+    "collection_list_CWdAxW",
     "image_with_text_gUTep7",
     "glass_section_YjFiQ6",
     "rich_text_k4EETc",
@@ -632,7 +633,6 @@
     "rich_text_WJrpJQ",
     "slideshow_hdNpdT",
     "glass_section_6aqj6A",
-    "rich_text_M7gNLC",
-    "collection_list_CWdAxW"
+    "rich_text_M7gNLC"
   ]
 }
