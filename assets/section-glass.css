@@ -178,6 +178,14 @@
 }
 
 /* Glass Button - Uses theme standard button styles */
+.glass-block.glass-button {
+  text-align: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
 .glass-section .button {
   border-radius: var(--buttons-radius-outset) !important;
   min-width: calc(12rem + var(--buttons-border-width) * 2) !important;
@@ -189,7 +197,6 @@
   display: inline-flex !important;
   justify-content: center !important;
   align-items: center !important;
-  margin: 0 auto !important;
 }
 /* Glass Image */
 .glass-image {
