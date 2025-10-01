@@ -137,3 +137,51 @@
 .transparent-collections-section.color-background-5 {
   background: transparent !important;
 }
+
+/* Override gradient class background */
+.transparent-collections-section.gradient {
+  background: transparent !important;
+  background-attachment: initial !important;
+}
+
+/* Override any color scheme backgrounds */
+.transparent-collections-section[class*="color-"] {
+  background: transparent !important;
+}
+
+/* Ensure page-width doesn't add background */
+.transparent-collections-section.page-width {
+  background: transparent !important;
+}
+
+/* Override body background for transparent collections sections */
+body:has(.transparent-collections-section) {
+  background-color: transparent !important;
+}
+
+/* Additional overrides for any parent containers */
+.transparent-collections-section * {
+  background: transparent !important;
+}
+
+/* Re-apply card backgrounds */
+.transparent-collections-section .card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.transparent-collections-section .title,
+.transparent-collections-section .collection-list-title {
+  background: rgba(255, 255, 255, 0.9) !important;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  display: inline-block;
+}
