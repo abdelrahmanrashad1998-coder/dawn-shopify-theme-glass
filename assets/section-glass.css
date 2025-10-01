@@ -177,13 +177,7 @@
   margin-bottom: 0;
 }
 
-/* Glass Button */
-.glass-button {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* Glass Button - Uses theme standard button styles */
 /* Glass Image */
 .glass-image {
   text-align: center;

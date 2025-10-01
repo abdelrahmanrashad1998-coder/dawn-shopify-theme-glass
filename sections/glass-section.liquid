@@ -28,8 +28,6 @@
   .section-{{ section.id }}-padding {
     {% if section.settings.heading_color != blank %}--glass-heading-color: {{ section.settings.heading_color }};{% endif %}
     {% if section.settings.text_color != blank %}--glass-text-color: {{ section.settings.text_color }};{% endif %}
-    {% if section.settings.button_color != blank %}--glass-button-color: {{ section.settings.button_color }};{% endif %}
-    {% if section.settings.button_text_color != blank %}--glass-button-text-color: {{ section.settings.button_text_color }};{% endif %}
   }
 
   {%- if section.settings.page_background_image != blank -%}
@@ -76,9 +74,15 @@
             </div>
           {%- when 'button' -%}
             <div class="glass-block glass-button" {{ block.shopify_attributes }}>
-              <a href="{{ block.settings.button_link }}" class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">
-                {{ block.settings.button_label | escape }}
-              </a>
+              {%- if block.settings.button_link != blank -%}
+                <a href="{{ block.settings.button_link }}" class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">
+                  {{ block.settings.button_label | escape }}
+                </a>
+              {%- else -%}
+                <button type="button" class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}" disabled>
+                  {{ block.settings.button_label | escape }}
+                </button>
+              {%- endif -%}
             </div>
           {%- when 'image' -%}
             <div class="glass-block glass-image" {{ block.shopify_attributes }}>
@@ -202,20 +206,6 @@
       "label": "Text color",
       "default": "#ffffff",
       "info": "Custom color for the section text. Leave empty to use theme colors."
-    },
-    {
-      "type": "color",
-      "id": "button_color",
-      "label": "Button background color",
-      "default": "#000000",
-      "info": "Custom color for the button background. Leave empty to use theme colors."
-    },
-    {
-      "type": "color",
-      "id": "button_text_color",
-      "label": "Button text color",
-      "default": "#ffffff",
-      "info": "Custom color for the button text. Leave empty to use theme colors."
     },
     {
       "type": "header",
