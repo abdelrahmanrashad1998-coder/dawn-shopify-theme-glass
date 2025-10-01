@@ -723,7 +723,6 @@
         "slide_QMntgr",
         "slide_4gAJEf"
       ],
-      "disabled": true,
       "custom_css": [],
       "name": "Picture Slideshow",
       "settings": {
@@ -797,6 +796,7 @@
     "175916735763a264b1",
     "image_banner_PbUe8K",
     "glass_section_nDDtaK",
+    "picture_card_slideshow_XQzrax",
     "video_48Hm4j",
     "1759168659d85ef341",
     "image_banner_Fy4zQt",
@@ -809,7 +809,6 @@
     "image_with_text_n9zJcp",
     "image_with_text_kf4z6x",
     "featured_collection_xxdH3b",
-    "picture_card_slideshow_XQzrax",
     "glass_section_pYmQjb"
   ]
 }
