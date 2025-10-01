@@ -805,7 +805,7 @@
         "text_GTBXdD": {
           "type": "text",
           "settings": {
-            "text": "<h3><strong>Danutti offers a curated collection of exquisite accessories, including:</strong></h3><ul><li><h3><strong>Bracelets:</strong> Elegant designs that add a<br/>     sophisticated touch to any outfit.</h3></li><li><h3><strong>Necklaces:</strong> Statement pieces and subtle<br/>     adornments that elevate your style.</h3></li><li><h3><strong>Earrings:</strong> From minimalist studs to bold<br/>     designs, perfect for any occasion.</h3></li></ul><h3>Each product is a blend of traditional craftsmanship and modern aesthetics, featuring high-quality materials and meticulous attention to detail.</h3>"
+            "text": "<h3><strong>Danutti offers a curated collection of exquisite accessories, including:</strong></h3><h3><strong>Bracelets:</strong> Elegant designs that add a<br/>     sophisticated touch to any outfit.</h3><h3><strong>Necklaces:</strong> Statement pieces and subtle<br/>     adornments that elevate your style.</h3><h3><strong>Earrings:</strong> From minimalist studs to bold<br/>     designs, perfect for any occasion.</h3><h3>Each product is a blend of traditional craftsmanship and modern aesthetics, featuring high-quality materials and meticulous attention to detail.</h3>"
           }
         },
         "button_YPJA49": {
