@@ -3,8 +3,13 @@ picture-card-slideshow-component {
   display: block;
 }
 
+.picture-card-slideshow-wrapper {
+  background: transparent !important;
+}
+
 .picture-card-slideshow {
   width: 100%;
+  background: transparent;
 }
 
 .picture-card-slideshow__container {
