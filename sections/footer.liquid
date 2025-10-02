@@ -465,28 +465,15 @@
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
         </small>
         <small class="copyright__content">{{ powered_by_link }}</small>
-        {%- if section.settings.show_policy -%}
+        {%- if section.settings.show_policy and section.settings.policy_menu != blank -%}
           <ul class="policies list-unstyled">
-            <li>
-              <small class="copyright__content">
-                <a href="{{ pages.privacy-policy.url }}">Privacy Policy</a>
-              </small>
-            </li>
-            <li>
-              <small class="copyright__content">
-                <a href="{{ pages.refund-policy.url }}">Refund Policy</a>
-              </small>
-            </li>
-            <li>
-              <small class="copyright__content">
-                <a href="{{ pages.shipping-policy.url }}">Shipping Policy</a>
-              </small>
-            </li>
-            <li>
-              <small class="copyright__content">
-                <a href="{{ pages.terms-of-service.url }}">Terms of Service</a>
-              </small>
-            </li>
+            {%- for link in section.settings.policy_menu.links -%}
+              <li>
+                <small class="copyright__content">
+                  <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                </small>
+              </li>
+            {%- endfor -%}
           </ul>
         {%- endif -%}
       </div>
@@ -789,6 +776,12 @@
       "default": true,
       "label": "t:sections.footer.settings.show_policy.label",
       "info": "t:sections.footer.settings.show_policy.info"
+    },
+    {
+      "type": "link_list",
+      "id": "policy_menu",
+      "label": "Policy links menu",
+      "info": "Select a menu containing policy/legal links to display in the footer"
     },
     {
       "type": "header",
