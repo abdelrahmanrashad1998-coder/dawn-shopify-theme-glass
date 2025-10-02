@@ -52,10 +52,14 @@
       </div>
     {%- endunless -%}
 
-    <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <slideshow-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <ul
         class="collection-list contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items"
         id="Slider-{{ section.id }}"
+        aria-live="polite"
+        aria-atomic="true"
+        data-autoplay="{{ section.settings.auto_rotate }}"
+        data-speed="{{ section.settings.change_slides_speed }}"
         role="list"
       >
         {%- liquid
@@ -85,7 +89,7 @@
           </li>
         {%- endfor -%}
       </ul>
-      {%- if show_mobile_slider -%}
+      {%- if show_mobile_slider or section.settings.auto_rotate -%}
         <div class="slider-buttons">
           <button
             type="button"
@@ -113,9 +117,24 @@
               {{- 'icon-caret.svg' | inline_asset_content -}}
             </span>
           </button>
+          
+          {%- if section.settings.auto_rotate -%}
+            <button
+              type="button"
+              class="slideshow__autoplay slider-button{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
+              aria-label="Pause auto-slide"
+            >
+              <span class="svg-wrapper">
+                {{- 'icon-pause.svg' | inline_asset_content -}}
+              </span>
+              <span class="svg-wrapper">
+                {{- 'icon-play.svg' | inline_asset_content -}}
+              </span>
+            </button>
+          {%- endif -%}
         </div>
       {%- endif -%}
-    </slider-component>
+    </slideshow-component>
 
     {%- if section.settings.show_view_all and section.blocks.size < collections.size -%}
       <div
@@ -227,6 +246,27 @@
       "default": false,
       "label": "t:sections.collection-list.settings.show_view_all.label",
       "info": "t:sections.collection-list.settings.show_view_all.info"   
+    },
+    {
+      "type": "header",
+      "content": "Auto-slide settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_rotate",
+      "default": false,
+      "label": "Enable auto-slide"
+    },
+    {
+      "type": "range",
+      "id": "change_slides_speed",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "label": "Slide duration (seconds)",
+      "default": 4,
+      "info": "How long each slide displays before automatically advancing"
     },
     {
       "type": "header",

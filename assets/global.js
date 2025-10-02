@@ -834,7 +834,7 @@ class SlideshowComponent extends SliderComponent {
 
     if (!this.sliderControlWrapper) return;
 
-    this.sliderFirstItemNode = this.slider.querySelector('.slideshow__slide');
+    this.sliderFirstItemNode = this.slider.querySelector('.slideshow__slide') || this.slider.querySelector('.collection-list__item');
     if (this.sliderItemsToShow.length > 0) this.currentPage = 1;
 
     this.announcementBarSlider = this.querySelector('.announcement-bar-slider');
@@ -862,7 +862,7 @@ class SlideshowComponent extends SliderComponent {
           },
           { once: true }
         );
-      });
+      }) ;
     }
 
     if (this.slider.getAttribute('data-autoplay') === 'true') this.setAutoPlay();

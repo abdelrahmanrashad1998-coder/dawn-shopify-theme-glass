@@ -143,3 +143,31 @@
 .transparent-collections-section.color-background-5 {
   background: transparent !important;
 }
+
+/* Auto-slide autoplay button styling */
+.transparent-collections-section .slideshow__autoplay {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.transparent-collections-section .slideshow__autoplay:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.transparent-collections-section .slideshow__autoplay.slideshow__autoplay--paused:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Collection list auto-slide styling */
+.collection-list.slider {
+  scroll-behavior: smooth;
+}
+
+.collection-list__item.slider__slide {
+  transition: opacity 0.5s ease-in-out;
+}
