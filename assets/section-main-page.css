@@ -313,3 +313,34 @@
 .policy-content *::after {
   color: inherit;
 }
+
+/* Sticky footer fix for policy pages and short content */
+.page-width--narrow {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content-glass,
+.policy-page-glass {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+.policy-page-glass .policy-content {
+  flex: 1;
+}
+
+/* Ensure policy pages take up enough space to push footer down */
+@media screen and (max-width: 749px) {
+  .page-width--narrow {
+    min-height: 50vh;
+  }
+  
+  .page-content-glass,
+  .policy-page-glass {
+    min-height: 40vh;
+  }
+}

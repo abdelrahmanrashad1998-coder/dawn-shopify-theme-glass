@@ -261,6 +261,30 @@
         min-height: 0;
       }
 
+      /* Ensure sections within main content expand to fill available space */
+      main#MainContent > section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Specific fix for policy pages and other short content pages */
+      .page-width--narrow,
+      .page-content-glass,
+      .policy-page-glass {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 60vh; /* Ensure minimum height for short content */
+      }
+
+      /* Ensure content within glass containers expands properly */
+      .page-content-glass .rte,
+      .policy-page-glass .policy-content {
+        flex: 1;
+      }
+
       body::before {
         content: '';
         position: fixed;
