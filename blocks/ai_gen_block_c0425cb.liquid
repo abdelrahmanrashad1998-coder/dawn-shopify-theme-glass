@@ -158,14 +158,21 @@
 
     .ai-glass-banner-image-container-{{ ai_gen_id }} {
       width: 100%;
-      max-width: {{ block.settings.image_width }}px;
+      max-width: 100%;
       height: {{ block.settings.image_height | times: 0.8 }}px;
       order: 1;
+      margin: 0 auto;
     }
 
     .ai-glass-banner-content-{{ ai_gen_id }} {
       order: 2;
       width: 100%;
+      max-width: 100%;
+    }
+
+    .ai-glass-banner-glass-panel-{{ ai_gen_id }} {
+      width: 100%;
+      max-width: 100%;
     }
 
     .ai-glass-banner-heading-{{ ai_gen_id }} {
@@ -174,10 +181,6 @@
 
     .ai-glass-banner-text-{{ ai_gen_id }} {
       font-size: {{ block.settings.text_size | times: 0.9 }}px;
-    }
-
-    .ai-glass-banner-glass-panel-{{ ai_gen_id }} {
-      padding: {{ block.settings.glass_padding | times: 0.8 }}px;
     }
   }
 {% endstyle %}
