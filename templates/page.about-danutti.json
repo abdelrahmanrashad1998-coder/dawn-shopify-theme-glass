@@ -785,6 +785,7 @@
         "show_view_all": false,
         "auto_rotate": true,
         "change_slides_speed": 4,
+        "show_controls": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
@@ -881,6 +882,22 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "video_prAxi8": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "enable_video_looping": true,
+        "video": "shopify://files/videos/WhatsApp Video 2025-08-26 at 19.59.37.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -901,6 +918,7 @@
     "slideshow_hdNpdT",
     "collection_list_CWdAxW",
     "glass_section_6aqj6A",
-    "rich_text_M7gNLC"
+    "rich_text_M7gNLC",
+    "video_prAxi8"
   ]
 }
