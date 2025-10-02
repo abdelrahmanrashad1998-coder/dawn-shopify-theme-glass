@@ -256,6 +256,10 @@
     font-size: 1rem;
   }
   
+  /* Equal heights for stacked sections on mobile */
+  .glass-section {
+    min-height: 50vh;
+  }
 }
 
 /* Dark Mode Support - Now handled by color scheme variables */
