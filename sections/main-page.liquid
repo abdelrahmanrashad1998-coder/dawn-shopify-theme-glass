@@ -45,7 +45,18 @@
 {%- endif -%}
 
 <div class="page-width page-width--narrow section-{{ section.id }}-padding">
-  <div class="page-content-glass{% if is_policy_page %} policy-page-glass{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+  <div class="page-content-glass{% if is_policy_page %} policy-page-glass{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" 
+       style="border: 10px solid purple !important; 
+              background: rgba(255, 255, 255, 0.95) !important; 
+              backdrop-filter: blur(15px) !important;
+              border-radius: 20px !important;
+              padding: 40px !important;
+              margin: 20px auto !important;
+              max-width: 900px !important;
+              position: relative !important;">
+    <div style="background: yellow; color: red; padding: 10px; margin: 10px; font-weight: bold; text-align: center;">
+      🚨 TEMPLATE TEST: You are viewing main-page.liquid section 🚨
+    </div>
     <h1 class="main-page-title page-title h0{% if is_policy_page %} policy-title{% endif %}{% if settings.animations_reveal_on_scroll %} animate--slide-in{% endif %}">
       {{ page.title | escape }}
     </h1>
