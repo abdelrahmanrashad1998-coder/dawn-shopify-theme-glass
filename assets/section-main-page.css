@@ -21,3 +21,77 @@
   width: 52.5rem;
   height: 52.5rem;
 }
+
+/* Glass Container for Page Content */
+.page-glass-container {
+  width: 100%;
+  max-width: var(--glass-width, 800px);
+  margin: 0 auto;
+  padding: var(--glass-padding, 40px);
+  border-radius: var(--glass-border-radius, 20px);
+  border: var(--glass-border-width, 1px) solid rgba(var(--color-foreground), var(--glass-border-opacity, 0.3));
+  backdrop-filter: blur(var(--glass-blur, 15px));
+  -webkit-backdrop-filter: blur(var(--glass-blur, 15px));
+  background: rgba(var(--color-background), var(--glass-opacity, 0.2));
+  box-shadow: 
+    0 8px 32px 0 rgba(var(--color-shadow), 0.15),
+    inset 0 1px 0 0 rgba(var(--color-foreground), 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Text Color Overrides */
+.page-glass-container .main-page-title {
+  color: var(--page-heading-color, rgba(var(--color-foreground), 0.9)) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.page-glass-container .rte {
+  color: var(--page-text-color, rgba(var(--color-foreground), 0.8));
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Ensure all text elements in RTE inherit the color */
+.page-glass-container .rte *,
+.page-glass-container .rte p,
+.page-glass-container .rte div,
+.page-glass-container .rte span,
+.page-glass-container .rte strong,
+.page-glass-container .rte em,
+.page-glass-container .rte b,
+.page-glass-container .rte i,
+.page-glass-container .rte ul,
+.page-glass-container .rte ol,
+.page-glass-container .rte li,
+.page-glass-container .rte h1,
+.page-glass-container .rte h2,
+.page-glass-container .rte h3,
+.page-glass-container .rte h4,
+.page-glass-container .rte h5,
+.page-glass-container .rte h6 {
+  color: inherit;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 749px) {
+  .page-glass-container {
+    margin: 0 1rem;
+    padding: calc(var(--glass-padding, 40px) * 0.7);
+    max-width: calc(100% - 2rem);
+  }
+}
+
+/* Hover Effect */
+.page-glass-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 12px 40px 0 rgba(var(--color-shadow), 0.2),
+    inset 0 1px 0 0 rgba(var(--color-foreground), 0.15);
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .page-glass-container {
+    background: rgba(var(--color-background), 0.9);
+    border: 2px solid rgba(var(--color-foreground), 0.8);
+  }
+}

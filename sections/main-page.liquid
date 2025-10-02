@@ -21,15 +21,38 @@
       --background-position: {{ section.settings.page_background_position | default: 'center' }};
     }
   {%- endif -%}
+
+  .page-glass-container {
+    --glass-opacity: {{ section.settings.glass_opacity | divided_by: 100.0 }};
+    --glass-blur: {{ section.settings.glass_blur }}px;
+    --glass-border-radius: {{ section.settings.glass_border_radius }}px;
+    --glass-border-width: {{ section.settings.glass_border_width }}px;
+    --glass-border-opacity: {{ section.settings.glass_border_opacity | divided_by: 100.0 }};
+    --glass-padding: {{ section.settings.glass_padding }}px;
+    --glass-width: {{ section.settings.glass_width }}px;
+    {% if section.settings.heading_color != blank %}--page-heading-color: {{ section.settings.heading_color }};{% endif %}
+    {% if section.settings.text_color != blank %}--page-text-color: {{ section.settings.text_color }};{% endif %}
+  }
 {%- endstyle -%}
 
 <div class="page-width page-width--narrow section-{{ section.id }}-padding">
-  <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    {{ page.title | escape }}
-  </h1>
-  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    {{ page.content }}
-  </div>
+  {%- if section.settings.enable_glass_container -%}
+    <div class="page-glass-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} animate--slide-in{% endif %}">
+        {{ page.title | escape }}
+      </h1>
+      <div class="rte{% if settings.animations_reveal_on_scroll %} animate--slide-in{% endif %}">
+        {{ page.content }}
+      </div>
+    </div>
+  {%- else -%}
+    <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      {{ page.title | escape }}
+    </h1>
+    <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {{ page.content }}
+    </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
@@ -105,6 +128,105 @@
       ],
       "default": "center",
       "label": "Background Position"
+    },
+    {
+      "type": "header",
+      "content": "Glass Container"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_glass_container",
+      "default": true,
+      "label": "Enable Glass Container",
+      "info": "Add a glass effect container around the page content for better readability against background images"
+    },
+    {
+      "type": "range",
+      "id": "glass_opacity",
+      "min": 5,
+      "max": 50,
+      "step": 5,
+      "unit": "%",
+      "label": "Glass Opacity",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "glass_blur",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Blur Effect",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "glass_border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Border Radius",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "glass_border_width",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "label": "Border Width",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "glass_border_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Border Opacity",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "glass_padding",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Container Padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "glass_width",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Container Max Width",
+      "default": 800
+    },
+    {
+      "type": "header",
+      "content": "Text Colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#000000",
+      "info": "Custom color for the page heading"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000",
+      "info": "Custom color for the page text content"
     },
     {
       "type": "header",
