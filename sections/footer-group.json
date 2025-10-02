@@ -24,7 +24,7 @@
         "enable_language_selector": true,
         "payment_enable": true,
         "show_policy": true,
-        "margin_top": 156,
+        "margin_top": 56,
         "padding_top": 32,
         "padding_bottom": 28
       }
