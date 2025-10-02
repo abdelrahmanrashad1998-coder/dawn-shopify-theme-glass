@@ -21,7 +21,21 @@
     {%- assign is_policy_page = true -%}
     {%- break -%}
   {%- endif -%}
-{%- endfor -%}
+{%- endfor -% %}
+
+<!-- DEBUG: Show visual indicator for policy page -->
+{%- if is_policy_page -%}
+  <div style="background: red; color: white; padding: 20px; margin: 20px; font-size: 18px; text-align: center; font-weight: bold;">
+    🔥 POLICY PAGE DETECTED - GLASS EFFECT SHOULD BE VISIBLE 🔥<br>
+    Policy: {{ page.title }} | URL: {{ page.url }}
+  </div>
+{%- endif -%}
+
+<!-- DEBUG: Always show template info -->
+<div style="background: blue; color: white; padding: 10px; margin: 10px; font-size: 14px; text-align: center;">
+  🚨 You are viewing: sections/page.liquid (not main-page.liquid) 🚨<br>
+  Page URL: {{ page.url }} | Policy Page: {{ is_policy_page }}
+</div>
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width page-width--narrow section-{{ section.id }}-padding">
