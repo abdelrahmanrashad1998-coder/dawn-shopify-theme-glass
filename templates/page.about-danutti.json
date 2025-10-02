@@ -141,7 +141,8 @@
           "disabled": true,
           "settings": {
             "button_label": "Button label",
-            "button_link": ""
+            "button_link": "",
+            "button_style_secondary": false
           }
         }
       },
@@ -158,8 +159,6 @@
         "page_background_position": "center",
         "heading_color": "#000000",
         "text_color": "#000000",
-        "button_color": "#000000",
-        "button_text_color": "#ffffff",
         "glass_style": "frosted",
         "glass_position": "absolute",
         "hero_height": 95,
@@ -395,7 +394,8 @@
           "disabled": true,
           "settings": {
             "button_label": "Button label",
-            "button_link": ""
+            "button_link": "",
+            "button_style_secondary": false
           }
         }
       },
@@ -413,8 +413,6 @@
         "page_background_position": "center",
         "heading_color": "#000000",
         "text_color": "#000000",
-        "button_color": "#000000",
-        "button_text_color": "#ffffff",
         "glass_style": "frosted",
         "glass_position": "relative",
         "hero_height": 95,
@@ -623,7 +621,8 @@
           "disabled": true,
           "settings": {
             "button_label": "Button label",
-            "button_link": ""
+            "button_link": "",
+            "button_style_secondary": false
           }
         }
       },
@@ -640,8 +639,6 @@
         "page_background_position": "center",
         "heading_color": "#000000",
         "text_color": "#000000",
-        "button_color": "#000000",
-        "button_text_color": "#ffffff",
         "glass_style": "frosted",
         "glass_position": "relative",
         "hero_height": 95,
@@ -784,8 +781,10 @@
         "heading_size": "h2",
         "image_ratio": "square",
         "columns_desktop": 3,
-        "color_scheme": "",
+        "color_scheme": "background-1",
         "show_view_all": false,
+        "auto_rotate": true,
+        "change_slides_speed": 4,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
@@ -813,7 +812,8 @@
           "disabled": true,
           "settings": {
             "button_label": "Button label",
-            "button_link": ""
+            "button_link": "",
+            "button_style_secondary": false
           }
         }
       },
@@ -830,8 +830,6 @@
         "page_background_position": "center",
         "heading_color": "#000000",
         "text_color": "#000000",
-        "button_color": "#000000",
-        "button_text_color": "#ffffff",
         "glass_style": "frosted",
         "glass_position": "relative",
         "hero_height": 95,
