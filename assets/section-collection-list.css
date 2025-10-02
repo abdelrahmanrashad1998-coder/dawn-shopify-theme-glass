@@ -67,13 +67,15 @@
 }
 
 .transparent-collections-section .title {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(var(--color-background), 0.1);
   padding: 1rem 2rem;
-  border-radius: 12px;
-  backdrop-filter: blur(40px) saturate(200%);
-  -webkit-backdrop-filter: blur(40px) saturate(200%);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  box-shadow: 
+    0 8px 32px 0 rgba(var(--color-shadow), 0.15),
+    inset 0 1px 0 0 rgba(var(--color-foreground), 0.1);
+  border: 1px solid rgba(var(--color-foreground), 0.2);
   margin-bottom: 2rem;
   display: inline-block;
 }
@@ -87,23 +89,28 @@
   background: transparent;
 }
 
-/* Ensure collection cards have proper glass effect styling */
+/* Ensure collection cards have proper glass effect styling - matching glass section */
 .transparent-collections-section .card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(40px) saturate(200%);
-  -webkit-backdrop-filter: blur(40px) saturate(200%);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(var(--color-background), 0.1);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  box-shadow: 
+    0 8px 32px 0 rgba(var(--color-shadow), 0.15),
+    inset 0 1px 0 0 rgba(var(--color-foreground), 0.1);
+  border: 1px solid rgba(var(--color-foreground), 0.2);
+  border-radius: 20px;
   transition: all 0.3s ease;
 }
 
 .transparent-collections-section .card:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(50px) saturate(220%);
-  -webkit-backdrop-filter: blur(50px) saturate(220%);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(var(--color-background), 0.15);
+  backdrop-filter: blur(35px) saturate(200%);
+  -webkit-backdrop-filter: blur(35px) saturate(200%);
+  box-shadow: 
+    0 12px 40px 0 rgba(var(--color-shadow), 0.2),
+    inset 0 1px 0 0 rgba(var(--color-foreground), 0.15);
+  border: 1px solid rgba(var(--color-foreground), 0.3);
 }
 
 .transparent-collections-section .card__inner {
@@ -124,13 +131,15 @@
 }
 
 .transparent-collections-section .collection-list-title {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(var(--color-background), 0.1);
   padding: 1rem 2rem;
-  border-radius: 12px;
-  backdrop-filter: blur(40px) saturate(200%);
-  -webkit-backdrop-filter: blur(40px) saturate(200%);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  box-shadow: 
+    0 8px 32px 0 rgba(var(--color-shadow), 0.15),
+    inset 0 1px 0 0 rgba(var(--color-foreground), 0.1);
+  border: 1px solid rgba(var(--color-foreground), 0.2);
   margin-bottom: 2rem;
   display: inline-block;
 }
@@ -146,25 +155,33 @@
 
 /* Auto-slide autoplay button styling */
 .transparent-collections-section .slideshow__autoplay {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(40px) saturate(200%);
-  -webkit-backdrop-filter: blur(40px) saturate(200%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(var(--color-background), 0.1);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(var(--color-foreground), 0.2);
   border-radius: 50%;
+  box-shadow: 
+    0 8px 32px 0 rgba(var(--color-shadow), 0.15),
+    inset 0 1px 0 0 rgba(var(--color-foreground), 0.1);
   transition: all 0.3s ease;
 }
 
 .transparent-collections-section .slideshow__autoplay:hover {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(50px) saturate(220%);
-  -webkit-backdrop-filter: blur(50px) saturate(220%);
+  background: rgba(var(--color-background), 0.15);
+  backdrop-filter: blur(35px) saturate(200%);
+  -webkit-backdrop-filter: blur(35px) saturate(200%);
+  box-shadow: 
+    0 12px 40px 0 rgba(var(--color-shadow), 0.2),
+    inset 0 1px 0 0 rgba(var(--color-foreground), 0.15);
+  border: 1px solid rgba(var(--color-foreground), 0.3);
   transform: scale(1.05);
 }
 
 .transparent-collections-section .slideshow__autoplay.slideshow__autoplay--paused:hover {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(50px) saturate(220%);
-  -webkit-backdrop-filter: blur(50px) saturate(220%);
+  background: rgba(var(--color-background), 0.12);
+  backdrop-filter: blur(35px) saturate(200%);
+  -webkit-backdrop-filter: blur(35px) saturate(200%);
+  box-shadow: 0 12px 40px 0 rgba(var(--color-shadow), 0.2);
 }
 
 /* Collection list auto-slide styling */
