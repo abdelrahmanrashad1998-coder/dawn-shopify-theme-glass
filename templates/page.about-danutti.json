@@ -231,6 +231,7 @@
         "slide_dBHPKh",
         "slide_BNB6Ri"
       ],
+      "disabled": true,
       "name": "Picture Slideshow",
       "settings": {
         "slides_to_show": "4",
@@ -370,6 +371,22 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "video_WePhFt": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "enable_video_looping": true,
+        "video": "shopify://files/videos/WhatsApp Video 2025-08-26 at 19.59.33.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -588,6 +605,7 @@
         "slide_8JnhYz",
         "slide_JmMFPn"
       ],
+      "disabled": true,
       "name": "Picture Slideshow",
       "settings": {
         "slides_to_show": "4",
@@ -598,6 +616,22 @@
         "animation_easing": "linear",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "video_prAxi8": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "enable_video_looping": true,
+        "video": "shopify://files/videos/WhatsApp Video 2025-08-26 at 19.59.37.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "glass_section_HYGKfL": {
@@ -785,6 +819,7 @@
         "show_view_all": false,
         "auto_rotate": true,
         "change_slides_speed": 4,
+        "show_controls": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
@@ -891,11 +926,13 @@
     "video_9CzytT",
     "blocks_pX4x9A",
     "image_with_text_gUTep7",
+    "video_WePhFt",
     "glass_section_YjFiQ6",
     "rich_text_k4EETc",
     "main",
     "slideshow_tbDQU8",
     "picture_card_slideshow_dPmUHF",
+    "video_prAxi8",
     "glass_section_HYGKfL",
     "rich_text_WJrpJQ",
     "slideshow_hdNpdT",
