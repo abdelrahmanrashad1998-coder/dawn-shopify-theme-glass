@@ -32,11 +32,22 @@
   border: 1px solid rgba(var(--color-foreground), 0.2);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: 
     0 8px 32px 0 rgba(0, 0, 0, 0.15),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
+  
+  /* Fallback for browsers that don't support backdrop-filter */
+  -webkit-backdrop-filter: blur(15px);
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(15px)) {
+  .page-content-glass {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 2px solid rgba(var(--color-foreground), 0.3) !important;
+  }
 }
 
 /* Text Color Overrides */
@@ -99,18 +110,38 @@
 
 /* Enhanced Glass Effect for Policy Pages */
 .policy-page-glass {
-  background: rgba(255, 255, 255, 0.92) !important;
-  backdrop-filter: blur(20px) !important;
-  -webkit-backdrop-filter: blur(20px) !important;
-  border: 1.5px solid rgba(0, 0, 0, 0.15) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(25px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+  border: 2px solid rgba(0, 0, 0, 0.2) !important;
   border-radius: 25px !important;
   box-shadow: 
-    0 12px 48px 0 rgba(0, 0, 0, 0.18),
-    0 4px 16px 0 rgba(0, 0, 0, 0.12),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
-    inset 0 -1px 0 0 rgba(0, 0, 0, 0.05) !important;
+    0 12px 48px 0 rgba(0, 0, 0, 0.25),
+    0 4px 16px 0 rgba(0, 0, 0, 0.15),
+    0 2px 8px 0 rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.08) !important;
   transform: translateY(-5px);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Force visibility with a test indicator */
+  position: relative !important;
+}
+
+/* Debug indicator for policy pages */
+.policy-page-glass::before {
+  content: "POLICY PAGE - GLASS EFFECT" !important;
+  position: absolute !important;
+  top: -30px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  color: white !important;
+  padding: 5px 15px !important;
+  border-radius: 5px !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  z-index: 1000 !important;
 }
 
 .policy-page-glass:hover {
@@ -120,6 +151,20 @@
     0 8px 24px 0 rgba(0, 0, 0, 0.15),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
     inset 0 -1px 0 0 rgba(0, 0, 0, 0.08);
+}
+
+/* Fallback for browsers that don't support backdrop-filter for policy pages */
+@supports not (backdrop-filter: blur(25px)) {
+  .policy-page-glass {
+    background: rgba(255, 255, 255, 0.98) !important;
+    border: 2px solid rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 
+      0 12px 48px 0 rgba(0, 0, 0, 0.3),
+      0 4px 16px 0 rgba(0, 0, 0, 0.2),
+      0 2px 8px 0 rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.5),
+      inset 0 -1px 0 0 rgba(0, 0, 0, 0.1) !important;
+  }
 }
 
 /* Policy Page Title Enhancement */
