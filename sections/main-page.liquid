@@ -37,6 +37,13 @@
 <!-- Shop policies: {% for policy in shop.policies %}{{ policy.title }} ({{ policy.url }}), {% endfor %} -->
 <!-- Is policy page: {{ is_policy_page }} -->
 
+{% comment %} Debug: Show visible indicator if policy page {% endcomment %}
+{%- if is_policy_page -%}
+  <div style="background: red; color: white; padding: 10px; margin: 10px; text-align: center; font-weight: bold;">
+    🔍 DEBUG: This is a POLICY PAGE - Glass effect should be active!
+  </div>
+{%- endif -%}
+
 <div class="page-width page-width--narrow section-{{ section.id }}-padding">
   <div class="page-content-glass{% if is_policy_page %} policy-page-glass{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     <h1 class="main-page-title page-title h0{% if is_policy_page %} policy-title{% endif %}{% if settings.animations_reveal_on_scroll %} animate--slide-in{% endif %}">

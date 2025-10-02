@@ -29,7 +29,7 @@
   margin: 0 auto;
   padding: 40px;
   border-radius: 20px;
-  border: 1px solid rgba(var(--color-foreground), 0.2);
+  border: 3px solid rgb(0, 255, 0); /* GREEN TEST BORDER */
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   background: rgba(255, 255, 255, 0.9);
@@ -40,6 +40,25 @@
   
   /* Fallback for browsers that don't support backdrop-filter */
   -webkit-backdrop-filter: blur(15px);
+  
+  /* TEST: Make it very obvious */
+  position: relative;
+}
+
+/* TEST: Add visible indicator to ALL page content */
+.page-content-glass::after {
+  content: "🟢 BASIC GLASS EFFECT IS WORKING" !important;
+  position: absolute !important;
+  top: -35px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: rgb(0, 255, 0) !important;
+  color: black !important;
+  padding: 5px 10px !important;
+  border-radius: 5px !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  z-index: 999 !important;
 }
 
 /* Fallback for browsers that don't support backdrop-filter */
@@ -130,18 +149,29 @@
 
 /* Debug indicator for policy pages */
 .policy-page-glass::before {
-  content: "POLICY PAGE - GLASS EFFECT" !important;
+  content: "🔥 POLICY PAGE - GLASS EFFECT ACTIVE 🔥" !important;
   position: absolute !important;
-  top: -30px !important;
+  top: -40px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  background: rgba(0, 0, 0, 0.8) !important;
+  background: rgb(255, 0, 0) !important;
   color: white !important;
-  padding: 5px 15px !important;
+  padding: 8px 20px !important;
   border-radius: 5px !important;
-  font-size: 12px !important;
+  font-size: 14px !important;
   font-weight: bold !important;
   z-index: 1000 !important;
+  border: 2px solid white !important;
+}
+
+/* Force very obvious styling for testing */
+.policy-page-glass {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border: 5px solid rgb(255, 0, 0) !important;
+  box-shadow: 
+    0 20px 60px 0 rgba(255, 0, 0, 0.4),
+    0 0 20px 0 rgba(255, 0, 0, 0.3),
+    0 0 40px 0 rgba(255, 0, 0, 0.2) !important;
 }
 
 .policy-page-glass:hover {
