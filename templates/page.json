@@ -12,9 +12,8 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "page_background_opacity": 100,
-        "page_background_size": "cover",
-        "page_background_position": "center",
+        "page": "shipping-policy",
+        "heading_size": "h1",
         "padding_top": 100,
         "padding_bottom": 28
       }
