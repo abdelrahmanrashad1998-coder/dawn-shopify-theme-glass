@@ -14,17 +14,26 @@
   }
 {%- endstyle -%}
 
+{% comment %} Check if this is a policy page {% endcomment %}
+{%- assign is_policy_page = false -%}
+{%- for policy in shop.policies -%}
+  {%- if policy.url == page.url -%}
+    {%- assign is_policy_page = true -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width page-width--narrow section-{{ section.id }}-padding">
-    <div class="page-content-glass{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      <h2 class="page-title {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} animate--slide-in{% endif %}">
+    <div class="page-content-glass{% if is_policy_page %} policy-page-glass{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      <h2 class="page-title {{ section.settings.heading_size }}{% if is_policy_page %} policy-title{% endif %}{% if settings.animations_reveal_on_scroll %} animate--slide-in{% endif %}">
         {%- if section.settings.page.title != blank -%}
           {{ section.settings.page.title | escape }}
         {%- else -%}
           {{ 'sections.page.title' | t }}
         {%- endif -%}
       </h2>
-      <div class="rte{% if settings.animations_reveal_on_scroll %} animate--slide-in{% endif %}">
+      <div class="rte{% if is_policy_page %} policy-content{% endif %}{% if settings.animations_reveal_on_scroll %} animate--slide-in{% endif %}">
         {%- if section.settings.page.content != blank -%}
           {{ section.settings.page.content }}
         {%- else -%}
