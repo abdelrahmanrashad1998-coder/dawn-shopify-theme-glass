@@ -89,48 +89,59 @@
           </li>
         {%- endfor -%}
       </ul>
-      {%- if show_mobile_slider or section.settings.auto_rotate -%}
+      {%- liquid
+        assign show_controls_needed = false
+        if show_mobile_slider
+          assign show_controls_needed = true
+        endif
+        if section.settings.auto_rotate and section.settings.show_controls
+          assign show_controls_needed = true
+        endif
+      -%}
+      {%- if show_controls_needed -%}
         <div class="slider-buttons">
-          <button
-            type="button"
-            class="slider-button slider-button--prev"
-            name="previous"
-            aria-label="{{ 'general.slider.previous_slide' | t }}"
-          >
-            <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
-            </span>
-          </button>
-          <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-            <span class="slider-counter--total">{{ section.blocks.size }}</span>
-          </div>
-          <button
-            type="button"
-            class="slider-button slider-button--next"
-            name="next"
-            aria-label="{{ 'general.slider.next_slide' | t }}"
-          >
-            <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
-            </span>
-          </button>
-          
-          {%- if section.settings.auto_rotate -%}
+          {%- if section.settings.show_controls -%}
             <button
               type="button"
-              class="slideshow__autoplay slider-button{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
-              aria-label="Pause auto-slide"
+              class="slider-button slider-button--prev"
+              name="previous"
+              aria-label="{{ 'general.slider.previous_slide' | t }}"
             >
               <span class="svg-wrapper">
-                {{- 'icon-pause.svg' | inline_asset_content -}}
-              </span>
-              <span class="svg-wrapper">
-                {{- 'icon-play.svg' | inline_asset_content -}}
+                {{- 'icon-caret.svg' | inline_asset_content -}}
               </span>
             </button>
+            <div class="slider-counter caption">
+              <span class="slider-counter--current">1</span>
+              <span aria-hidden="true"> / </span>
+              <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+              <span class="slider-counter--total">{{ section.blocks.size }}</span>
+            </div>
+            <button
+              type="button"
+              class="slider-button slider-button--next"
+              name="next"
+              aria-label="{{ 'general.slider.next_slide' | t }}"
+            >
+              <span class="svg-wrapper">
+                {{- 'icon-caret.svg' | inline_asset_content -}}
+              </span>
+            </button>
+            
+            {%- if section.settings.auto_rotate -%}
+              <button
+                type="button"
+                class="slideshow__autoplay slider-button{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
+                aria-label="Pause auto-slide"
+              >
+                <span class="svg-wrapper">
+                  {{- 'icon-pause.svg' | inline_asset_content -}}
+                </span>
+                <span class="svg-wrapper">
+                  {{- 'icon-play.svg' | inline_asset_content -}}
+                </span>
+              </button>
+            {%- endif -%}
           {%- endif -%}
         </div>
       {%- endif -%}
@@ -267,6 +278,13 @@
       "label": "Slide duration (seconds)",
       "default": 4,
       "info": "How long each slide displays before automatically advancing"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_controls",
+      "default": false,
+      "label": "Show navigation controls",
+      "info": "Show play/pause button and arrow controls"
     },
     {
       "type": "header",
