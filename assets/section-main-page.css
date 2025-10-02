@@ -32,21 +32,22 @@
   border: 1px solid rgba(var(--color-foreground), 0.2);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  background: rgba(var(--color-background), 0.8);
+  background: rgba(255, 255, 255, 0.85);
   box-shadow: 
-    0 8px 32px 0 rgba(var(--color-shadow), 0.15),
-    inset 0 1px 0 0 rgba(var(--color-foreground), 0.1);
+    0 8px 32px 0 rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
 }
 
 /* Text Color Overrides */
-.page-content-glass .main-page-title {
-  color: rgba(var(--color-foreground), 0.9) !important;
+.page-content-glass .main-page-title,
+.page-content-glass .page-title {
+  color: rgba(0, 0, 0, 0.9) !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .page-content-glass .rte {
-  color: rgba(var(--color-foreground), 0.85);
+  color: rgba(0, 0, 0, 0.8);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
