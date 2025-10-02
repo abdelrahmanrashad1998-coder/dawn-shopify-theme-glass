@@ -25,17 +25,17 @@
 /* Glass Container for Page Content */
 .page-content-glass {
   width: 100%;
-  max-width: 900px;
   margin: 0 auto;
-  padding: 40px;
-  border-radius: 20px;
-  border: 1px solid rgba(var(--color-foreground), 0.2);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  background: rgba(255, 255, 255, 0.85);
+  max-width: var(--glass-width, 900px);
+  padding: var(--glass-padding, 40px);
+  border-radius: var(--glass-border-radius, 20px);
+  border: var(--glass-border-width, 1px) solid rgba(var(--color-foreground), var(--glass-border-opacity, 0.2));
+  backdrop-filter: blur(var(--glass-blur, 15px));
+  -webkit-backdrop-filter: blur(var(--glass-blur, 15px));
+  background: rgba(var(--color-background), var(--glass-opacity, 0.85));
   box-shadow: 
-    0 8px 32px 0 rgba(0, 0, 0, 0.15),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    0 8px 32px 0 rgba(var(--color-shadow), var(--glass-shadow-opacity, 0.15)),
+    inset 0 1px 0 0 rgba(var(--color-foreground), var(--glass-inset-opacity, 0.1));
   transition: all 0.3s ease;
 }
 
@@ -104,19 +104,33 @@
   }
 }
 
-/* Enhanced Glass Effect for Policy Pages */
+/* Enhanced Glass Effect for Policy Pages - Following Theme Design Language */
 .policy-page-glass {
-  background: rgba(255, 255, 255, 0.95) !important;
-  backdrop-filter: blur(25px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
-  border: 2px solid rgba(0, 0, 0, 0.2) !important;
-  border-radius: 25px !important;
+  /* Apply glass design system variables for policy pages */
+  --glass-opacity: 0.95;
+  --glass-blur: 25px;
+  --glass-border-radius: 25px;
+  --glass-border-width: 2px;
+  --glass-border-opacity: 0.25;
+  --glass-padding: 50px;
+  --glass-shadow-opacity: 0.25;
+  --glass-inset-opacity: 0.15;
+  
+  /* Enhanced effects for policy prominence */
+  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  background: rgba(var(--color-background), var(--glass-opacity));
+  border: var(--glass-border-width) solid rgba(var(--color-foreground), var(--glass-border-opacity));
+  border-radius: var(--glass-border-radius);
+  padding: var(--glass-padding);
+  
+  /* Enhanced shadows following theme pattern */
   box-shadow: 
-    0 12px 48px 0 rgba(0, 0, 0, 0.25),
-    0 4px 16px 0 rgba(0, 0, 0, 0.15),
-    0 2px 8px 0 rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
-    inset 0 -1px 0 0 rgba(0, 0, 0, 0.08) !important;
+    0 12px 48px 0 rgba(var(--color-shadow), var(--glass-shadow-opacity)),
+    0 4px 16px 0 rgba(var(--color-shadow), 0.15),
+    inset 0 1px 0 0 rgba(var(--color-foreground), var(--glass-inset-opacity));
+  
+  /* Elevation effect */
   transform: translateY(-5px);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -125,10 +139,9 @@
 .policy-page-glass:hover {
   transform: translateY(-8px);
   box-shadow: 
-    0 20px 64px 0 rgba(0, 0, 0, 0.22),
-    0 8px 24px 0 rgba(0, 0, 0, 0.15),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
-    inset 0 -1px 0 0 rgba(0, 0, 0, 0.08);
+    0 20px 64px 0 rgba(var(--color-shadow), 0.3),
+    0 8px 24px 0 rgba(var(--color-shadow), 0.2),
+    inset 0 1px 0 0 rgba(var(--color-foreground), var(--glass-inset-opacity));
 }
 
 /* Fallback for browsers that don't support backdrop-filter for policy pages */
@@ -145,12 +158,13 @@
   }
 }
 
-/* Policy Page Title Enhancement */
+/* Policy Page Title Enhancement - Following Theme Glass Design Language */
 .policy-title {
-  color: rgba(0, 0, 0, 0.95) !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
-  font-weight: 700 !important;
+  color: rgba(var(--color-foreground), var(--glass-heading-opacity, 0.95)) !important;
+  text-shadow: 0 2px 4px rgba(var(--color-shadow), 0.1) !important;
+  font-weight: 600 !important;
   margin-bottom: 4rem !important;
+  line-height: 1.2 !important;
 }
 
 @media screen and (min-width: 750px) {
@@ -159,45 +173,98 @@
   }
 }
 
-/* PolicyContent Enhancement */
+/* PolicyContent Enhancement - Following Theme Glass Text Standards */
 .policy-content {
-  color: rgba(0, 0, 0, 0.85) !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08) !important;
-  line-height: 1.7 !important;
+  color: rgba(var(--color-foreground), var(--glass-text-opacity, 0.8));
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+  text-shadow: 0 1px 2px rgba(var(--color-shadow), 0.05);
 }
 
+/* Heading styles within policy content */
 .policy-content h2 {
-  color: rgba(0, 0, 0, 0.9) !important;
+  color: rgba(var(--color-foreground), var(--glass-heading-opacity, 0.9)) !important;
   font-weight: 600 !important;
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
   margin-top: 3rem !important;
   margin-bottom: 1.5rem !important;
+  line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
 }
 
 .policy-content h3 {
-  color: rgba(0, 0, 0, 0.88) !important;
+  color: rgba(var(--color-foreground), var(--glass-heading-opacity, 0.88)) !important;
   font-weight: 600 !important;
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
   margin-top: 2.5rem !important;
   margin-bottom: 1rem !important;
+  line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
 }
 
+/* List styling */
 .policy-content ul,
 .policy-content ol {
   margin-left: 2rem !important;
+  color: inherit !important;
 }
 
 .policy-content li {
   margin-bottom: 0.75rem !important;
+  color: inherit !important;
 }
 
-/* Responsive Adjustments for Policy Pages */
+/* Paragraph styling */
+.policy-content p {
+  margin-bottom: 1rem !important;
+  color: inherit !important;
+}
+
+.policy-content p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Glass Style Variations for Policy Pages - Following Theme Patterns */
+.policy-page-glass.glass-frosted {
+  --glass-opacity: 0.95;
+  --glass-blur: 25px;
+  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+}
+
+.policy-page-glass.glass-blurred {
+  --glass-opacity: 0.85;
+  --glass-blur: 30px;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.policy-page-glass.glass-translucent {
+  --glass-opacity: 0.75;
+  --glass-blur: 15px;
+  --glass-border-opacity: 0.15;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+/* Responsive Design Following Theme Patterns */
 @media screen and (max-width: 749px) {
   .policy-page-glass {
-    padding: 32px !important;
-    border-radius: 20px !important;
+    --glass-padding: 32px;
+    --glass-border-radius: 20px;
+    margin: 0 1rem !important;
+    padding: var(--glass-padding);
   }
   
   .policy-title {
     margin-bottom: 3rem !important;
+    font-size: 2.5rem !important;
+  }
+  
+  .policy-content {
+    font-size: 1rem !important;
   }
 }
 
@@ -230,4 +297,40 @@
   .policy-content h3 {
     color: rgba(255, 255, 255, 0.93) !important;
   }
+}
+
+/* Accessibility - Following Theme Patterns */
+@media (prefers-reduced-motion: reduce) {
+  .policy-page-glass {
+    transition: none !important;
+  }
+  
+  .policy-page-glass:hover {
+    transform: none !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .policy-page-glass {
+    background: rgba(var(--color-background), 0.9) !important;
+    border: 2px solid rgba(var(--color-foreground), 0.8) !important;
+  }
+  
+  .policy-title {
+    color: rgba(var(--color-foreground), 0.95) !important;
+    text-shadow: none !important;
+  }
+  
+  .policy-content {
+    color: rgba(var(--color-foreground), 0.9) !important;
+    text-shadow: none !important;
+  }
+}
+
+/* Ensure proper text inheritance for all elements */
+.policy-content *,
+.policy-content *::before,
+.policy-content *::after {
+  color: inherit;
 }
