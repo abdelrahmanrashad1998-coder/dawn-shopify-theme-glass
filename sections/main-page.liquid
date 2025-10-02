@@ -29,7 +29,7 @@
 <!-- Method 1: Direct URL comparison -->
 {%- for policy in shop.policies -%}
   {%- if policy.url == page.url -%}
-    {%- assign is_p-per-page = true -%}
+    {%- assign is_policy_page = true -%}
     {%- break -%}
   {%- endif -%}
 {%- endfor -%}
@@ -48,6 +48,22 @@
   {%- assign is_policy_page = true -%}
 {%- endif -%}
 
+<!-- Method 4: Check page handle vs policy handles -->
+{%- for policy in shop.policies -%}
+  {%- if page.handle == policy.handle -%}
+    {%- assign is_policy_page = true -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<!-- Method 5: Check if URL contains policy handle -->
+{%- for policy in shop.policies -%}
+  {%- if page.url contains policy.handle -%}
+    {%- assign is_policy_page = true -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
 <!-- DEBUG: Show visual indicator for policy page -->
 {%- if is_policy_page -%}
   <div style="background: red; color: white; padding: 20px; margin: 20px; font-size: 18px; text-align: center; font-weight: bold;">
@@ -56,19 +72,37 @@
   </div>
 {%- endif -%}
 
-<!-- DEBUG: Always show template info -->
-<div style="background: blue; color: white; padding: 15px; margin: 10px; font-size: 14px; text-align: center;">
-  🚨 You are viewing: sections/main-page.liquid (CORRECT!) 🚨<br>
-  Current Page URL: <strong>{{ page.url }}</strong><br>
-  Page Title: <strong>{{ page.title }}</strong><br>
-  Policy Page Detected: <strong>{{ is_policy_page }}</strong><br>
-  <br>
-  <strong>Available Shop Policies:</strong><br>
+<!-- DEBUG: Super aggressive debugging -->
+<div style="background: orange; color: black; padding: 20px; margin: 20px; font-size: 16px; text-align: left; border: 3px solid red;">
+  🔥 AGGRESSIVE DEBUG 🔥<br><br>
+  
+  <strong>1. PAGE INFO:</strong><br>
+  Current URL: <span style="background: yellow;">{{ page.url }}</span><br>
+  Page Title: <span style="background: yellow;">{{ page.title }}</span><br>
+  Page Handle: <span style="background: yellow;">{{ page.handle }}</span><br>
+  Page ID: <span style="background: yellow;">{{ page.id }}</span><br><br>
+  
+  <strong>2. METHOD TESTING:</strong><br>
+  Method 1 (Direct): <span style="background: yellow;">{{ page.url }} == policy.url</span><br>
+  Method 2 (Contains): <span style="background: yellow;">{{ page.url contains '/policies/' }}</span><br>
+  Method 3 (Title): <span style="background: yellow;">{{ policy_titles }}</span><br>
+  Final Result: <span style="background: yellow;">{{ is_policy_page }}</span><br><br>
+  
+  <strong>3. ALL SHOP POLICIES:</strong><br>
   {% for policy in shop.policies %}
     {%- if policy != blank -%}
-      • {{ policy.title }}: <strong>{{ policy.url }}</strong><br>
+      → Policy: <strong>{{ policy.title }}</strong><br>
+      → URL: <span style="background: yellow;">{{ policy.url }}</span><br>
+      → Handle: <span style="background: yellow;">{{ policy.handle }}</span><br>
+      → ID: <span style="background: yellow;">{{ policy.id }}</span><br>
+      → Matches?: <span style="background: {% if policy.url == page.url %}green{% else %}red{% endif %};">{{ policy.url == page.url }}</span><br><br>
     {%- endif -%}
   {% endfor %}
+  
+  <strong>4. MANUAL TESTS:</strong><br>
+  Current URL length: {{ page.url.size }}<br>
+  URL starts with '/policies': {{ page.url | slice: 0, 9 }}<br>
+  Last 20 chars: {{ page.url | slice: -20, 20 }}
 </div>
 
 <div class="page-width page-width--narrow section-{{ section.id }}-padding">
