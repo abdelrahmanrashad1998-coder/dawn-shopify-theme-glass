@@ -781,7 +781,7 @@
         "heading_size": "h2",
         "image_ratio": "square",
         "columns_desktop": 3,
-        "color_scheme": "",
+        "color_scheme": "background-1",
         "show_view_all": false,
         "auto_rotate": true,
         "change_slides_speed": 4,
