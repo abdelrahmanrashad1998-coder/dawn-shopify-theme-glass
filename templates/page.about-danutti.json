@@ -424,7 +424,7 @@
       "name": "about text",
       "settings": {
         "color_scheme": "",
-        "page_background_image": "shopify://shop_images/IMG_0186_2.jpg",
+        "page_background_image": "shopify://shop_images/WhatsApp_Image_2025-10-04_at_12.59.35.jpg",
         "page_background_opacity": 85,
         "page_background_size": "cover",
         "page_background_position": "center",
@@ -486,9 +486,8 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
-        "page_background_opacity": 100,
-        "page_background_size": "cover",
-        "page_background_position": "center",
+        "page": "",
+        "heading_size": "h1",
         "padding_top": 28,
         "padding_bottom": 28
       }
