@@ -497,7 +497,7 @@
     "featured_collection_MDAxGp": {
       "type": "featured-collection",
       "custom_css": [
-        ".card__heading{font-weight: bold!important; font-size: 15px;}"
+        ".card__heading {font-weight: bold !important; font-size: 15px;}"
       ],
       "name": "necklaces collection",
       "settings": {
@@ -714,6 +714,9 @@
     },
     "featured_collection_xxdH3b": {
       "type": "featured-collection",
+      "custom_css": [
+        ".card__heading {font-weight: bold !important; font-size: 15px;}"
+      ],
       "name": "earrings collection",
       "settings": {
         "collection": "earrings",
