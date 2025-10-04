@@ -426,7 +426,7 @@
         "color_scheme": "",
         "page_background_image": "shopify://shop_images/WhatsApp_Image_2025-10-04_at_12.59.35.jpg",
         "page_background_opacity": 85,
-        "page_background_size": "cover",
+        "page_background_size": "auto",
         "page_background_position": "top",
         "heading_color": "#000000",
         "text_color": "#000000",
