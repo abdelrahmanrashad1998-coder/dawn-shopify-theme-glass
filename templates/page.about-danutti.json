@@ -391,32 +391,32 @@
         "padding_bottom": 0
       }
     },
-    "1760099355d1a70740": {
+    "176009950717ff0659": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_5cc23b4_gdgtQC": {
-          "type": "ai_gen_block_5cc23b4",
+        "ai_gen_block_d46706f_aeLepe": {
+          "type": "ai_gen_block_d46706f",
           "settings": {
-            "heading": "Meet the owner",
-            "owner_image": "shopify://shop_images/WhatsApp_Image_2025-10-09_at_11.29.12_PM.jpg",
-            "description": "<p>At the heart of Danutti stands Dana El Gendy — a designer who transforms emotion into art. Her creations speak through gold, texture, and light, carrying not just craftsmanship but meaning and energy. For Dana, jewelry isn't about perfection, it's about feeling — each piece reflects her journey, strength, and grace. Danutti embodies her spirit: bold yet delicate, timeless yet alive — inviting every woman to wear not just beauty, but emotion.</p>",
+            "heading": "Meet The Founder",
+            "image": "shopify://shop_images/WhatsApp_Image_2025-10-09_at_11.29.12_PM.jpg",
+            "text": "<p>At the heart of Danutti stands Dana El Gendy — a designer who transforms emotion into art. Her creations speak through gold, texture, and light, carrying not just craftsmanship but meaning and energy. For Dana, jewelry isn't about perfection, it's about feeling — each piece reflects her journey, strength, and grace. Danutti embodies her spirit: bold yet delicate, timeless yet alive — inviting every woman to wear not just beauty, but emotion.</p>",
             "text_alignment": "center",
             "container_width": 1200,
-            "content_gap": 40,
-            "section_padding_top": 60,
-            "section_padding_bottom": 60,
             "heading_size": 48,
             "heading_color": "#ffffff",
             "text_size": 16,
-            "text_line_height": 1.6,
             "text_color": "#ffffff",
-            "image_border_radius": 0
+            "text_line_height": 2,
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "heading_margin_bottom": 40,
+            "image_margin_bottom": 40
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_5cc23b4_gdgtQC"
+        "ai_gen_block_d46706f_aeLepe"
       ],
       "settings": {}
     },
@@ -996,7 +996,7 @@
     "blocks_pX4x9A",
     "image_with_text_gUTep7",
     "video_WePhFt",
-    "1760099355d1a70740",
+    "176009950717ff0659",
     "176009824623918f0d",
     "1760097551a532cf62",
     "17600969217d6218ec",
