@@ -502,7 +502,7 @@
       "name": "necklaces collection",
       "settings": {
         "collection": "necklaces",
-        "products_to_show": 12,
+        "products_to_show": 25,
         "title": "",
         "heading_size": "h1",
         "description": "<p>Discover earrings designed to bring elegance, sparkle, and style to every moment.</p>",
