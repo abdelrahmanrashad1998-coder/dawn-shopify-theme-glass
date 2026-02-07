@@ -114,7 +114,7 @@
             "heading": "DISCOVER \"EN MOUVEMENT\" COLLECTION",
             "subheading": "",
             "button_text": "Shop Now",
-            "button_link": "",
+            "button_link": "shopify://collections/newly-added",
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
             "content_max_width": 600,
