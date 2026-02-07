@@ -11,15 +11,98 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "page": "shipping-policy",
         "heading_size": "h1",
         "padding_top": 100,
         "padding_bottom": 28
       }
+    },
+    "blocks_BLabia": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_688ea8f_rXXMnG": {
+          "type": "ai_gen_block_688ea8f",
+          "settings": {
+            "media_type": "image",
+            "hero_image": "shopify://shop_images/11e460c1-2b98-4563-a2c0-e4fc555c91ea.jpg",
+            "video_url": "",
+            "media_position": "center",
+            "section_height": 900,
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "badge_text": "New Drop",
+            "heading": "DISCOVER \"EN MOUVEMENT\" COLLECTION",
+            "subheading": "",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "content_max_width": 600,
+            "desktop_width_percent": 90,
+            "glass_opacity": 15,
+            "glass_blur": 15,
+            "glass_border_thickness": 1,
+            "glass_border_opacity": 20,
+            "glass_border_radius": 20,
+            "glass_padding": 50,
+            "badge_background": "#000000",
+            "badge_text_color": "#ffffff",
+            "badge_font_size": 12,
+            "heading_color": "#000000",
+            "heading_size": 48,
+            "text_color": "#333333",
+            "text_size": 16,
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_background": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_border_radius": 4
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_688ea8f_rXXMnG"
+      ],
+      "name": "Glass drop hero",
+      "settings": {}
+    },
+    "featured_collection_cJjzdY": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "newly-added",
+        "products_to_show": 10,
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "blocks_BLabia",
+    "featured_collection_cJjzdY"
   ]
 }
