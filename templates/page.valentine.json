@@ -75,7 +75,7 @@
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "newly-added",
-        "products_to_show": 10,
+        "products_to_show": 17,
         "title": "Featured collection",
         "heading_size": "h1",
         "description": "",
